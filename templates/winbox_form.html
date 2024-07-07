@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Winbox Exploit</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body>
+    <div class="container">
+        <form action="/run_winbox" method="post">
+            <h1>Winbox Exploit</h1>
+            <label for="choice">Choose an option:</label>
+            <select id="choice" name="choice" required>
+                <option value="1">Network Range (IP range)</option>
+                <option value="2">Organization Name</option>
+            </select>
+            <label for="target_ip">Target IP or Organization Name:</label>
+            <input type="text" id="target_ip" name="target_ip" required>
+            <input type="submit" value="Run Winbox Exploit">
+            <a href="{{ url_for('index') }}">Go Back</a>
+        </form>
+    </div>
+</body>
+</html>

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Pentest Tools</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body>
+    <div class="container">
+        <h1>Select a Pentest Tool</h1>
+        <form action="{{ url_for('select_tool') }}" method="post">
+            <label for="tool">Select a Tool:</label>
+            <select id="tool" name="tool">
+                <option value="pfsense">PfSense Exploit</option>
+                <option value="winbox">Winbox Exploit</option>
+                <option value="apache">Apache RCE/Path Traversal Exploit</option>
+            </select>
+            <button type="submit">Go</button>
+        </form>
+        <div class="message">
+            <p>
+                <strong>PfSense Exploit:</strong> Use this tool to identify and exploit vulnerabilities in PfSense firewalls.
+            </p>
+            <p>
+                <strong>Winbox Exploit:</strong> Utilize this tool to find and exploit vulnerabilities in MikroTik routers using Winbox.
+            </p>
+            <p>
+                <strong>Apache RCE/Path Traversal Exploit:</strong> Use this tool to identify and exploit Remote Code Execution and Path Traversal vulnerabilities in Apache servers.
+            </p>
+        </div>
+    </div>
+</body>
+</html>

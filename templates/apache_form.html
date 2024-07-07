@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Apache Vulnerability Scanner</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body>
+    <div class="container">
+        <h1>Apache Vulnerability Scanner</h1>
+        <form method="POST" action="{{ url_for('run_apache') }}">
+            <div id="nmap-options">
+                <label for="target_ip">Target IP:</label>
+                <input type="text" id="target_ip" name="target_ip" required>
+                <label for="target_port">Target Port (optional):</label>
+                <input type="text" id="target_port" name="target_port">
+            </div>
+            <label for="vulnerability">Choose vulnerability to check:</label>
+            <select id="vulnerability" name="vulnerability">
+                <option value="pt">Path Traversal</option>
+                <option value="rce">Remote Code Execution</option>
+                <option value="both">Both</option>
+            </select>
+            <button type="submit">Scan</button>
+        </form>
+    </div>
+</body>
+</html>

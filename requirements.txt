@@ -1,0 +1,10 @@
+Flask
+python-docx
+requests
+urllib3
+docx
+pyfiglet
+nmap
+netifaces
+unoconv
+pymetaspoloit3

