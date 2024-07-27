@@ -46,7 +46,7 @@ def create_cover_page(document):
         document.paragraphs[-1].add_run().add_break()
         while len(document.paragraphs) % 4 != 0:
             document.add_paragraph()
-        title = "Sample Penetration Test Report Apache HTTP Server"
+        title = "Laporan Pengujian Penetrasi Server Apache HTTP"
         document.add_heading(title, level=0).alignment = 1  # Center align the text
         # Add spacer
         document.add_paragraph()
@@ -55,8 +55,8 @@ def create_cover_page(document):
             document.add_paragraph()
         # Add details
         text = f"""
-        Date: {date.today().strftime('%d %B %Y')}
-        Version 1.0"""
+        Tanggal: {date.today().strftime('%d %B %Y')}
+        Versi 1.0"""
         document.add_paragraph(text)
         logging.info("Cover page created successfully.")
     except Exception as e:
@@ -70,47 +70,76 @@ def generate_report(scan_result, findings, ugm_logo_path, tri_logo_path):
 
         create_cover_page(document)
 
-        # Introduction
-        document.add_heading('Introduction', level=1)
+        # Pendahuluan
+        document.add_heading('Pendahuluan', level=1)
         introduction = (
-            "This is a pentesting report for Apache HTTP Server vulnerabilities. "
-            "The vulnerabilities addressed in this report include Path Traversal and Remote Code Execution. "
-            "The impact of these vulnerabilities includes unauthorized access to the server, data theft, and potential network compromise. "
-            "It is crucial to address these vulnerabilities promptly to protect the security and integrity of the network infrastructure."
+            "Penelitian ini bertujuan untuk mengembangkan aplikasi berbasis web yang mengotomatisasi pengujian penetration testing terhadap kerentanan CVE-2021-42013 pada server Apache HTTP. "
+            "Aplikasi ini dirancang untuk mempermudah dan mempercepat proses pengujian kerentanan, mulai dari pemindaian hingga pembuatan laporan. "
+            "Hasil pengujian menunjukkan bahwa metode otomatis mampu menyelesaikan uji penetrasi dengan lebih cepat dan konsisten dibandingkan metode manual. "
+            "Kerentanan yang ditemukan pada server Apache versi 2.4.50, terutama pada konfigurasi tertentu, memungkinkan eksploitasi path traversal dan remote code execution (RCE). "
+            "Konfigurasi yang rentan termasuk mengaktifkan modul CGI-BIN, menambahkan direktori 'icons' dalam bagian Alias, dan mengatur `Require all granted` dalam konteks `<Directory>`. "
+            "Konfigurasi ini memungkinkan serangan yang dapat membahayakan keamanan server dan jaringan."
         )
         paragraph = document.add_paragraph(introduction)
         paragraph.alignment = WD_PARAGRAPH_ALIGNMENT.JUSTIFY
 
         # Findings
-        document.add_heading('Findings', level=1)
-        document.add_heading('Nmap Scan Results', level=2)
+        document.add_heading('Hasil Temuan', level=1)
+        document.add_heading('Hasil Pemindaian Nmap', level=2)
         document.add_paragraph(sanitize_text(scan_result))
 
-        document.add_heading('Vulnerability Exploitation Results', level=2)
+        document.add_heading('Hasil Eksploitasi Kerentanan', level=2)
         document.add_paragraph(sanitize_text(findings))
 
-        # Recommendation
-        document.add_heading('Recommendation', level=1)
+        # Rekomendasi dan Mitigasi
+        document.add_heading('Rekomendasi dan Mitigasi', level=1)
         recommendation = (
-            "To mitigate the identified vulnerabilities (CVE-2021-42013 and CVE-2021-41773), it is recommended to take the following steps:\n"
-            "1. Update Apache HTTP Server:\n"
-            "   - Upgrade to the latest version of Apache HTTP Server where these vulnerabilities have been patched.\n"
-            "   - Regularly apply updates and patches from the Apache Software Foundation.\n"
-            "2. Configure the Server Securely:\n"
-            "   - Disable the use of vulnerable modules such as mod_cgi, unless absolutely necessary.\n"
-            "   - Restrict access to the server by configuring the `Directory` settings correctly. For example, use `Options -Indexes` and `Require all denied` to restrict unauthorized access.\n"
-            "3. Employ Web Application Firewalls (WAF):\n"
-            "   - Use a WAF to detect and block malicious requests that may exploit path traversal and RCE vulnerabilities.\n"
-            "4. Regular Security Audits:\n"
-            "   - Conduct regular security audits and vulnerability assessments to identify and address potential security issues.\n"
-            "5. Logging and Monitoring:\n"
-            "   - Enable detailed logging and regularly monitor logs for suspicious activity.\n"
-            "   - Use intrusion detection systems (IDS) and intrusion prevention systems (IPS) to monitor and protect against exploits.\n"
-            "6. Access Controls:\n"
-            "   - Implement strong access controls to limit who can modify the server configuration and execute scripts.\n"
-            "7. Input Validation:\n"
-            "   - Implement strict input validation to ensure that user input is sanitized and validated before processing.\n"
-            "By following these recommendations, the risk associated with CVE-2021-42013 and CVE-2021-41773 can be significantly reduced, helping to ensure the security and integrity of the Apache HTTP Server."
+            "Jika Anda harus tetap menggunakan Apache versi 2.4.50 dan harus mengaktifkan modul CGI-BIN, berikut adalah beberapa langkah mitigasi yang dapat Anda ambil untuk mengurangi risiko kerentanan:\n"
+            "1. Batasi Akses CGI-BIN:\n"
+            "   - Hanya izinkan akses ke direktori CGI-BIN dari lokasi IP tertentu yang terpercaya.\n"
+            "   ```\n"
+            "   <Directory \"/path/to/cgi-bin\">\n"
+            "       Options +ExecCGI\n"
+            "       AllowOverride None\n"
+            "       Order deny,allow\n"
+            "       Deny from all\n"
+            "       Allow from 192.168.1.0/24\n"
+            "   </Directory>\n"
+            "   ```\n"
+            "2. Gunakan `ScriptAlias`:\n"
+            "   - Pastikan direktori CGI-BIN hanya dapat diakses melalui `ScriptAlias` dan bukan melalui URL standar.\n"
+            "   ```\n"
+            "   ScriptAlias /cgi-bin/ \"/path/to/cgi-bin/\"\n"
+            "   <Directory \"/path/to/cgi-bin\">\n"
+            "       AllowOverride None\n"
+            "       Options +ExecCGI -Indexes\n"
+            "       Require all granted\n"
+            "   </Directory>\n"
+            "   ```\n"
+            "3. Pemisahan Hak Istimewa:\n"
+            "   - Jalankan skrip CGI dengan pengguna dan grup yang tidak memiliki hak istimewa tinggi untuk membatasi dampak jika ada skrip yang berhasil dieksploitasi.\n"
+            "4. Monitoring dan Logging:\n"
+            "   - Aktifkan logging terperinci untuk semua akses CGI.\n"
+            "   ```\n"
+            "   CustomLog ${APACHE_LOG_DIR}/cgi_access.log combined\n"
+            "   ```\n"
+            "   - Gunakan alat monitoring real-time seperti `ModSecurity` untuk mendeteksi dan merespons aktivitas mencurigakan.\n"
+            "5. Pembatasan Akses File:\n"
+            "   - Batasi akses ke direktori sensitif melalui konfigurasi Apache.\n"
+            "   ```\n"
+            "   <Directory \"/etc\">\n"
+            "       Order deny,allow\n"
+            "       Deny from all\n"
+            "   </Directory>\n"
+            "   ```\n"
+            "6. Penggunaan WAF (Web Application Firewall):\n"
+            "   - Pasang dan konfigurasi ModSecurity untuk melindungi server Apache dari berbagai jenis serangan, termasuk path traversal dan RCE.\n"
+            "7. Penggunaan Proksi Terbalik:\n"
+            "   - Gunakan reverse proxy seperti `nginx` atau `HAProxy` untuk menyaring permintaan sebelum mencapai server Apache, memberikan kontrol tambahan atas permintaan yang masuk.\n"
+            "8. Audit dan Pengetesan Keamanan Berkala:\n"
+            "   - Lakukan pengujian penetrasi secara berkala untuk menemukan dan memperbaiki potensi kerentanan.\n"
+            "   - Lakukan audit keamanan berkala pada konfigurasi server dan skrip CGI yang digunakan.\n"
+            "Dengan mengikuti langkah-langkah ini, risiko yang terkait dengan CVE-2021-42013 dan CVE-2021-41773 dapat dikurangi secara signifikan, membantu memastikan keamanan dan integritas Apache HTTP Server."
         )
         paragraph = document.add_paragraph(recommendation)
         paragraph.alignment = WD_PARAGRAPH_ALIGNMENT.LEFT
